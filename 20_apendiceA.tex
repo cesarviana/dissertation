@@ -1,0 +1,58 @@
+% ----------------------------------------------------------------------- %
+% Arquivo: 20_apendiceA.tex
+% ----------------------------------------------------------------------- %
+\chapter{Strings de Busca para Revisão Sistemática da Literatura}
+\label{apendice_a}
+
+\begin{longtable}{|p{.2\textwidth}|p{.7\textwidth}|}
+\hline
+\textbf{Base} & \textbf{String} \\ \hline
+ACM Digital Library & \textit{"query": { AllField:((children OR kindergarten OR “childhood education”)
+AND (activities OR "pedagogic practices" OR "curriculum") AND (robotics
+OR "programmable toy" OR "computational toy") AND ("computational
+thinking") AND (algorithm* OR program*) ) AND Title:(NOT (survey OR
+secondary OR middle OR "high school")) }
+"filter": { Article Type: Research Article, Publication Date: (01/01/2015 TO
+06/30/2020), ACM Content: DL }} \\ \hline
+
+ERIC & \textit{((children OR kindergarten OR "childhood education")  AND (robotics OR "programmable toy" OR "computational toy") AND ("computational thinking"))
+Tags: “Since 2016”, “Early Childhood Education”, “Journal Articles”} \\ \hline
+
+IEEE Xplore & (
+"Full Text .AND. Metadata":children OR 
+"Full Text .AND. Metadata":kindergarten OR 
+"Full Text .AND. Metadata":"childhood education"
+) AND
+(
+"Full Text .AND. Metadata":activities OR 
+"Full Text .AND. Metadata":"pedagogic practices" OR 
+"Full Text .AND. Metadata":"curriculum"
+) AND
+(
+"Full Text .AND. Metadata":robotics OR 
+"Full Text .AND. Metadata":"programmable toy" OR 
+"Full Text .AND. Metadata":"computational toy"
+) AND
+(
+"Full Text .AND. Metadata":"computational thinking"
+) AND NOT
+(
+"Document Title":"high school" OR
+"Document Title":"survey" OR
+"Document Title":"secondary education" OR
+"Document Title":"undergraduate" OR
+"Document Title":"middle" OR
+"Document Title":"teacher"
+)
+\\ \hline
+
+ScienceDirect & Terms:((children OR kindergarten OR "childhood education")  AND (robotics OR "programmable toy" OR "computational toy") AND ("computational thinking"))
+
+Years: 2015-2020 \\ \hline
+
+\end{longtable}
+
+
+% \includepdf[pages=1,scale=1]{pdf/exemplo.pdf}
+% se o documento tiver mais páginas pode-se colocar assim: pages=1-2
+% mesmo que o documento tenha mais de 2 páginas...

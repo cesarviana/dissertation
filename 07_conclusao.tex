@@ -1,0 +1,64 @@
+% ---
+% Conclusão
+% ---
+\chapter{Conclusão}
+\label{c_conclusao}
+
+%Quais problemas este trabalho trata
+A questão que norteia esta pesquisa é como unir as vantagens das interfaces virtuais e tangíveis para facilitar o aprendizado de programação por crianças. A busca por experiências de interação benéficas ao aprendizado inicia desde a graduação do autor, na qual foi desenvolvido um aplicativo para programar e ver o algoritmo da memória no RoPE. Entretanto, os testes daquela etapa e estudos subsequentes indicaram que telas não são o tipo de interface mais adequado a crianças pequenas, as quais preferiram usar os botões físicos do brinquedo.
+
+Como alternativa ao smartphone, foram investigadas interfaces tangíveis de programação em blocos. As interfaces tangíveis ofereceram vantagens como a possibilidade de interação coletiva e intuitiva. Nessa etapa porém, percebeu-se a dificuldade das crianças sequenciarem blocos para formar um algoritmo. Essa dificuldade se deu tanto pelo encaixe invertido dos blocos, quanto pela aparente incoerência na sequência de encaixe.
+
+Na tentativa de contribuir para o campo de design de interação, que estuda este tipo de problema, o \autoref{c_fundamentacao_teorica} trouxe a visão dos teóricos que iniciaram o estudo com foco no desenvolvimento da criança. Piaget observou o desenvolvimento das estruturas cognitivas, e afirma que há operações mentais não realizáveis sem esses estruturas. Papert avançou neste estudo e observou como materiais externos contribuem para a formação das estruturas mentais, incentivando a abordagem por projetos significativos. Bruner teoriza sobre as formas de representação do conhecimento, e concorda que as experiências sensoriais concretas devem embasar o raciocínio formal subsequente.
+
+O Pensamento Computacional foi abordado em seus quatro pilares \cite{brackmann_desenvolvimento_2017}: abstração, decomposição, reconhecimento de padrões e algoritmos. Após isso, foram analisados conceitos ligados à criação de interfaces de programação para crianças: brinquedos programáveis, interfaces tangíveis, programação em blocos e marcas fiduciais.
+
+O estudo sobre o estado da arte se dividiu em três partes: pesquisas de interfaces com crianças, mapeamento industrial e trabalhos relacionados. O resultado mais relevante percebido é que há uma grande variedade de brinquedos programáveis disponíveis no mercado, porém o uso de realidade aumentada nesses brinquedos é escasso. 
+O objetivo 1 \textit{(mapear os principais tipos de interfaces de brinquedos programáveis existentes)} foi alcançado nessa etapa. Não foi encontrado outro mapeamento abrangente com foco nessas interfaces. A análise dos resultados indicou aumento do número de brinquedos lançados a partir de 2013, quando também aumentou o interesse pelo assunto \acl{PC}. Os tipos de interfaces mais usados são virtuais, e a realidade aumentada é pouco explorada.
+
+O segundo objetivo \textit{(implementar um sistema de registro de interações com o brinquedo RoPE)} é considerado atendido por meio da implementação de uma \ac{API}\footnote{\url{https://github.com/cesarviana/rope_api}}. Em pesquisas anteriores, o autor precisou anotar manualmente ações ocorridas com o brinquedo. Esse tipo de coleta é propensa a erros de anotação e demanda tempo. O método automatizado pode ser útil para outras pesquisas. 
+
+O terceiro objetivo \textit{(construir uma interface de realidade aumentada projetiva para o brinquedo programável RoPE)} foi atendido parcialmente. A estrutura da interface (projeção, captura de blocos, identificação da área projetável e projeção de elementos virtuais na posição desejada) foi implementada. Um mini-projetor de 1200 lumens produziu imagens visíveis em ambientes internos iluminados. Os blocos com marcas fiduciais com diâmetro de 3cm foram identificados sem problemas por uma câmera com resolução 8 megapixels de resolução. Porém essa parte técnica ainda não é a interface. Ainda é preciso implementar a comunicação Bluetooth entre o brinquedo e o smartphone, e avaliar o uso por crianças.
+
+Por fim, o quarto objetivo \textit{(planejar e aplicar um protocolo de experimentos para coletar eventos de interação com a interface)} teve apenas o planejamento executado. O \autoref{c_avaliacao} descreve a intenção de se utilizar a abordagem centrada no usuário, o que inclui design iterativo e observações empíricas, bem como os aspectos definidos a priori para serem observados. O planejamento da atividade para detectar dificuldade com localização e direções foi apresentado como uma sequência de 9 atividades, em que a criança programa o brinquedo em orientações variadas. 
+
+%O que foi feito até o momento (cap 2, 3 e 4)
+
+%Este trabalho
+
+%Quais os próximos passos (com base no cap 4)
+
+%Resultados esperados... no modelo Univali está assim:
+
+%Este capítulo deve apresentar uma síntese sobre o trabalho desenvolvido, realizando uma análise a respeito do cumprimento dos objetivos estabelecidos e da verificação da hipótese de pesquisa inicial. Cada objetivo deve ser analisado, identificando-se o grau de atendimento (parcial ou integral), os problemas encontrados e as soluções adotadas, e justificando o porquê do não cumprimento integral (quando for o caso). Não devem ser apresentadas justificativas baseadas em dificuldades de natureza pessoal (ex. falta de tempo).
+
+
+%_________________________
+\section{Contribuição da Dissertação}
+\label{c_conclusao-contribuicao}
+
+%Nesta seção, devem ser destacadas as principais contribuições do trabalho. Deve se identificar a relevância técnico-científica da pesquisa realizada, assim como os seus impactos social, ambiental e econômico (quando aplicável). Principalmente, deve-se ressaltar a contribuição do trabalho em relação ao estado da arte. Também podem ser identificados resultados alcançados quanto à publicações e patentes depositadas.
+
+A idealização de uma ferramenta de representação externa de realidade aumentada é uma das contribuições deste trabalho até o momento. Não se encontrou nenhum brinquedo que utilize essa abordagem, que pode representar uma inovação.
+
+Também se considera uma contribuição a implementação do sistema de registro de interações. Esse sistema foi desenvolvido utilizando ferramentas comumente utilizadas no mercado de trabalho, o que facilita encontrar desenvolvedores que possam manter e evoluir o sistema. Deste modo, o sistema poderá ser utilizado em pesquisas futuras.
+
+O mapeamento de 56 brinquedos programáveis em uma planilha pública\footnote{url{https://bit.ly/35cUbZ1}} também é um subproduto que poderá ser útil para pesquisas futuras. O maior número de brinquedos analisados em pesquisas \cite{hamilton_emerging_2020,yu_review_2019} foi 30, e portanto os resultados obtidos são mais abrangentes. Além dos 56 brinquedos, há uma lista de brinquedos encontrados que não foram analisados, mas que constituem o corpus de resultados. O fato da planilha ser pública e manter o histórico de alterações permite adição de novos registros sem risco de perder a informação atual.
+
+%_________________________
+\section{Trabalhos Futuros}
+\label{c_conclusao-trabalhos-futuros}
+
+%Esta seção deve identificar possíveis trabalhos que possam ser realizados a partir do desdobramento da pesquisa feita na dissertação. Procure discutir esses trabalhos como oportunidades de pesquisa que possam ser aproveitadas tanto por você como por outras pessoas.
+
+%Caso queira listar essas oportunidades, anteceda a lista por um parágrafo introdutório, como, por exemplo: “Ao longo do desenvolvimento deste trabalho, puderam ser identificadas algumas possibilidades de melhoria e de continuação a partir de futuras pesquisas, as quais incluem:”. Depois do parágrafo inicial, você pode listar as melhorias e continuações que podem ser feitas a partir do trabalho desenvolvido, mas procure comentar um pouco sobre cada proposta, mostrando que você já saberia como começar aquela nova pesquisa.
+
+A principal continuação deste trabalho será executar o design iterativo e as avaliações descritas no \autoref{c_avaliacao} para responder as hipóteses de pesquisa. Para isso é necessário executar o plano de avaliação descrito no \autoref{c_avaliacao}.
+
+Foram vislumbradas algumas possibilidades de investigação futuras a esta pesquisa. Uma é verificar como as cores dos botões influenciam na comunicação de locais e direções. Poderia se criar um brinquedo com todos os botões da mesma cor e observar como adulto e criança se comunicam durante a construção de um algoritmo. Isso poderia evidenciar a importância das cores das interfaces de programação para crianças.
+
+Outra possibilidade também é avaliar formas alternativas de comunicar algoritmos, como a fala ou gestos por exemplo. Tendo em vista que é possível programar o RoPE por Bluetooth, um adulto escondido pode observar a criança enquanto ela fala ou gesticula e programar o brinquedo de acordo. Isso poderia gerar \textit{insights} de formas mais naturais da criança programar.
+
+Um estudo abrangente, com mais crianças, também é um trabalho futuro útil para verificar a atração e o engajamento obtido com a interface. \citeonline{horn_comparing_2009} posicionaram uma interface em um museu e observaram variáveis como tempo de uso e colaboração dos visitantes.
+
+Por fim, a possibilidade de criar mapas virtuais que tenham reações aos movimentos do brinquedo programável também é um trabalho a ser desenvolvido. Identificar a posição do brinquedo e modificar seu ambiente permite criar jogos e desafios dinâmicos. A aplicação a atividades de aprendizado específicas precisa ser avaliada, para indicar se vale a pena ou não prosseguir com essa abordagem de uso de \acl{RA}.

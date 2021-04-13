@@ -1,0 +1,67 @@
+%% Como usar o pacote acronym
+
+
+% Na primeira vez que for citado o acronimo, o nome completo 
+% irá aparecer seguido do acronimo entre parênteses. Na 
+% proxima vez somente o acronimo irá aparecer. Se usou a 
+% opção footnote no pacote, entao o nome por extenso irá 
+% aparecer no rodapé \ac{acronimo}
+
+
+% Para aparecer com nome completo + acronimo
+% \acf{acronimo}
+
+% Para aparecer somente o acronimo
+% \acs{acronimo}
+
+% Nome por extenso somente, sem o acronimo
+% \acl{acronimo}
+
+% igual o \ac mas deixando no plural com S (ingles)
+% \acp{acronimo}
+
+% \acfp{acronimo}
+
+% \acsp{acronimo}
+
+% \aclp{acronimo}
+
+%% ATENCAO
+% Criei o comando \acfe{}, resultando em: Extenso -- ACRO
+
+\chapter*{Lista de Abreviaturas}%
+% \addcontentsline{toc}{chapter}{Lista de abreviaturas}
+\markboth{Lista de abreviaturas}{}
+
+
+\begin{acronym}
+
+%A
+\acro{API}{\textit{Application Programming Interface}}
+%B
+\acro{BLE}{\textit{Bluetooth Low Energy}}
+\acro{BPs}{Brinquedos Programáveis}
+%C
+\acro{CDI}{Centro de Desenvolvimento Infantil}
+\acro{CSTA}{\textit{Computer Science Teachers Association}}
+\acro{CHI}{\textit{Human Factors in Computing Systems}}
+%I
+\acro{IBGE}{Instituto Brasileiro de Geografia e Estatística}
+\acro{IHC}{Interação Humano Computador}
+\acro{ISTE}{\textit{International Society for Technology in Education}}
+%J
+\acro{JSON}{\textit{Javascript Object Notation}}
+%P
+\acro{PC}{Pensamento Computacional}
+\acro{PPP}{Projeto Político Pedagógico}
+%Q
+\acro{QP}{Questão de pesquisa}
+\acro{QE}{Questão exploratória}
+%R
+\acro{RA}{Realidade Aumentada}
+\acro{RSL}{Revisão Sistemática da Literatura}
+\acro{RoPE}{Robô Programável Educacional}
+%Z
+\acro{ZDP}{Zona de Desenvolvimento Proximal}
+
+\end{acronym}
