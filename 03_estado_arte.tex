@@ -5,11 +5,12 @@ Este capítulo apresenta trabalhos similaridades ao que se propõe nesta pesquis
 
 \section{Ferramentas de Programação com Funções de Depuração}
 \label{sec_tools}
-Esta seção tem por objetivo demonstrar trabalhos relacionados ao tema da depuração de algoritmos por crianças. Para isso, identifica as contribuições de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
+Esta seção tem por objetivo demonstrar trabalhos relacionados ao tema da depuração de algoritmos por crianças. Para isso, identifica as contribuições de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças a partir dos 4 anos), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
 
 \begin{enumerate}
     \item Robo-Blocks: uma interface tangível eletrônica para programação de BPs, com foco em ensino de depuração.
     \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes. \todo{Adicionar outros trabalhos aqui.}
+    \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage aos posicionamento dos objetos físicos em sua superfície. 
 \end{enumerate}
 
 \subsection{Robo-Blocks}
@@ -40,7 +41,8 @@ Os algoritmos do Cubetto são feitos com blocos coloridos encaixados em um paine
     \label{fig:cubetto_features}
 \end{figure}
 
-O painel do Cubetto possui 16 entradas para encaixe dos blocos, sendo 12 reservadas para o algoritmo principal e 4 dedicadas à área de função. Embaixo de cada entrada há um indicador luminoso que acende quando o bloco é encaixado e pisca quando o bloco é executado. Essa indicação luminosa torna visível a sequência de execução de cada bloco, o que é particularmente útil para o bloco de negação e de função. Como o bloco de negação tem sua ação associada ao bloco seguinte, ambos piscam. O mesmo ocorre com o bloco de função, que permanece piscando enquanto os blocos na área de função são executados.
+O painel do Cubetto possui 16 reentrâncias para encaixe dos blocos, sendo 12 reservadas para o algoritmo principal e 4 dedicadas à uma área denominada "função". Para cada reentrância
+há um indicador luminoso que acende quando o bloco é encaixado e pisca quando o bloco é executado. Essa indicação luminosa mostra a sequência de execução de cada bloco, o que é particularmente útil para os blocos de negação e de função. Como o bloco de negação tem sua ação associada ao bloco seguinte (inverte a ação do bloco seguinte), ambos piscam. O mesmo ocorre com o bloco de função, que pisca enquanto os blocos na área de função são executados.
 
 Neste sentido, o design do Cubetto busca demonstrar tanto a estrutura quanto a execução do algoritmo. A estrutura é visível por meio dos blocos e do \textit{feedback} luminoso fornecido ao encaixar um bloco no painel. Já a execução é indicada por meio do piscar embaixo de cada bloco. Essa visibilidade facilita a interação das crianças e a formação do modelo mental sobre como as peças se relacionam e modificam o comportamento do brinquedo. Os movimentos lentos do brinquedo, associados a indicação de quais peças estão sendo executadas beneficiam o entendimento do algoritmo e facilitam a depuração. Essas característica fizeram o projeto receber diversos prêmios de design\footnote{
 \begin{itemize}
@@ -50,32 +52,28 @@ Neste sentido, o design do Cubetto busca demonstrar tanto a estrutura quanto a e
 \end{itemize}
 }.
 
-\subsection{}
-Peraza, Pina e Demo (2010) criaram uma mesa interativa para ser utilizada com a Bee-Bot. O trabalho propõe o uso da mesa (hardware) e de um programa de apoio para as atividades (software). A mesa tem uma superfície semi-transparente, sobre a qual são posicionados a Bee-Bot e outros elementos tangíveis. 
-Uma câmera na parte de baixo da mesa capta os objetos da superfície, os quais tem marcas fiduciais da biblioteca reacTIVision coladas na parte inferior. Por fim, um projetor embaixo da mesa projeta um cenário na superfície da mesa.
+\subsection{Bee-Bot com mesa interativa}
+\citeonline{beraza_soft_2010} criaram uma mesa interativa para ser utilizada com a Bee-Bot por crianças de 4-5 a 12-14 anos. Essa mesa tem superfície semitransparente, na qual um projetor cria mapas virtuais interativos, projetando-os por baixo. A imagem projetada muda de acordo com os movimentos da Bee-Bot e acompanha a manipulação de outros elementos tangíveis. Por exemplo, quando a Bee-Bot passa de um quadrado para outro do mapa projetado, este quadrado é destacado.
 
-Os autores criaram o software de apoio ao uso do robô para poder:
+A projeção de elementos virtuais de acordo com os elementos tangíveis ocorre devido à marcas fiduciais da biblioteca reacTIVision coladas na parte inferior desses elementos. Como a superfície da mesa é semitransparente, uma câmera embaixo da mesa consegue captar as marcas fiduciais. As imagens captadas são analisadas por um software que controla as projeções.
+
+Além da mesa, o trabalho propõe a criação de um software de apoio aos professores para que criem e configurem as atividades com o brinquedo programável. Esse software busca atender aos seguintes requisitos:
+
 \begin{itemize}
     \item Ter tapetes ou cenários adaptados para cada atividade;
-    \item Interromper uma atividade e continuar depois;
+    \item Poder interromper uma atividade e continuar depois;
     \item Registrar o progresso das crianças em determinado problema e acompanhar sua evolução no tempo;
 \end{itemize}
 
-ter vários cenários (tapetes) adaptados para cada atividade. 
-
-\subsection{ARBlocks}
-\label{sub_arblocks}
-O ARBlocks é uma interface tangível de blocos desenvolvida por \citeonline{roberto_dynamic_2013}. A borda de cada bloco possui uma marca que é capturada por uma câmera e identificada por um algoritmo de visão computacional. O retorno do algoritmo é a posição e orientação de cada bloco, e com essa informação o sistema projeta figuras na superfície de cada bloco. Como a figura é projetada, é possível definir diferentes figuras e usar os mesmos blocos para diferentes aplicações.
-
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=.7\linewidth,fbox]{figs/ar_blocks.png}
-    \caption{Figuras projetadas sobre os blocos da ferramenta ARBlocks.}
-    \label{fig:arblocks}
-    \sourceauthor
+    \includegraphics[width=.7\linewidth,fbox]{figs/beraza_bee_bot.png}
+    \caption{Mesa interativa com a Bee-Bot.}
+    \label{fig:beraza}
+    \source{\citeonline{beraza_soft_2010}}
 \end{figure}
 
-O autor analisou a usabilidade do sistema com conjuntos de crianças e uma professora. Problemas encontrados foram o medo, por parte da professora, de que alguém batesse no projetor e danificasse o sistema. Apesar disso a experiência de uso foi considerada positiva tanto pela professora quanto pelos estudantes.
+Uma atividade de demonstração permite entender as potencialidades do trabalho (\autoref{fig:beraza}). Nessa atividade, o usuário pode decidir o mapa a ser utilizado; as posições de início e fim do trajeto a ser percorrido; e ver o trajeto percorrido com cálculo do número de passos executados. Em cada quadrado do mapa há formas geométricas de cores e tamanhos variados. Isso possibilita que a criança exercite a classificação e abstração. A classificação seria a habilidade de identificar propriedades ou categorias, e relacionar essas categorias ou classes entre si. Nessa atividade, a criança pode classificar as formas geométricas por propriedades como cores, formatos e tamanhos. Assim, a criança aprende abstrair e observar apenas as características relevantes para solucionar um problema. Esse mesmo tipo de tapete com formas geométricas é utilizado pelo brinquedo RoPE, porém em seu formato físico.
 
 \subsection{ALERT}
 
@@ -95,7 +93,9 @@ A \autoref{fig:alert} demonstra uma forma de uso do sistema. As marcas fiduciais
 
 \subsection{Análise Comparativa}
 
-Esta pesquisa analisou três classes de trabalhos similares. Primeiramente buscou artigos sobre uso de brinquedos programáveis em atividades com crianças de \idadeinicial a \idadefinal anos, dos quais foram identificados os métodos e aprendizados resultantes. A seguir foi realizado um mapeamento industrial, onde foram analisados 56 brinquedos programáveis construídos por empresas que vendem ou planejam vender esses brinquedos. A terceira classe de trabalhos são ferramentas de programação que utilizam algum tipo de projeção ou distribuem as instruções do algoritmo no espaço de deslocamento do agente de execução.
+Esta pesquisa analisou três classes de trabalhos similares. Primeiramente buscou artigos sobre uso de brinquedos programáveis em atividades com crianças de \idadeinicial a \idadefinal anos, dos quais foram identificados os métodos e aprendizados resultantes. A seguir foi realizado um mapeamento industrial, onde foram analisados 56 brinquedos programáveis construídos por empresas que vendem ou planejam vender esses brinquedos. A terceira classe de trabalhos
+
+.
 
 Esta pesquisa se difere da primeira classe de trabalhos (\autoref{quadroartigosrsl}) quanto à fonte de dados para análise. As pesquisas apresentadas avaliam notas e vídeos. A presente pesquisa pretende coletar automaticamente interações ocorridas com o brinquedo. Outra diferença é que as pesquisas da primeira classe verificaram o impacto de uma ferramenta no aprendizado de aspectos do PC ou compararam duas ferramentas. Este trabalho, por sua vez, compara o mesmo brinquedo em duas situações: estando ou não associado a uma ferramenta de projeção de comandos.
 
