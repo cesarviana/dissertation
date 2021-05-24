@@ -1,0 +1,34 @@
+[x] adicionar e codificar imagens rope ponta cabeça
+
+Adicionar ao texto 
+{
+    apresentar idades
+    roteiro de observação
+    datas, durações das sessões, resultados
+}
+
+{}
+
+Como se chegou ao roteiro de observação? Foi feito antes ou depois da coleta dos dados? (antes)
+Quantas horas de vídeo? (muitas)
+Foi feita a transcrição de falas? (sim)
+As crianças interagiram individualmente ou em grupo? (ambos)
+
+Como era decidido se a criança compreendeu ou não?
+
+
+# Conclusões
+- Apertam os botões que fariam o robô andar na direção do maçã, passo a passo
+- Compreenderam bem o feedback do brinquedo comer a maçã
+- As cores do vermelho e do laranja ficaram muito semelhantes. 
+- As crianças acham que no desenho o brinquedo "tá dormindo" (pelo formato dos olhos).
+- Chamam o bloco frente de "cima" e o trás de "baixo", mas conseguiram entender o significado
+- Algumas crianças tendem a olhar pouco para os blocos
+    Para Normam,
+    "A capacidade de atenção consciente é limitada: se você concentra o foco de sua atenção numa coisa, reduz sua atenção em outra. Os psicólogos chamam o fenômeno de "atenção seletiva". O excesso de foco resulta em uma espécie de "visão em túnel", em que os itens periféricos são ignorados.
+    
+    Deste modo, a criança concentra sua visão no robô, e esquece dos blocos. Em ...% das execuções, o olhar esteve direcionado ao robô. 
+
+- Preferem apertar os botões
+- Ficaram intrigados com o fato da maçã sumir e viraram o brinquedo pra ver se estava dentro dele
+- Os blocos precisam estar perto do brinquedo pra facilitar a programação

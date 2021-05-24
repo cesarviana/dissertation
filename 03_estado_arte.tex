@@ -1,16 +1,17 @@
 \chapter{Trabalhos Relacionados}
 \label{c_estado_arte}
 
-Este capítulo apresenta trabalhos similaridades ao que se propõe nesta pesquisa. Ele está dividido em três seções. A primeira seção (\autoref{sec_tools}) apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A segunda seção (\autoref{sec_rsl}) apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. A intenção é compreender quais interfaces são comumente utilizadas, quais são os designs experimentais aplicados e que resultados são obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também chamado de mapeamento industrial sistemático.} sobre as interfaces de BPs que demonstra quais tipos de interface estão disponíveis no comércio eletrônico. Enquanto na \autoref{sub_sub_aplicacoes_ra_projetiva_educacao} apresenta aplicação de RA projetiva em ferramentas educacionais, essa seção demonstra que a técnica não foi explorada no contexto de BPs, indicando uma possível lacuna de pesquisa.
+Este capítulo apresenta trabalhos similaridades ao que se propõe nesta pesquisa. Ele está dividido em três seções. A primeira seção (\autoref{sec_tools}) apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A segunda seção (\autoref{sec_rsl}) apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. A intenção é compreender quais interfaces são comumente utilizadas, quais são os designs experimentais aplicados e que resultados são obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também chamado de mapeamento industrial sistemático.} sobre as interfaces de BPs que demonstra quais tipos de interface estão disponíveis no comércio eletrônico. Enquanto na \autoref{sub_sub_aplicacoes_ra_projetiva_educacao} apresenta aplicação de RA projetiva em ferramentas educacionais, o mapeamento indica que a técnica não foi explorada no contexto de BPs.
 
-\section{Ferramentas de Programação com Funções de Depuração}
+\section{Interfaces de Brinquedos Programáveis}
 \label{sec_tools}
 Esta seção tem por objetivo demonstrar trabalhos relacionados ao tema da depuração de algoritmos por crianças. Para isso, identifica as contribuições de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças a partir dos 4 anos), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
 
 \begin{enumerate}
     \item Robo-Blocks: uma interface tangível eletrônica para programação de BPs, com foco em ensino de depuração.
-    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes. \todo{Adicionar outros trabalhos aqui.}
+    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes.
     \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage aos posicionamento dos objetos físicos em sua superfície. 
+    \item ALERT: interface de programação interativa, na qual o BP interpreta comandos a medida que os detecta via câmera.
 \end{enumerate}
 
 \subsection{Robo-Blocks}
@@ -32,7 +33,7 @@ A avaliação da ferramenta ocorreu com crianças de 5 a 12 anos, e envolveu ati
 \label{sub_sec:cubetto}
 O Cubetto é um brinquedo programável feito de madeira e destinado a crianças entre 4 a 8 anos, desenvolvido pela empresa PrimoToys\footnote{\url{https://www.primotoys.com}} a partir de 2013. Ele se inspira no ambiente LOGO, pois se move no chão como a tartaruga robótica desenvolvida de Papert. Além disso, o seu design é inspirado no método Montessori, que incentiva o aprendizado autônomo por meio da interação com materiais concretos e lúdicos.
 
-Os algoritmos do Cubetto são feitos com blocos coloridos encaixados em um painel. Há 7 blocos disponíveis, sendo quatro direcionais e outros três blocos lógicos. Os blocos direcionais são mover para frente (verde), mover para trás (roxo), girar à esquerda (amarelo) e girar a direita (vermelho). Já os blocos lógicos são de movimento aleatório (preto), negação (marrom) e função (azul). O bloco de movimento aleatório sorteia um dos quatro movimentos direcionais, possibilitando um comportamento diferente a cada execução. O bloco de negação é associado a um bloco de movimento posicionado em sequência,  modificando-o para movimento contrário. Por exemplo, se o próximo bloco é girar para a esquerda, então o brinquedo gira para a direita. Por fim, o bloco de função faz com que os blocos encaixados em uma área inferior do painel (área de função) sejam executados. Esses blocos especiais, portanto, permitem estender o comportamento além do simples sequenciamento de comandos. Um bloco de função posicionado na área de função, por exemplo, cria um \textit{loop} infinito sempre chamando a função recursivamente. Se esta função tiver um bloco de movimento aleatório, o brinquedo executará movimentos diferentes até a execução ser interrompida.
+Os algoritmos do Cubetto são feitos com blocos coloridos encaixados em um painel. Há 7 tipos de blocos, sendo quatro blocos direcionais e três blocos lógicos. Os blocos direcionais são \it{frente} (verde), trás (roxo), giro à esquerda (amarelo) e giro à direita (vermelho). Os blocos lógicos são movimento aleatório (preto), negação (marrom) e função (azul). O bloco de movimento aleatório sorteia um movimento direcional, possibilitando trajetos diferente com um mesmo algoritmo. O bloco de negação é associado a um bloco de movimento posicionado em sequência, modificando-o para movimento contrário. Por exemplo, se o próximo bloco é girar para a esquerda, então o brinquedo gira para a direita. Por fim, o bloco de função faz com que os blocos encaixados em uma área inferior do painel (área de função) sejam executados. Esses blocos especiais, portanto, permitem estender o comportamento além do simples sequenciamento de comandos. Um bloco de função posicionado na área de função, por exemplo, cria um \textit{loop} infinito sempre chamando a função recursivamente. Se esta função tiver um bloco de movimento aleatório, o brinquedo executará movimentos diferentes indefinidamente.
 
 \begin{figure}
     \centering
@@ -41,10 +42,9 @@ Os algoritmos do Cubetto são feitos com blocos coloridos encaixados em um paine
     \label{fig:cubetto_features}
 \end{figure}
 
-O painel do Cubetto possui 16 reentrâncias para encaixe dos blocos, sendo 12 reservadas para o algoritmo principal e 4 dedicadas à uma área denominada "função". Para cada reentrância
-há um indicador luminoso que acende quando o bloco é encaixado e pisca quando o bloco é executado. Essa indicação luminosa mostra a sequência de execução de cada bloco, o que é particularmente útil para os blocos de negação e de função. Como o bloco de negação tem sua ação associada ao bloco seguinte (inverte a ação do bloco seguinte), ambos piscam. O mesmo ocorre com o bloco de função, que pisca enquanto os blocos na área de função são executados.
+O painel do Cubetto possui 16 reentrâncias para encaixe dos blocos, sendo 12 reservadas para o algoritmo principal e 4 dedicadas à área de função. Para cada reentrância há um indicador luminoso que acende quando o bloco é encaixado e pisca quando o bloco é executado. Essa indicação luminosa mostra a sequência de execução de cada bloco, o que é particularmente útil para os blocos de negação e de função. Como o bloco de negação tem sua ação associada ao bloco seguinte (inverte a ação do bloco seguinte), ambos piscam. O mesmo ocorre com o bloco de função, que pisca enquanto os blocos na área de função são executados.
 
-Neste sentido, o design do Cubetto busca demonstrar tanto a estrutura quanto a execução do algoritmo. A estrutura é visível por meio dos blocos e do \textit{feedback} luminoso fornecido ao encaixar um bloco no painel. Já a execução é indicada por meio do piscar embaixo de cada bloco. Essa visibilidade facilita a interação das crianças e a formação do modelo mental sobre como as peças se relacionam e modificam o comportamento do brinquedo. Os movimentos lentos do brinquedo, associados a indicação de quais peças estão sendo executadas beneficiam o entendimento do algoritmo e facilitam a depuração. Essas característica fizeram o projeto receber diversos prêmios de design\footnote{
+Neste sentido, o design do Cubetto busca tornar visível tanto as instruções do algoritmo quanto destacar cada passo durante a execução. A estrutura é visível por meio dos blocos e do \textit{feedback} luminoso fornecido ao encaixar um bloco no painel. Já a execução é indicada por meio do piscar embaixo de cada bloco. Essa visibilidade facilita a interação das crianças e a formação do modelo mental sobre como as peças se relacionam e modificam o comportamento do brinquedo. Os movimentos lentos do brinquedo, associados a indicação de quais peças estão sendo executadas beneficiam o entendimento do algoritmo e facilitam a depuração. Essas característica fizeram o projeto receber diversos prêmios de design\footnote{
 \begin{itemize}
     \item London Design Award (2016) - \url{https://drivenxdesign.com/LON16/project.asp?ID=15112}
     \item German Design Award (2017) - \url{https://www.german-design-award.com/en/the-winners/gallery/detail/9304-cubetto.html}
@@ -65,33 +65,61 @@ Além da mesa, o trabalho propõe a criação de um software de apoio aos profes
     \item Registrar o progresso das crianças em determinado problema e acompanhar sua evolução no tempo;
 \end{itemize}
 
-\begin{figure}[!htbp]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=.7\linewidth,fbox]{figs/beraza_bee_bot.png}
+    \includegraphics[width=.6\linewidth,fbox]{figs/beraza_bee_bot.png}
     \caption{Mesa interativa com a Bee-Bot.}
     \label{fig:beraza}
     \source{\citeonline{beraza_soft_2010}}
 \end{figure}
 
-Uma atividade de demonstração permite entender as potencialidades do trabalho (\autoref{fig:beraza}). Nessa atividade, o usuário pode decidir o mapa a ser utilizado; as posições de início e fim do trajeto a ser percorrido; e ver o trajeto percorrido com cálculo do número de passos executados. Em cada quadrado do mapa há formas geométricas de cores e tamanhos variados. Isso possibilita que a criança exercite a classificação e abstração. A classificação seria a habilidade de identificar propriedades ou categorias, e relacionar essas categorias ou classes entre si. Nessa atividade, a criança pode classificar as formas geométricas por propriedades como cores, formatos e tamanhos. Assim, a criança aprende abstrair e observar apenas as características relevantes para solucionar um problema. Esse mesmo tipo de tapete com formas geométricas é utilizado pelo brinquedo RoPE, porém em seu formato físico.
+Uma atividade de demonstração permite entender as potencialidades da tecnologia (\autoref{fig:beraza}). Nessa atividade, o usuário pode decidir o mapa a ser utilizado; decidir as posições de início e fim do trajeto a ser percorrido; e ver o trajeto percorrido com o número de passos executados. A visualização do trajeto percorrido permite à criança refletir sobre os comandos inseridos e depurar possíveis erros.
 
-\subsection{ALERT}
+Nessa demonstração cada quadrado do mapa contém uma forma geométrica de cor e tamanho variado. Isso possibilita que a criança exercite a classificação e abstração. A classificação seria a habilidade de identificar propriedades ou categorias, e relacionar essas categorias ou classes entre si. Nessa atividade, a criança classifica formas geométricas por propriedades como cor, formato e tamanho. Assim, a criança aprende abstrair e observar apenas as propriedades relevantes para formar uma categoria. Esse mesmo tipo de tapete com formas geométricas é utilizado pelo brinquedo RoPE, porém em seu formato físico.
 
-O quarto trabalho similar é a ferramenta ALERT, de \cite{burleson_active_2018}, citada também na primeira categoria de trabalhos similares. O ALERT é um sistema de programação de robôs que interpreta as informações conforme elas ficam acessíveis ao campo de visão do brinquedo. Por exemplo, se o robô anda para frente e “vê”\ a instrução “vire 90º à direita”, ele interpreta e executa esta ação.
+\subsection {ALERT}
 
-O que o torna similar ao trabalho proposto é o fato dos comandos ficarem distribuídos espacialmente no caminho do robô. O reconhecimento dos comandos no espaço é baseado no software reactTIVision, que interpreta marcas fiduciais (marcas semelhantes a QR codes). A vantagem deste sistema em relação à inserção de comandos por meio de botões é a variedade de comandos possível desenvolver sem a necessidade de dedicar um botão físico. Pode haver, por exemplo, uma marca representando o comando “vire 180º”\ sem necessidade de alterações de hardware.
+O ALERT \cite{burleson_active_2018}, assim como os trabalhos anteriores, é uma interface de programação de brinquedos programáveis. O seu diferencial é que o robô interpreta os comandos a medida que ficam acessíveis no seu campo de visão. Cada robô possui uma câmera, que detecta novos comandos quando o robô se move. Por exemplo, se o robô anda para frente e capta o comando “vire 90º à direita”, ele interpreta e executa esta ação. Nisto percebe-se o princípio do feedback imediato defendido por \citeonline{norman_design_1988}. Quando o brinquedo o executa o comando logo ao detectá-lo fica claro qual comando provocou qual resultado.
 
-\begin{figure}[!htbp]
+Para identificar os comandos captados o sistema interpreta marcas fiduciais da biblioteca reactTIVision, assim como o trabalho de \citeonline{beraza_soft_2010}. Essas marcas podem estar fixas em folhas impressas distribuídas pelo chão, coladas em outros robôs ou também ser projetadas na superfície.
+
+A vantagem em relação à inserção de comandos por meio de botões é a variedade de comandos possível de desenvolver sem a necessidade de um botão físico. Pode haver, por exemplo, uma marca representando o comando “vire 180º” ou "toque um som" sem necessidade de alterações de hardware. A \autoref{fig:alert} demonstra o uso do ALERT. As marcas fiduciais aparecem no cenário partindo de um projetor e representam, segundo o autor, comida e as bordas do cenário. O personagem da direita também tem marcas fiduciais e isso permite ao personagem da esquerda identificá-lo.
+
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=.7\linewidth,fbox]{figs/alert.png}
-    \caption{Sistema ALERT.}
+    \includegraphics[width=.6\linewidth,fbox]{figs/alert.png}
+    \caption{ALERT.}
     \label{fig:alert}
     \source{\citeonline{burleson_active_2018}}
 \end{figure}
 
-A \autoref{fig:alert} demonstra uma forma de uso do sistema. As marcas fiduciais aparecem no cenário partindo de um projetor e representam, segundo o autor, comida e as bordas do cenário. O personagem da direita também tem marcas fiduciais e isso permite ao personagem da esquerda identificá-lo.
+Com relação à depuração, a programação interativa se apresenta como um diferencial. A execução dos comandos a medida que o brinquedo os detecta, possibilita às crianças corrigirem o algoritmo durante a execução. Os autores exemplificam que se o brinquedo faz um movimento em U, quando o esperado era um giro à direita, as crianças podem adicionar novos comandos na frente dele. Deste modo a criança tem interação constante tanto com o robô quando com o algoritmo, que se torna algo móvel. 
 
 \subsection{Análise Comparativa}
+
+{{\renewcommand{\arraystretch}{1.5}
+    \begin{footnotesize}
+    
+        \begin{quadro}[!h]
+        \begin{tabularx}{\textwidth}{ @{} p{.2\linewidth} p{.1\linewidth} X X  @{} }
+        \toprule
+        Projeto ou ferramenta       & Idade do público-alvo & Tipo de interface                & Depuração                                                  \\ \midrule
+        
+        Robo-Blocks                 & 5 a 12 anos           & Tangível com blocos eletrônicos  & Execução passo a passo, protractor e marcadores de erros   \\ \hline
+        Cubetto                     & 4 a 8 anos            & Tangível com painel eletrônico   & Destaca blocos em execução                                 \\ \hline
+        Bee-Bot com mesa interativa & 4-5 a 12-14 anos      & Tangível com botões              & Mostra caminho percorrido                                  \\ \hline
+        ALERT                       & 6 anos                & Tangível com projeção            & Permite alterar o comportamento do robô durante a execução \\ \bottomrule
+        
+        \end{tabularx}
+        \caption{Análise comparativa.}
+        \sourceauthor
+        \label{tab:comparision}
+        \end{quadro}
+
+    \end{footnotesize}
+}
+
+Esta seção compara os quatro trabalhos similares listados anteriormente. 
 
 Esta pesquisa analisou três classes de trabalhos similares. Primeiramente buscou artigos sobre uso de brinquedos programáveis em atividades com crianças de \idadeinicial a \idadefinal anos, dos quais foram identificados os métodos e aprendizados resultantes. A seguir foi realizado um mapeamento industrial, onde foram analisados 56 brinquedos programáveis construídos por empresas que vendem ou planejam vender esses brinquedos. A terceira classe de trabalhos
 
@@ -118,13 +146,6 @@ Por fim, esse capítulo ressalta três aspectos. (i) O mapeamento industrial nã
  Facilidade em criar aplicações com os mesmos blocos físicos. Atração da atenção dos estudantes. & 
  Necessita de ajuste fino da luminosidade do ambiente. \\ \hline
  
- 2 - Go Robot Mouse & Tangível controlada por botões. Usuário interage por meio de botões e robô produz movimentos, sons e luzes. & Tangibilidade do meio de inserção (botões) e da representação visual (cartas). & Organização manual das cartas sobre o mapa para demonstrar o caminho a ser percorrido. \\ \hline
- 
- 3 - Operação Big Hero: Code Baymax &
-Interface virtual de programação em blocos. Usuário interage clicando ou arrastando as instruções. Robô se movimenta sobre os comandos do mapa. &
-Demonstração dos comandos sobre um mapa auxilia a pré-visualizar o resultado do algoritmo. Acessível gratuitamente via navegador. &
-Não adaptado para usuários cegos. Interação por interface gráfica é menos indicada para crianças do que a interface tangível \cite{sapounidis_evaluating_2015}. \\ \hline
-
 4- ALERT
 \citeonline{burleson_active_2018} &
 Tangível espacial. Usuário posiciona marcas fiduciais no caminho do robô e ele interpreta e executa. &
