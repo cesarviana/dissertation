@@ -1,21 +1,21 @@
 \chapter{Trabalhos Relacionados}
 \label{c_estado_arte}
 
-Este capítulo apresenta trabalhos similaridades ao que se propõe nesta pesquisa. Ele está dividido em três seções. A primeira seção (\autoref{sec_tools}) apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A segunda seção (\autoref{sec_rsl}) apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. A intenção é compreender quais interfaces são comumente utilizadas, quais são os designs experimentais aplicados e que resultados são obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também chamado de mapeamento industrial sistemático.} sobre as interfaces de BPs que demonstra quais tipos de interface estão disponíveis no comércio eletrônico. Enquanto na \autoref{sub_sub_aplicacoes_ra_projetiva_educacao} apresenta aplicação de RA projetiva em ferramentas educacionais, o mapeamento indica que a técnica não foi explorada no contexto de BPs.
+Este capítulo apresenta trabalhos similaridades ao que se propõe nesta pesquisa. Ele está dividido em três seções. A \autoref{sec_tools} apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A \autoref{sec_rsl} apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. A intenção é compreender quais interfaces são comumente utilizadas, quais são os designs experimentais aplicados e que resultados são obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também chamado de mapeamento industrial sistemático.} sobre as interfaces de BPs que demonstra quais tipos de interface estão disponíveis no comércio eletrônico. %Enquanto na \autoref{sub_sub_aplicacoes_ra_projetiva_educacao} apresenta aplicação de RA projetiva em ferramentas educacionais, o mapeamento indica que a técnica   no contexto de BPs.
 
 \section{Interfaces de Brinquedos Programáveis}
 \label{sec_tools}
-Esta seção tem por objetivo demonstrar trabalhos relacionados ao tema da depuração de algoritmos por crianças. Para isso, identifica as contribuições de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças a partir dos 4 anos), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
+Esta seção tem por objetivo demonstrar interfaces para crianças terem os primeiros contatos com algoritmos utilizando BPs, e também abordem o tema da depuração. Para isso, identifica as características de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças a partir dos 4 anos), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
 
 \begin{enumerate}
-    \item Robo-Blocks: uma interface tangível eletrônica para programação de BPs, com foco em ensino de depuração.
-    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes.
-    \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage aos posicionamento dos objetos físicos em sua superfície. 
-    \item ALERT: interface de programação interativa, na qual o BP interpreta comandos a medida que os detecta via câmera.
+    \item Robo-Blocks: uma interface tangível eletrônica para programação de BPs, com foco em ensino de depuração \cite{sipitakiat_robo-blocks_2012}.
+    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes (\url{https://www.primotoys.com}).
+    \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage aos posicionamento dos objetos físicos em sua superfície \cite{beraza_soft_2010}. 
+    \item ALERT: interface de programação interativa, na qual o BP interpreta comandos a medida que os detecta via câmera \cite{burleson_active_2018}. 
 \end{enumerate}
 
 \subsection{Robo-Blocks}
-O Robo-Blocks, de \citeonline{sipitakiat_robo-blocks_2012}, é um sistema que permite que crianças comandem um BP por meio do encaixe de blocos físicos. Os quatro movimentos básicos do robô são iguais aos do brinquedo RoPE (mover-se para frente, para trás, girar à esquerda e girar à direita), porém as crianças também podem parametrizar a extensão do movimento do robô ajustando um controle giratório presente em cada bloco (\autoref{fig:robo_blocks}). Os blocos são encaixados por conectores magnéticos, formando uma sequência. Essa sequência é encaixada em um bloco principal, que envia os comandos ao BP por comunicação sem fio. O BP, por sua vez, é inspirado na tartaruga do ambiente Logo. Ele tem uma caneta acoplada que permite desenhar formas geométricas, controlada pelos blocos de "pen up" (erguer caneta) e "pen down" (baixar caneta).
+O Robo-Blocks, de \citeonline{sipitakiat_robo-blocks_2012}, é um sistema que permite que crianças comandem um BP por meio do encaixe de blocos eletrônicos. Os quatro movimentos básicos do robô são iguais aos do brinquedo RoPE (mover-se para frente, para trás, girar à esquerda e girar à direita), porém as crianças também podem parametrizar a extensão do movimento do robô ajustando um controle giratório presente em cada bloco (\autoref{fig:robo_blocks}). Os blocos são encaixados por conectores magnéticos, formando uma sequência. Essa sequência se liga a um bloco principal, que envia os comandos ao BP por comunicação sem fio. O BP, por sua vez, é inspirado na tartaruga do ambiente Logo. Ele tem uma caneta acoplada que permite desenhar ao serem utilizados blocos de \textit{"pen up"} (erguer caneta) e \textit{"pen down"} (baixar caneta).
 
 \begin{figure}[!h]
     \centering
@@ -27,7 +27,9 @@ O Robo-Blocks foi inicialmente desenvolvido com uma interface tangível sem aten
 
 Além da execução passo a passo, os autores utilizam "objetos passivos", ou seja, que não influenciam na execução do robô. No caso foi utilizado pequenas bandeiras com as quais a criança identifica os blocos que podem ser a causa de erros. As bandeiras tem ícones de "mais"\ e "menos". Deste modo, a criança pode colocar a bandeira com sinal positivo ao lado do bloco para indicar que o robô deve girar mais ou mover-se mais para frente, por exemplo. 
 
-A avaliação da ferramenta ocorreu com crianças de 5 a 12 anos, e envolveu atividades de programar o robô para desenhar a primeira letra do nome andar em um mapa. Os autores identificaram as crianças precisaram das funções de depuração. As dificuldades em encontrar os erros, segundo eles, estava no fato de que a criança não conseguia observar a cadeia de comandos e robô simultaneamente. Neste sentido, a execução passo a passo foi o modo de execução preferido pelas crianças. O uso das bandeiras para marcar os erros também foi comum, porém os autores ressaltam que devido à linearidade dos programas, a presença de um erro no início da cadeia de blocos interfere em todos os demais, de modo que parecem também estar errados. Essa característica levava as crianças a marcar todos os demais blocos como errôneos. Os pesquisadores precisaram intervir corrigindo a posição do robô manualmente.
+Outro objeto utilizado para auxiliar na depuração foi o protractor. Destinado à solucionar dúvidas com relação à ângulos, é um simples pedaço de papel com um furo no centro, por onde o robô passa. Quando o robô está parado, a criança coloca o protractor na mesa, sobre o robô. Ao redor do furo há marcações de ângulos, de modo que a criança consegue estimar o quanto o robô precisa se mover relativo à sua direção atual.
+
+Testes com o Robo-Blocks ocorreram com crianças de 5 a 12 anos, porém o estudo formal focou em crianças de 8 a 9. Esse estudo consistiu em atividades de programar o robô para desenhar a primeira letra do nome e andar em um mapa. Os autores identificaram que as crianças tiveram dificuldades em concluir as atividades e recorreram às funções de depuração. Um problema estava no fato de a criança não conseguir observar a cadeia de comandos e robô simultaneamente. Neste sentido, a execução passo a passo foi o modo de preferido pelas crianças. O uso das bandeiras para marcar os erros também foi comum, porém os autores ressaltam que a presença de um erro no início da cadeia de blocos interfere em todos os demais movimentos do robô, de modo que parecem também estar errados. Essa característica levava as crianças a marcar todos os demais blocos como errados. Neste caso os pesquisadores precisaram intervir corrigindo a posição do robô manualmente.
 
 \subsection{Cubetto}
 \label{sub_sec:cubetto}
@@ -77,7 +79,7 @@ Uma atividade de demonstração permite entender as potencialidades da tecnologi
 
 Nessa demonstração cada quadrado do mapa contém uma forma geométrica de cor e tamanho variado. Isso possibilita que a criança exercite a classificação e abstração. A classificação seria a habilidade de identificar propriedades ou categorias, e relacionar essas categorias ou classes entre si. Nessa atividade, a criança classifica formas geométricas por propriedades como cor, formato e tamanho. Assim, a criança aprende abstrair e observar apenas as propriedades relevantes para formar uma categoria. Esse mesmo tipo de tapete com formas geométricas é utilizado pelo brinquedo RoPE, porém em seu formato físico.
 
-\subsection {ALERT}
+\subsection{ALERT}
 
 O ALERT \cite{burleson_active_2018}, assim como os trabalhos anteriores, é uma interface de programação de brinquedos programáveis. O seu diferencial é que o robô interpreta os comandos a medida que ficam acessíveis no seu campo de visão. Cada robô possui uma câmera, que detecta novos comandos quando o robô se move. Por exemplo, se o robô anda para frente e capta o comando “vire 90º à direita”, ele interpreta e executa esta ação. Nisto percebe-se o princípio do feedback imediato defendido por \citeonline{norman_design_1988}. Quando o brinquedo o executa o comando logo ao detectá-lo fica claro qual comando provocou qual resultado.
 
@@ -97,29 +99,35 @@ Com relação à depuração, a programação interativa se apresenta como um di
 
 \subsection{Análise Comparativa}
 
+%%%%%%%%%%%%%%%%%
+As seções anteriores apresentaram quatro trabalhos relacionados com programação de brinquedos programáveis por crianças. Além disso, todos tem alguma característica relacionada à depuração de algoritmos. Esta seção compara estes trabalhos entre si quanto às seguintes característica: idade do público-alvo, tipo de interface, e depuração (\autoref{quadro:comparision}). Por fim, os trabalhos são posicionados em relação à solução proposta.
+
+Em relação ao público-alvo, o Robo-Blocks foca em crianças de 8 a 9 anos, pois nesta idade as crianças geralmente conseguem ler \cite{committee_on_the_prevention_of_reading_difficulties_in_young_children_preventing_1998}. A habilidade de ler e compreender números é necessária para a criança conseguir programar o ângulo do giro do robô. Em contrapartida, o Cubetto, a Bee-Bot e o ALERT, não tem caracteres ou números, e por isso consegue atender um público a partir dos 4 ou 6 anos.
+
+Com relação ao tipo de interface, todos os trabalhos utilizam interface tangível, porém seguindo diferentes abordagens. O Robo-Blocks tem blocos eletrônicos, que são encaixados entre si e possuem um display que mostra o tamanho do avanço ou giro. O Cubetto também é programado por blocos tangíveis, porém a parte eletrônica está no painel onde os blocos são encaixados. Isso possivelmente diminui o custo com blocos e centraliza os possíveis problemas eletrônicos no painel. A Bee-Bot, por sua vez, não é programada por blocos, mas sua interface de botões é tangível \cite{}
+
+%Quais são as ações possíveis? Qual o estado atual? Qual o resultado de cada ação?
+
 {{\renewcommand{\arraystretch}{1.5}
-    \begin{footnotesize}
-    
-        \begin{quadro}[!h]
-        \begin{tabularx}{\textwidth}{ @{} p{.2\linewidth} p{.1\linewidth} X X  @{} }
-        \toprule
-        Projeto ou ferramenta       & Idade do público-alvo & Tipo de interface                & Depuração                                                  \\ \midrule
-        
-        Robo-Blocks                 & 5 a 12 anos           & Tangível com blocos eletrônicos  & Execução passo a passo, protractor e marcadores de erros   \\ \hline
-        Cubetto                     & 4 a 8 anos            & Tangível com painel eletrônico   & Destaca blocos em execução                                 \\ \hline
-        Bee-Bot com mesa interativa & 4-5 a 12-14 anos      & Tangível com botões              & Mostra caminho percorrido                                  \\ \hline
-        ALERT                       & 6 anos                & Tangível com projeção            & Permite alterar o comportamento do robô durante a execução \\ \bottomrule
-        
-        \end{tabularx}
+    \begin{quadro}[!h]
         \caption{Análise comparativa.}
+        \vspace{-15pt}
+        \begin{tabularx}{\textwidth}{ @{} | p{.2\linewidth} | p{.1\linewidth} | X | X | @{} }
+        \hline
+        \textbf{Projeto ou ferramenta}  & \textbf{Idade do público-alvo}  & \textbf{Tipo de interface}       &\textbf{Depuração}                                          \\ \hline
+        
+        Robo-Blocks                     & 8 a 9 anos                      & Tangível com blocos eletrônicos  & Execução passo a passo, protractor e marcadores de erros   \\ \hline
+        Cubetto                         & 4 a 8 anos                      & Tangível com painel eletrônico   & Destaca blocos em execução                                 \\ \hline
+        Bee-Bot com mesa interativa     & 4-5 a 12-14 anos                & Tangível com botões              & Mostra caminho percorrido                                  \\ \hline
+        ALERT                           & 6 anos                          & Tangível com projeção            & Permite alterar o comportamento do robô durante a execução \\ \hline
+        Este trabalho                   & 4 a 6 anos                      & Tangível com projeção            & Destaca blocos em execução                                 \\ \hline
+        \end{tabularx}
+        \vspace{-10ppt}
         \sourceauthor
-        \label{tab:comparision}
-        \end{quadro}
+        \label{quadro:comparision}
+    \end{quadro}
 
-    \end{footnotesize}
 }
-
-Esta seção compara os quatro trabalhos similares listados anteriormente. 
 
 Esta pesquisa analisou três classes de trabalhos similares. Primeiramente buscou artigos sobre uso de brinquedos programáveis em atividades com crianças de \idadeinicial a \idadefinal anos, dos quais foram identificados os métodos e aprendizados resultantes. A seguir foi realizado um mapeamento industrial, onde foram analisados 56 brinquedos programáveis construídos por empresas que vendem ou planejam vender esses brinquedos. A terceira classe de trabalhos
 

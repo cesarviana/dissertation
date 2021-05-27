@@ -29,6 +29,9 @@ Como era decidido se a criança compreendeu ou não?
     
     Deste modo, a criança concentra sua visão no robô, e esquece dos blocos. Em ...% das execuções, o olhar esteve direcionado ao robô. 
 
+    Sipitakiat
+        "Without this function (step by step), children had to choose whether to pay attention to the floor robot or to the command blocks." Por isso criaram uma função de execução passo a passo.
+
 - Preferem apertar os botões
 - Ficaram intrigados com o fato da maçã sumir e viraram o brinquedo pra ver se estava dentro dele
 - Os blocos precisam estar perto do brinquedo pra facilitar a programação
