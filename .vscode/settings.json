@@ -1,0 +1,33 @@
+{
+    "cSpell.language": "pt,en",
+    "cSpell.words": [
+        "Cubetto",
+        "JNICALL",
+        "JNIEXPORT",
+        "KUMIITA",
+        "Meizu",
+        "Redmi",
+        "Robo",
+        "Sphero",
+        "Thymio",
+        "Univali",
+        "Xiaomi",
+        "addi",
+        "cmds",
+        "detecta",
+        "detectadas",
+        "jint",
+        "jobject",
+        "modulariza",
+        "modularização",
+        "o",
+        "prototipa",
+        "prototipação",
+        "renderscript",
+        "textregistered",
+        "textsuperscript",
+        "topcodes"
+    ],
+    "editor.fontFamily": "'Times','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "monospace"
+}
