@@ -1,12 +1,12 @@
 \chapter{Desenvolvimento}
 \label{c_desenvolvimento}
 
-Este capítulo apresenta a interface desenvolvida. Primeiramente a \autoref{sec:elementos_interface} descreve a interface do ponto de vista do usuário, ou seja, os elementos com os quais a criança ou o adulto interagem. A seguir a \autoref{sec:detalhes_tecnicos} traz detalhes técnicos, como a comunicação Bluetooth entre smartphone e robô e as tecnologias utilizadas.
+Este capítulo apresenta a interface desenvolvida, denominada de RoPE AR. Primeiramente a \autoref{sec:elementos_interface} descreve a interface do ponto de vista do usuário, ou seja, os elementos com os quais a criança ou o adulto interagem. A seguir a \autoref{sec:detalhes_tecnicos} traz detalhes técnicos das tecnologias utilizadas, como a comunicação Bluetooth entre smartphone e robô.
 
 \section{Elementos da interface}
 \label{sec:elementos_interface}
 \subsection{Aplicativo}
-A interação inicial ocorre quando um adulto usa o aplicativo para conectar o smartphone com o RoPE. A primeira tela permite conectar o smartphone ao brinquedo (\autoref{fig:app_connection}). Essa tela mostra um desenho do RoPE e uma lupa indicando a procura pelo brinquedo, ou seja, a conexão com o brinquedo físico. Gravações de uma voz guiam o usuário para que ligue o RoPE acionando seu botão inferior e informam quando a conexão foi estabelecida. No momento da conexão o brinquedo também emite um \textit{feedback} sonoro e luminoso para indicar conexão concluída.
+A interação inicial ocorre quando um adulto usa o aplicativo para conectar o smartphone com o RoPE. Ele é constituído de apenas duas telas. A primeira tela permite conectar o smartphone ao brinquedo (\autoref{fig:app_connection}). Ela mostra um desenho do RoPE e uma lupa indicando a procura pelo brinquedo, ou seja, a conexão com o brinquedo físico. Gravações de uma voz guiam o usuário para que ligue o RoPE acionando seu botão inferior e informam quando a conexão foi estabelecida. Ao se conectar o brinquedo também emite um \textit{feedback} sonoro e luminoso como \i{feedback}.
 
 \begin{figure}[!h]
     \begin{subfigure}{.5\textwidth}
@@ -25,9 +25,11 @@ A interação inicial ocorre quando um adulto usa o aplicativo para conectar o s
     \label{fig:app_screens}
 \end{figure}
 
-Após a conexão com o brinquedo, o aplicativo mostra um desafio contendo uma sequência de mapas (\autoref{fig:app_game}). Cada mapa mostra um caminho, uma posição inicial (circulo verde) e um ou mais itens a serem coletados pelo brinquedo. No lado direito há um retângulo branco onde os blocos físicos podem ser posicionados, dado que a projeção em branco facilita a identificação das marcas fiduciais dos blocos. Por fim, o último elemento da tela são círculos vermelhos que indicam quais blocos fazem parte do algoritmo a ser executado pelo brinquedo. 
+A segunda tela aparece após a conexão com o brinquedo. Ela apresenta um desafio contendo uma sequência de mapas (\autoref{fig:app_game}). Cada mapa tem um caminho, uma posição inicial (circulo verde) e um ou mais itens coletáveis. Na direita da tela há um retângulo branco. Ao ser projetada, a cor branca não interfere nas características visuais dos blocos físicos. Manter essas características auxilia na identificação das marcas fiduciais. Por fim, o último elemento da tela são círculos vermelhos que indicam quais blocos fazem parte do algoritmo a ser executado pelo brinquedo. 
 
-Ao sequenciar os blocos físicos a criança programa o brinquedo. O aplicativo identifica o posicionamento dos blocos e verifica se há algum algoritmo criado. Em caso positivo, a luz emitida pelo projetor destaca os blocos do algoritmo. Quando o brinquedo coleta todos os itens, o aplicativo reproduz uma gravação que parabeniza a criança, e mostra o próximo desafio. Caso não existam mais mapas, uma gravação sinaliza que a brincadeira acabou.
+Relembrando, a criança não interage com o aplicativo. Toda interação ocorre com o RoPE e com blocos físicos, posicionados no chão. A criança cria algoritmos ao sequenciar os blocos físicos, que são identificados pelo App. Caso exista um algoritmo válido, a luz emitida pelo projetor destaca os blocos do algoritmo.
+
+O brinquedo executa o algoritmo quando a criança pressiona seu botão verde. Ao executar o programa, o brinquedo se move e o aplicativo capta as posições percorridas. Deste modo, consegue identificar se o brinquedo colidiu ou não nos itens coletáveis do mapa. Quando o brinquedo coleta todos os itens, o aplicativo reproduz uma gravação de parabenização, e mostra o mapa seguinte. Caso não existam outros mapas, uma gravação sinaliza que a brincadeira acabou.
 
 \subsection{Elementos tangíveis}
 A interface possui quatro tipos de elementos tangíveis: o brinquedo RoPE, os blocos de código, os marcadores de calibragem, e o ativador de depuração  (\autoref{fig:tangible_elements}).
@@ -49,7 +51,7 @@ Todos os elementos tangíveis possuem marcas fiduciais de 4cm de diâmetro. Essa
 \section{Aspectos técnicos}
 \label{sec:detalhes_tecnicos}
 \subsection{Arquitetura}
-A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo RoPE, um servidor web e um projetor \autoref{fig:system_overview}. Estes dispositivos se comunicam por meio de conexão Bluetooth e Wi-Fi para envio de dados como as ações executadas pelo brinquedo e as imagens a serem mostradas no tapete.  A seções seguintes apresentam cada um destes componentes.
+A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo RoPE, um servidor web e um projetor (\autoref{fig:system_overview}). Estes dispositivos se comunicam por meio de conexão sem fio. Nesta comunicação os dados enviados são as ações executadas pelo brinquedo e as imagens a serem mostradas no tapete.  A seções seguintes apresentam cada um destes componentes.
 
 \begin{figure}
     \centering
@@ -59,10 +61,9 @@ A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo 
 \end{figure}
 
 \subsection{Smartphone}
-Um smartphone com sistema operacional Android é o componente central da interface, pois coordena a comunicação com os outros dispositivos. Dois aplicativos precisam estar ativos para o funcionamento da interface. O primeiro aplicativo transmite a tela do smartphone ao projetor via Wi-Fi, pois o projetor disponível não recebe a imagem da tela do smartphone por USB. O segundo aplicativo foi desenvolvido neste trabalho, e é responsável pela comunicação com o brinquedo RoPE, com o servidor da plataforma CT Puzzle, e também pela captura e processamento de imagens.
+Um smartphone com sistema operacional Android é o componente central da arquitetura, pois coordena a comunicação com o projetor e o servidor web. Dois aplicativos permanecem ativos para o funcionamento no smartphone. O primeiro aplicativo transmite a tela do smartphone ao projetor via Wi-Fi. O segundo, desenvolvido neste trabalho, é responsável pela comunicação com o brinquedo RoPE, com o servidor da plataforma CT Puzzle, e também pela captura e processamento de imagens.
 
 Cinco módulos compõem a arquitetura de software deste aplicativo. O módulo de detecção de blocos, o módulo de análise dos blocos, o módulo de comunicação com o RoPE, o módulo de câmera e, por fim, o módulo de registro de interações (log). As próximas seções apresentam os 
-
 
 O diagrama de sequência da \autoref{fig:sequence_diagram} mostra classes pertencentes a esses módulos sendo invocadas. O controle principal solicita o início da captação de imagens, que utiliza conversão de formato YUV para RGB (explicado na \autoref{sec:camera}). Depois da obtenção de imagem RGB, ocorre a identificação dos objetos tangíveis presentes na cena. Por fim ocorre a análise do posicionamento dos objetos para gerar feedbacks visuais. As próximas três seções apresentam detalhes de implementação destes módulos.
 

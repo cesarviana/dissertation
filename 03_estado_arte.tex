@@ -99,14 +99,14 @@ Com relação à depuração, a programação interativa se apresenta como um di
 
 \subsection{Análise Comparativa}
 
-%%%%%%%%%%%%%%%%%
-As seções anteriores apresentaram quatro trabalhos relacionados com programação de brinquedos programáveis por crianças. Além disso, todos tem alguma característica relacionada à depuração de algoritmos. Esta seção compara estes trabalhos entre si quanto às seguintes característica: idade do público-alvo, tipo de interface, e depuração (\autoref{quadro:comparision}). Por fim, os trabalhos são posicionados em relação à solução proposta.
+As seções anteriores apresentaram quatro trabalhos relacionados com programação de brinquedos programáveis por crianças.. Esta seção compara estes trabalhos quanto às seguintes característica: idade do público-alvo, tipo de interface, e depuração (\autoref{quadro:comparision}). Por fim, os trabalhos são posicionados em relação à solução proposta.
 
 Em relação ao público-alvo, o Robo-Blocks foca em crianças de 8 a 9 anos, pois a criança precisa entender basicamente o significado dos algarismos numéricos ao parametrizar o ângulo do giro do robô, e nesta idade as crianças normalmente aprenderam ler \cite{committee_on_the_prevention_of_reading_difficulties_in_young_children_preventing_1998}. Em contrapartida, o Cubetto, a Bee-Bot\footnote{Existem versões com texto nos botões \it{clear}, \it{go} e \it{pause}, mas os botões provocam sempre o mesmo comportamento. Mesmo que não saiba ler, a criança consegue mapear a ação do botão com sua funcionalidade.} e o ALERT não dependem diretamente de números, e por isso consegue atender um público a partir dos 4 ou 6 anos.
 
-Com relação ao tipo de interface, todos os trabalhos utilizam interface tangível, mas seguindo diferentes abordagens. O Robo-Blocks tem blocos eletrônicos, que são encaixados entre si e possuem um display que mostra o tamanho do avanço ou giro. O Cubetto também é programado por blocos tangíveis, porém a parte eletrônica está no painel onde os blocos são encaixados. Isso possivelmente diminui o custo com blocos em relação ao Robo-Blocks, e centraliza possíveis problemas eletrônicos no painel. O ALERT tem blocos ainda mais simples. Por captar qualquer tipo de marca fiducial, foram usadas folhas de papel com as marcas impressas, o que tente a ser mais barato e fácil de produzir em relação às outras ferramentas. A Bee-Bot, por sua vez, não é programada por blocos, mas sua interface de botões é tangível \cite{yu_review_2019}, bem como os elementos usados para controlar a mesa de realidade aumentada. Diferente das outras ferramentas, a Bee-Bot não favorece a visibilidade do algoritmo. Apesar das diferentes abordagens utilizadas, todos os trabalhos mencionam engajamento das crianças durante as interações, sejam elas com blocos eletrônicos ou com as folhas de papel.
+Com relação ao tipo de interface, todos os trabalhos utilizam interface tangível, mas seguindo diferentes abordagens. O Robo-Blocks tem blocos eletrônicos, que são encaixados entre si e possuem um display que mostra o tamanho do avanço ou giro. A programação do Cubetto também se dá por blocos tangíveis, porém sem visores e controles ajustáveis. Tudo o que a criança faz é encaixar os blocos em um painel. O ALERT tem blocos ainda mais simples. Foram usadas folhas de papel com as marcas fiduciais impressas, o que tente a ser mais barato e fácil de reproduzir. Por fim, a interface tangível da Bee-Bot não tem blocos, mas sim botões  \cite{yu_review_2019}. Apesar das diferentes abordagens, todos os trabalhos mencionam engajamento das crianças durante as interações, sejam elas com blocos eletrônicos, com as folhas de papel ou com os botões.
 
-%Quais são as ações possíveis? Qual o estado atual? Qual o resultado de cada ação?
+Por fim, em relação à depuração, o Robo-Blocks é a interface com maior foco em facilitar a atividade de encontrar erros em algoritmos. Isso se dá por duas características: marcadores físicos (bandeiras) para indicar possíveis erros, e a função de execução passo a passo.
+No ALERT, os elementos de execução passo a passo são menos necessários. O brinquedo se move lentamente, e com isso há mais tempo para a criança olhar os comandos e comparar com os movimentos do robô. Além disso, o algoritmo pode ser alterado durante a execução. Se um comando desvia o brinquedo da rota, os passos subsequentes podem ser alterados para reajustá-la. A associação entre comando e ação também é mais óbvia no ALERT, pois o brinquedo precisa se aproximar do comando a ser executado. Quando um erro ocorre, fica claro qual foi o comando responsável. Quando os blocos eletrônicos ficam distântes do brinquedo esse mapeamento entre comando e ação é menos óbvio. Segundo  \citeonline{sipitakiat_robo-blocks_2012} as funções de depuração foram uma tentativa de resolver esse problema de mapeamento. A depuração no Cubetto é similar ao Robo-Blocks, pois o painel de programação fica distante do robô. Além disso o Cubetto não tem execução passo a passo. Por fim, a interface de RA utilizada com a Bee-Bot  \cite{beraza_soft_2010} não tem visibilidade de código e nem funções de execução passo a passo, mas é similar ao trabalho aqui apresentado devido às tecnologias empregadas.
 
 {{\renewcommand{\arraystretch}{1.5}
     \begin{quadro}[!h]
@@ -118,58 +118,20 @@ Com relação ao tipo de interface, todos os trabalhos utilizam interface tangí
         
         Robo-Blocks                     & 8 a 9 anos                      & Tangível com blocos eletrônicos  & Execução passo a passo, protractor e marcadores de erros   \\ \hline
         Cubetto                         & 4 a 8 anos                      & Tangível com painel eletrônico   & Destaca blocos em execução                                 \\ \hline
-        Bee-Bot com mesa interativa     & 4-5 a 12-14 anos                & Tangível com botões              & Mostra caminho percorrido                                  \\ \hline
+        Bee-Bot com mesa interativa     & 4-5 a 12-14 anos                & Tangível com botões              & -                                  \\ \hline
         ALERT                           & 6 anos                          & Tangível com projeção            & Permite alterar o comportamento do robô durante a execução \\ \hline
-        Este trabalho                   & 4 a 6 anos                      & Tangível com projeção            & Destaca blocos em execução                                 \\ \hline
+        RoPE AR                   & 4 a 6 anos                      & Tangível com projeção            & Destaca blocos em execução                                 \\ \hline
         \end{tabularx}
-        \vspace{-10ppt}
+        \vspace{-10pt}
         \sourceauthor
         \label{quadro:comparision}
     \end{quadro}
-
 }
 
-Esta pesquisa analisou três classes de trabalhos similares. Primeiramente buscou artigos sobre uso de brinquedos programáveis em atividades com crianças de \idadeinicial a \idadefinal anos, dos quais foram identificados os métodos e aprendizados resultantes. A seguir foi realizado um mapeamento industrial, onde foram analisados 56 brinquedos programáveis construídos por empresas que vendem ou planejam vender esses brinquedos. A terceira classe de trabalhos
+Os trabalhos apresentados usam diferentes abordagens visando o mesmo objetivo: facilitar os primeiros contatos de crianças com algoritmos. Os quatro trabalhos aplicam interfaces tangíveis, mas de diferentes formas: há o uso de painel, blocos e botões. Assim como estes, o RoPE AR também usa interface tangível. A diferença está na união do tangível com a realidade aumentada. O trabalho de \citeonline{beraza_soft_2010} e o ALERT também aplicam RA, mas não há associação entre elementos os virtuais e os blocos que formam o algoritmo. Isso não significa uma desvantagem dos trabalhos citados, mas aponta uma lacuna de investigação a que este trabalho busca preencher.
 
-.
-
-Esta pesquisa se difere da primeira classe de trabalhos (\autoref{quadroartigosrsl}) quanto à fonte de dados para análise. As pesquisas apresentadas avaliam notas e vídeos. A presente pesquisa pretende coletar automaticamente interações ocorridas com o brinquedo. Outra diferença é que as pesquisas da primeira classe verificaram o impacto de uma ferramenta no aprendizado de aspectos do PC ou compararam duas ferramentas. Este trabalho, por sua vez, compara o mesmo brinquedo em duas situações: estando ou não associado a uma ferramenta de projeção de comandos.
-
-A segunda classe são brinquedos disponíveis comercialmente, nos quais se analisou os tipos de interface, o uso de realidade aumentada e os conceitos de algoritmos abordados. O mapeamento apontou apenas dois brinquedos usando realidade aumentada (o Augie e o Botzees), no modo \textit{window-on-the-world}, por meio de \textit{tablets} e \textit{smartphones}. A realidade aumentada utilizada neste trabalho é o modo projetivo, em que a criança deve interagir com uma interface tangível combinados com objetos virtuais projetados e não deve ter contato com telas sensíveis ao toque.
-
-A terceira classe apresenta quatro tipos de interface. O ARBlocks é uma interface de realidade aumentada; o Go Robot Mouse é um brinquedo tangível programado por botões; o Big Hero: Code Baymax é um jogo de interface gráfica; e o ALERT é uma interface de programação espacial.
-
-Esses trabalhos tem semelhanças e diferenças com esta pesquisa (\autoref{quadro:relacionados}). Quanto às semelhanças, os trabalhos 2, 3 e 4 utilizam alguma forma de representação espacial do algoritmo a ser executado, assim como a presente pesquisa. Os trabalhos 1 e 4 utilizam projeção dos comandos, assim como a ferramenta aqui proposta. Quanto às diferenças, nenhuma das ferramentas possibilita inserir comandos por meio de botões ou de interface tangível. 
-
-Por fim, esse capítulo ressalta três aspectos. (i) O mapeamento industrial não apontou uso de realidade aumentada projetiva com brinquedos programáveis. Entretanto (ii) os trabalhos relacionados demonstram que usar projeção em interfaces de programação é viável e abre novas possibilidades de interação, como a programação espacial descrita por \citeonline{burleson_active_2018}. Além disso, o mapeamento indicou (iii) uso de interfaces tangíveis por 55\% dos brinquedos. A proposta apresentada no \autoref{c_desenvolvimento} considera esses três aspectos e busca representar um tipo inovador de interação, ou, ao menos, contribuir com pesquisas que indiquem a adequação da realidade aumentada projetiva aplicada à interfaces de brinquedos programáveis.
-
-\begin{quadro}[!htbp]
- \begin{longtable}{p{3cm} p{4cm} p{4cm} p{4cm} }
- \hline
- 
- Publicação & Tipo de Interface & Vantagens & Desvantagens \\ \hline
- \endhead
- 1 - ARBlocks \citeonline{roberto_dynamic_2013} & 
- Tangível projetiva de realidade aumentada. Usuário interage por meio de blocos e o sistema projeta imagens sobre os blocos. & 
- Facilidade em criar aplicações com os mesmos blocos físicos. Atração da atenção dos estudantes. & 
- Necessita de ajuste fino da luminosidade do ambiente. \\ \hline
- 
-4- ALERT
-\citeonline{burleson_active_2018} &
-Tangível espacial. Usuário posiciona marcas fiduciais no caminho do robô e ele interpreta e executa. &
-Possibilidade de alterar o algoritmo em tempo de execução. Facilidade em criar comandos sem alterar o hardware do brinquedo. &
-As marcas fiduciais não tem significado visível ao olhar humano. \\ \hline
-
-Esta pesquisa &
-Tangível (botões do brinquedo) projetiva. Usuário interage por meio dos botões do brinquedo e sistema projeta algoritmo no caminho do brinquedo. &
-Tangibilidade do meio de inserção (botões) e facilidade em ver o caminho a ser percorrido pelo brinquedo sobre o mapa físico. &
-Possível oclusão das marcas fiduciais. Falta de significado das marcas fiduciais para o olhar humano. \\ \hline
-
- \end{longtable}
- \caption{Trabalhos relacionados.}
- \label{quadro:relacionados}
- \sourceauthor
-\end{quadro}
+Outro diferença do RoPE AR é a tentativa de facilitar a instalação e o transporte. Isso é importante para produtos a serem usados em sala de aula. O trabalho de \citeonline{beraza_soft_2010} necessita de uma mesa com tampa semitransparente e de um notebook. O RoPE AR, por outro lado, utiliza apenas um suporte para o projetor, um projetor pequeno e um smartphone. 
+Por fim, um último diferencial é que no RoPE AR a projeção ocorre por cima, o que permite projetar não apenas figuras numa superfície inferior aos elementos tangíveis, mas também \it{sobre} eles.
 
 \section{Revisão Sistemática: Pesquisas de IHC com crianças}
 \label{sec_rsl}
@@ -347,7 +309,7 @@ As amostras utilizadas foram de conveniência, com experimentos realizados nos a
 
 Os trabalhos citam principalmente o aprendizado de sequenciamento e de algoritmos em geral. \citeonline{pila_learning_2019}, após a interação de um conjunto de crianças durante 5 dias com os aplicativos Daisy e Kodable, perguntaram às crianças “O que é programar?”. A nota máxima foi dada a respostas que apresentavam a ideia de causa e efeito aplicável à tecnologia em geral, por exemplo “programar é colocar código em algo para que faça alguma ação”. Os resultados indicaram que as crianças não evoluíram na capacidade de expressar verbalmente seu entendimento de codificação.
 
-Um outro aspecto da compreensão algorítmica avaliado por \citeonline{repiso_robotics_2019} e \citeonline{pila_learning_2019} é a compreensão dos símbolos da interface. \citeonline{repiso_robotics_2019} investigaram a compreensão sobre a correspondência entre ação e instrução, que significa relacionar qual ação o robô executa em correspondência a um símbolo da instrução. A partir das rubricas os pesquisadores identificaram uma evolução significativa no grupo experimental. \citeonline{pila_learning_2019} mostrou quatro símbolos da interface do aplicativo Daisy para as criaças e solicitou que explicassem verbalmente o significado do símbolo. No pré-teste a média de acerto foi de 0.5 e no pós-teste esse valor subiu para 2.3.
+Um outro aspecto da compreensão algorítmica avaliado por \citeonline{repiso_robotics_2019} e \citeonline{pila_learning_2019} é a compreensão dos símbolos da interface. \citeonline{repiso_robotics_2019} investigaram a compreensão sobre a correspondência entre ação e instrução, que significa mapear qual ação o robô executa em correspondência a um símbolo. A partir das rubricas os pesquisadores identificaram uma evolução significativa no grupo experimental. \citeonline{pila_learning_2019} mostrou quatro símbolos da interface do aplicativo Daisy para as crianças e solicitou que explicassem verbalmente o significado do símbolo. No pré-teste a média de acerto foi de 0.5 e no pós-teste esse valor subiu para 2.3.
 
 \citeonline{nam_connecting_2019} avançaram nessa compreensão e utilizaram um instrumento para captar a compreensão de sequências. O instrumento utilizado solicita que crianças organizem 4 imagens que mostram eventos sequenciais, dada a imagem inicial. Os resultados apontaram evolução significativa na pontuação de sequenciamento para o grupo experimental.
 
@@ -580,11 +542,6 @@ Outros dois conceitos interligados são condicionais e eventos. 66\% dos brinque
 
 Conceitos mais avançados, como paralelismo, recursividade e vetores são suportados pelos brinquedos que tem interfaces de código textual, com suporte a linguagens de propósito geral. Recursividade e vetores são conceitos suportados por 23\% dos brinquedos.
 
-%\section{Comparação dos Trabalhos Relacionados}
-%\label{s_c3_comparacao}
+\section{Considerações}
 
-%Nesta seção, apresente a análise comparativa dos trabalhos selecionados caracterizando-os em um quadro (conforme exemplificado no \autoref{q_c3-trabalhos}) e posicionando o seu trabalho em relação a eles (na última coluna). Dependendo da quantidade de trabalhos analisados, pode ser necessário elaborar mais de um quadro ou definir uma seção com página no formato paisagem.
-
-%Mesmo que você ainda não tenha apresentado os resultados da sua dissertação no texto, isso conduzirá o restante da leitura, permitindo que você indique a contribuição de cada um dos trabalhos para a solução do problema de pesquisa da sua dissertação e evidencie a sua contribuição, e o diferencial do seu trabalho em relação aos demais. Isso deve ser feito por meio de um texto de discussão apoiado pelos dados apresentados no quadro.
-
-\section{
+Por fim, esse capítulo ressalta três aspectos. (i) O mapeamento industrial não apontou uso de realidade aumentada projetiva com brinquedos programáveis. Entretanto (ii) os trabalhos relacionados demonstram que usar projeção em interfaces de programação é viável e abre novas possibilidades de interação, como a programação espacial descrita por \citeonline{burleson_active_2018}. Além disso, o mapeamento indicou (iii) uso de interfaces tangíveis por 55\% dos brinquedos. A proposta apresentada no \autoref{c_desenvolvimento} considera esses três aspectos e busca representar um tipo inovador de interação, ou, ao menos, contribuir com pesquisas que indiquem a adequação da realidade aumentada projetiva aplicada à interfaces de brinquedos programáveis.
