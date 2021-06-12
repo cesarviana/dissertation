@@ -53,48 +53,63 @@ Todos os elementos tangíveis possuem marcas fiduciais de 4cm de diâmetro. Essa
 \subsection{Arquitetura}
 A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo RoPE, um servidor web e um projetor (\autoref{fig:system_overview}). Estes dispositivos se comunicam por meio de conexão sem fio. Nesta comunicação os dados enviados são as ações executadas pelo brinquedo e as imagens a serem mostradas no tapete.  A seções seguintes apresentam cada um destes componentes.
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[width=.8\linewidth,fbox]{figs/system_overview.png}
     \caption{Visão geral dos componentes do sistema.}
     \label{fig:system_overview}
 \end{figure}
 
-\subsection{Smartphone}
-Um smartphone com sistema operacional Android é o componente central da arquitetura, pois coordena a comunicação com o projetor e o servidor web. Dois aplicativos permanecem ativos para o funcionamento no smartphone. O primeiro aplicativo transmite a tela do smartphone ao projetor via Wi-Fi. O segundo, desenvolvido neste trabalho, é responsável pela comunicação com o brinquedo RoPE, com o servidor da plataforma CT Puzzle, e também pela captura e processamento de imagens.
+\subsubsection{Smartphone}
+Um smartphone com sistema operacional Android é o componente central, pois coordena a comunicação com o projetor e o servidor web. Dois aplicativos permanecem ativos no smartphone. O primeiro aplicativo é o Mirroring 360, que transmite a tela do smartphone ao projetor via Wi-Fi. Esse aplicativo está disponível na loja de aplicativos da Google, e há diversos aplicativos similares que executam a mesma função. O Mirroring 360 foi selecionado por ser gratuito e não mostrar anúncios.
 
-Cinco módulos compõem a arquitetura de software deste aplicativo. O módulo de detecção de blocos, o módulo de análise dos blocos, o módulo de comunicação com o RoPE, o módulo de câmera e, por fim, o módulo de registro de interações (log). As próximas seções apresentam os 
+O segundo aplicativo foi desenvolvido neste trabalho. Ele tem as funções de:
+\begin{itemize}
+    \item gerar o cenário virtual
+    \item captar os blocos tangíveis e, se houver um algoritmo, enviá-lo ao RoPE
+    \item detectar colisões entre o RoPE e os elementos virtuais coletáveis
+    \item enviar os eventos ocorridos para a CtPuzzle Platform
+\end{itemize}
 
-O diagrama de sequência da \autoref{fig:sequence_diagram} mostra classes pertencentes a esses módulos sendo invocadas. O controle principal solicita o início da captação de imagens, que utiliza conversão de formato YUV para RGB (explicado na \autoref{sec:camera}). Depois da obtenção de imagem RGB, ocorre a identificação dos objetos tangíveis presentes na cena. Por fim ocorre a análise do posicionamento dos objetos para gerar feedbacks visuais. As próximas três seções apresentam detalhes de implementação destes módulos.
+Para isso, o aplicativo é dividido em cinco módulos: Câmera, Detecção de blocos, Análise dos blocos, Registro de interações, e Comunicação com o RoPE . As próximas seções seções apresentam detalhes de implementação destes módulos.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\textwidth,fbox]{figs/sequence_diagram.png}
-    \caption{Diagrama de sequência: obtenção de imagem, identificação dos topcodes e análise dos elementos tangíveis.}
-    \label{fig:sequence_diagram}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.95\textwidth,fbox]{figs/sequence_diagram.png}
+%    \caption{Diagrama de sequência: obtenção de imagem, identificação dos topcodes e análise dos elementos tangíveis.}
+%    \label{fig:sequence_diagram}
+%\end{figure}
 
-\subsubsection{Módulo de câmera}
+\subsubsubsection{Módulo de Câmera}
 \label{sec:camera}
 
-O módulo de câmera capta imagens utilizadas na identificação de blocos. O sistema operacional Android tem dois modos de capturar imagens. O modo fotografia obtém imagens com mais resolução, porém é lento\footnote{Entre meio segundo e um segundo.}. O modo vídeo obtém um fluxo contínuo de imagens, porém com em menor resolução. A \autoref{tab:resolutions} mostra as resoluções disponíveis para os dois smartphones utilizados neste projeto. Enquanto o M5c produz imagens de 1280 x 720 pixeis, o Redmi 8 produz imagens de 1920 x 1080 pixeis.
+%O diagrama de sequência da \autoref{fig:sequence_diagram} mostra classes desses módulos sendo invocadas. O controle principal solicita o início da captação de imagens, que utiliza conversão de formato YUV para RGB (explicado na \autoref{sec:camera}). Depois da obtenção de imagem, ocorre a identificação dos objetos tangíveis presentes na cena. Por fim ocorre a análise do posicionamento dos objetos para gerar feedbacks visuais.
 
-{\renewcommand{\arraystretch}{1.5}
+A câmera capta as imagens utilizadas na identificação dos elementos tangíveis, com os quais a criança interage. Para essa captação o sistema operacional Android oferece dois modos de acesso à câmera: fotografia e vídeo. O modo fotografia obtém imagens com mais resolução, porém imagens maiores também precisam de mais tempo de processamento \footnote{O tempo entre captura e processamento ficou entre 0.5 a 1 segundo no modo fotografia. Essa medição ocorreu por meio de logs com o dispositivo M5c.}. O modo vídeo obtém um fluxo contínuo de imagens, porém em menor resolução. Esta pesquisa usou dois smartphones: um Meizu M5c e um Xiaomi Redmi 8. A \autoref{fig:photo_video_dimensions} mostra, em proporção, as resoluções disponíveis para os dois smartphones utilizados.
+
+% {\renewcommand{\arraystretch}{1.5}
     
-    \begin{table}[!h]
-        \begin{tabular}{|l|c|c|} \hline
-        Modelo         	   & Resolução de foto & Resolução de vídeo (pixeis) \\ \hline
-        Meizu M5C          & 3264 x 2448       & 1280 x 720  \\ \hline
-        Xiaomi Redmi 8     & 4032 x 3016       & 1920 x 1080 \\ \hline
-        \end{tabular}
-        \caption{Resolução de câmera dos smartphones utilizados.}
-        \label{tab:resolutions}
-    \end{table}   
-}
+%     \begin{table}[!h]
+%         \begin{tabular}{|l|c|c|} \hline
+%         Modelo         	   & Resolução de foto & Resolução de vídeo (pixeis) \\ \hline
+%         Meizu M5C          & 3264 x 2448       & 1280 x 720  \\ \hline
+%         Xiaomi Redmi 8     & 4032 x 3016       & 1920 x 1080 \\ \hline
+%         \end{tabular}
+%         \caption{Resolução de câmera dos smartphones utilizados.}
+%         \label{tab:resolutions}
+%     \end{table}   
+% }
 
-Os formatos de imagem gerados pelo modo vídeo e o exigido pela biblioteca TopCodes são incompatíveis. A TopCodes precisa de informação em RGB (\textit{Red, Green, Blue} - Vermelho, Verde e Azul), o espaço de cores gerado por vídeo é o YUV. O RGB armazena as informações de cada pixel em 3 bytes, um para R, outro para G e outro para B. O valor de cada byte varia entre 0 e 255, onde 0 significa ausência de cor e 255 significa presença de cor. A cor preta é representada pela ausência das três cores, representada por 000, e cor branca é a presença total das três cores, igual a 255 255 255. Nesta estratégia cada um dos três bytes tem a informação de luminosidade.
+\begin{figure}[!h]
+   \centering
+   \includegraphics[width=0.6\textwidth,fbox]{figs/photo_video_dimensions.png}
+   \caption{Comparativo de dimensões de foto e vídeo para os smartphones utilizados.}
+   \label{fig:photo_video_dimensions}
+\end{figure}
+No modo vídeo o M5c produz imagens de 1280 x 720 pixeis, e o Redmi 8 produz imagens de 1920 x 1080 pixeis. Já no modo foto, o M5c produz imagens de 3264 x 2448 pixeis, e o Redmi 8 produz imagens de 4032 x 3016 pixeis. Após testes empíricos nos dois modos disponíveis, o modo vídeo no Redmi 8 apresentou o maior desempenho entre assertividade na identificação dos blocos e tempo de processamento.
 
-O formato YUV separa a luminosidade (Y) e as cores (U e V). Essa separação entre luminosidade e cores ocorreu por razões históricas. Os televisores em preto e branco necessitavam apenas da informação de luminosidade, e os televisores coloridos, que surgiram posteriormente, precisavam de canais de cores \cite{jack_video_2001}. O formato YUV manteve o funcionamento das televisões em preto e branco, que decodificavam apenas o canal Y, enquanto os aparelhos coloridos usaram também as informações de cores. A conversão do formato YUV para RGB segue a seguinte fórmula:
+O modo vídeo, entretanto, produz imagens em formato incompatível com exigido pela biblioteca TopCodes. Enquanto a TopCodes processa imagens em formato RGB\footnote{O RGB (\textit{Red, Green, Blue} - Vermelho, Verde e Azul) armazena as informações de cada pixel em 3 bytes, um para R, outro para G e outro para B. O valor de cada byte varia entre 0 e 255, onde 0 significa ausência de cor e 255 significa presença de cor. A cor preta é representada pela ausência das três cores, igual a 0 0 0, e cor branca é a presença total das três cores, igual a 255 255 255. Nesta estratégia cada um dos três bytes tem a informação de luminosidade.}, o formato gerado por vídeo é o YUV\footnote{Y significa luminosidade, e U e V representam intensidade das cores. Essa separação entre luminosidade e cores ocorreu por razões históricas. Os televisores em preto e branco necessitavam apenas da informação de luminosidade, e os televisores coloridos, que surgiram posteriormente, precisavam de canais de cores \cite{jack_video_2001}. O formato YUV manteve o funcionamento das televisões em preto e branco, que decodificavam apenas o canal Y, enquanto os aparelhos coloridos usaram também as informações de cores.
+}. Portanto, é preciso converter o formato YUV para RGB, o que ocorre com a seguinte fórmula:
 
 \begin{equation}
 \label{equation:yuvrgb}
@@ -106,16 +121,18 @@ B' &= Y + 2.032U
 \end{aligned}
 \end{equation}
 
-A \autoref{equation:yuvrgb} precisa ser aplicada para cada pixel. Em uma imagem de 1920 x 1080 pixeis isso significa iterar em um laço de repetição por mais de 2 milhões de vezes. Esse processo deve ocorrer para todas as imagens obtidas, e não causar atrasos perceptíveis para a interação do usuário. Considerando esse tipo de restrição de performance, o módulo de câmera utiliza a API Renderscript, que o sistema Android disponibiliza para viabilizar execução de operações computacionais de alto desempenho. O ganho de performance decorre da execução de código nativo, que pode ser paralelizado e executado na GPU do dispositivo \cite{sams_introducing_2011}.
+A \autoref{equation:yuvrgb} precisa ser invocada para cada pixel. Para uma imagem de 1920 x 1080 isso significa iterar em um laço de repetição 2073600 vezes. Entretanto ess processo não ocorre apenas em uma imagem , mas sim em um fluxo contínuo de imagens.
 
+Para que este tipo de processamento não cause atrasos perceptíveis para a interação do usuário, o módulo de câmera utiliza a API Renderscript. Essa api é um modo pelo qual o que o sistema Android viabiliza operações computacionais de alto desempenho, geralmente aplicado em processamento de imagens. O ganho de performance decorre da execução de código nativo, que pode ser e executado em modo paralelo na GPU \cite{sams_introducing_2011}. Isso viabiliza que mais e um píxel seja convertido simultâneamente.
 
-\subsubsection{Módulo de detecção de blocos}
+\subsubsubsection{Módulo de Detecção de Blocos}
 
-Após a recepção da imagem em formato RGB, o módulo de detecção de blocos processa as imagens a fim de identificar as marcas fiduciais. Os blocos são os objetos tangíveis que contém marcas fiduciais, apresentados na \autoref{fig:tangible_elements}. Este módulo utiliza a biblioteca TopCodes para facilitar a identificação dos objetos da cena. Esta biblioteca possui implementações nas linguagens Java, JavaScript e C++. O uso do algoritmo em Java se mostrou inviável devido à lentidão, restando o uso do algoritmo em C++. 
+Após a captação da imagem e sua conversão para o formato RGB, o módulo de detecção de blocos processa as imagens a fim de identificar as marcas fiduciais. Os blocos são os objetos tangíveis que contém marcas fiduciais, apresentados na \autoref{fig:tangible_elements}. Este módulo utiliza a biblioteca TopCodes para facilitar a identificação dos objetos da cena. Esta biblioteca possui implementações nas linguagens Java, JavaScript e C++. O uso do algoritmo em Java se mostrou inviável devido à lentidão, restando o uso do algoritmo em C++. 
 
-A tecnologia que viabiliza o uso de C++ em ambiente Android é \textit{Java Native Interface} (JNI). Para utilizar código nativo, uma função tipo \mintinline{java}{external} é declarada no código Java ou Kotlin e sua implementação ocorre em C++. O \autoref{quadro:jni} demonstra o relacionamento entre ambas as linguagens. O código Kotlin invoca a função \mintinline{java}{external}, cuja implementação é em C++. Os parâmetros que transitam entre os dois ambientes são a altura e a largura da imagem, bem como uma lista de números inteiros que representam os pixeis da imagem no formato RGB. O retorno da função é a lista de marcas detectadas.
+A tecnologia que viabiliza o uso de C++ em ambiente Android é \textit{Java Native Interface} (JNI). Para utilizar código nativo, uma função do tipo \mintinline{java}{external} é declarada no código Java ou Kotlin e sua implementação ocorre em C++. O \autoref{quadro:jni} demonstra o relacionamento entre ambas as linguagens. O código Kotlin invoca a função \mintinline{java}{external}, cuja implementação é em C++. Os parâmetros que transitam entre os dois ambientes são a altura e a largura da imagem, bem como uma lista de números inteiros que representam os pixeis da imagem no formato RGB.
 
 \begin{quadro}[!h]
+    \captionquadro{Ligação entre código nativo escrito e código Kotlin. }
     \begin{minted}[breaklines,frame=single]{kotlin}
     // kotlin (arquivo TopcodesScanner.kt)
     private external fun searchTopCodesNative(imageWidth: Int, imageHeight: Int, imageData: IntArray) : Array<TopCode>
@@ -131,24 +148,22 @@ A tecnologia que viabiliza o uso de C++ em ambiente Android é \textit{Java Nati
         // uso da biblioteca topcodes em código nativo.
     }
     \end{minted}
-    \caption{Ligação entre código nativo escrito e código Kotlin. }
     \label{quadro:jni}
 \end{quadro}
 
+Por fim, o código nativo retorna a lista de marcas detectadas. Cada marca tem como atributo a coordenada da marca, seu ângulo, tamanho e código identificador. Essas informações podem, então, ser analisadas para compreender o posicionamento dos elementos tangíveis no cenário.
 
-
-
-\subsubsection{Módulo de análise de blocos}
-Após a identificação dos blocos, o módulo de análise executa as seguintes ações:
+\subsubsubsection{Módulo de Análise de Blocos}
+Após a identificação dos blocos, o módulo de análise:
 
 \begin{itemize}
-\item Analisa se um algoritmo foi construído
-\item Detecta o posicionamento do brinquedo RoPE sobre o tapete
-\item Detecta se o bloco ativador de depuração está visível
+\item analisa se um algoritmo foi construído
+\item detecta o posicionamento do brinquedo RoPE sobre o tapete
+\item detecta se o bloco ativador de depuração está visível
 \end{itemize}
 
 Estas ações são uma parte do código fonte propensa a mudanças. Outros blocos podem ser criados em funcionalidades futuras, exigindo análises específicas. A estrutura de código fonte deve considerar e evitar mudanças constantes em um mesmo arquivo, pois isso provoca o surgimento de erros e código difícil de manter. 
-O padrão de projeto Composite foi a solução utilizada para evitar estes problemas. Esse padrão facilita a construção de hierarquias de objetos, e uniformiza a interação com grupos de objetos (composições) e objetos individuais (folhas). Objetos do tipo folha e composição obedecem uma mesma interface, e os objetos do tipo composição podem ter listas de folhas ou outras composições \cite{gamma_design_1994}.
+O padrão de projeto Composite foi a solução utilizada para evitar estes problemas. Esse padrão facilita a construção de hierarquias de objetos, construídas com grupos de objetos (composições) e objetos individuais (folhas). Tanto o tipo folha como composição obedecem uma mesma interface, e os objetos do tipo composição podem ter listas de folhas ou outras composições \cite{gamma_design_1994}.
 
 \begin{figure}
 \centering
@@ -158,10 +173,11 @@ O padrão de projeto Composite foi a solução utilizada para evitar estes probl
 \sourceauthor
 \end{figure}
 
-A \autoref{fig:composite} demonstra o uso do \textit{pattern}. A classe \mintinline{java}{BlocksAnalyserComposite} é uma composição, e as classes \mintinline{java}{ProgramDetector}, \mintinline{java}{RoPEPositionDetector} e \mintinline{java}{DebugBlockDetector} são folhas. Essas quatro classes implementam a interface \mintinline{java}{BlocksAnalyser}, ou seja, são analisadores de blocos. A primeira classe é um analisador composto pelos três analisadores folha.
-O código cliente\footnote{Código que solicita a análise dos blocos.} tem apenas um objeto do tipo \mintinline{java}{BlocksAnalyserComposite}, o qual tem uma lista de analisadores. Quando o código cliente solicita a esse objeto que analise os blocos, este repassa a solicitação a cada um dos analisadores da lista para executarem especializadas (\autoref{quadro:composite}). O código cliente não sabe quais análises ocorrem, e o comportamento do programa pode ser alterado ao adicionar mais analisadores na composição sem alterar o código principal.
+No código, o Composite viabiliza compor uma estrutura hierárquica que une analisadores de blocos. A \autoref{fig:composite} demonstra o uso do \textit{pattern}. A classe \mintinline{java}{BlocksAnalyserComposite} é uma composição, e as classes \mintinline{java}{ProgramDetector}, \mintinline{java}{RoPEPositionDetector} e \mintinline{java}{DebugBlockDetector} são folhas. Essas quatro classes implementam a interface \mintinline{java}{BlocksAnalyser}, ou seja, são analisadores de blocos. A primeira classe é um analisador composto pelos três analisadores folha.
+O código cliente\footnote{Código que solicita a análise dos blocos.} tem apenas um objeto do tipo \mintinline{java}{BlocksAnalyserComposite}, o qual tem uma lista de analisadores. Quando o código cliente solicita a esse objeto que analise os blocos, este repassa a solicitação a cada um dos analisadores da lista para executarem especializadas (\autoref{quadro:composite}). O código cliente não sabe quais análises ocorrem, e o comportamento do programa pode ser alterado ao adicionar mais analisadores na composição. Isso evita alterações em cada um dos analisadores, que ficam responsáveis por ações específicas, e também evita alterações no código cliente, pois a interface com o composite se mantém inalterada.
 
 \begin{quadro}[!h]
+    \captionquadro{Implementação da classe de composição.}
     \begin{minted}[breaklines,frame=single]{kotlin}
     
     class BlocksAnalyzerComposite : BlocksAnalyzer {
@@ -181,21 +197,20 @@ O código cliente\footnote{Código que solicita a análise dos blocos.} tem apen
         
     }
     \end{minted}
-    
-    \caption{Implementação da classe de composição.}
     \label{quadro:composite}
 \end{quadro}
 
 
-\subsubsection{Módulo de log}
-O módulo Log rastreia as interações do usuário e as armazena em uma plataforma web chamada Ct Puzzle Test Platform. Esta plataforma permite a criação de testes de Pensamento Computacional através da definição de mecânicas de jogos e desafios de lógica. A mecânica especifica os atributos do desafio. Este pesquisador usou a plataforma para especificar uma mecânica com quatro atributos: um caminho, posições de itens coletáveis, a posição inicial do robô, e os comandos esperados como solução do desafio.
+\subsubsubsection{Módulo de Registro de Interações - CtPuzzle Platform}
+O módulo Log rastreia as interações do usuário e as armazena na plataforma web CtPuzzle Platform\footnote{\url{ctplatform.playerweb.com.br}}. Esta plataforma permite a criação de testes de Pensamento Computacional através da definição de \textbf{mecânicas} de jogos e desafios de lógica. Uma mecânica é um conjunto de atributos, que especificam de maneira abstrata as regras do jogo ou desafio. No caso desta pesquisa, o jogo ou desafio consiste em um mapa, com um caminho a ser percorrido, posições de objetos a serem coletado e um conjunto de comandos esperados como solução. 
 
-A definição dos itens é a segunda etapa. Os itens representam instâncias concretas do desafio seguindo os atributos definidos. Este projeto especifica 9 itens, cada um com um caminho e uma maçã a ser capturada, em ordem crescente de dificuldade. Estes itens são por fim agrupados e sequenciados formando uma sequência de fases de um jogo.
+Após a definição das mecânica do puzzle, a plataforma permite definir \textbf{itens} que correspondem à instâncias desse puzzle. Similar à fases de um jogo, cada item tem valores concretos de acordo com o que as definições da mecânica\footnote{Pode-se comparar mecânica e item com classe e objeto, na programação orientada a objetos. A classe/mecânica define atributos, e o objeto/item tem valores concretos para estes atributos.}.  Neste trabalho, a mecânica define o puzzle deve ter objetos coletáveis, que o robô deve capturar. Um item especifica que haverá um objeto na posição (2,3) do mapa, e que este mapa terá uma dimensão de 4 por 5. O aplicativo implementa a interface do jogo com base nestas regras. Ao todo são 9 itens, cada um com um caminho e uma maçã a ser capturada. 
+
+Estes itens são por fim agrupados e sequenciados formando uma sequência de fases de um jogo.
 
 Por fim, o aplicativo envia para a plataforma as respostas para cada um dos itens testados, ou seja, para cada fase. Cada resposta possui uma lista de tentativas de solução do desafio, que são os algoritmos executados pelo robô. Isso permite entender como as estratégias de resolução mudaram até a obtenção da solução.
 
-
-\subsection{RoPE: Comunicação Bluetooth}
+\subsubsection{RoPE: Comunicação Bluetooth}
 Para entender como ocorre a comunicação com o brinquedo RoPE via Bluetooth é necessário entender a organização do seu \textit{firmware} e o conceito de comunicação serial. O \textit{firmware} é o programa instalado no chip ATMega3268p, o qual é acoplado à placa principal e coordena as reações aos eventos percebidos pelo brinquedo. As reações possíveis são o acionamento de  luzes, o acionamento dos motores e a emissão de sons. O \textit{firmware} coordena o acionamento dessas ações em eventos de cliques nos botões e de recepção de mensagens na comunicação serial do Arduino.
 
 A comunicação serial possibilita a transferência de dados entre uma placa Arduino e outros computadores ou dispositivos. Todas as placas Arduino possuem ao menos dois pinos para essa comunicação, sendo um para leitura e outro para a escrita. Normalmente a comunicação ocorre por cabos para a transferência de código hexadecimal, o qual gerado em ambientes de desenvolvimento e transferido para a placa para atualização do \textit{firmware}.
@@ -286,8 +301,5 @@ Ao registrar funções disparadas quando do recebimento de caracteres, o código
 \end{quadro}
 
 \section{Considerações}
-Este capítulo descreveu os componentes utilizados na construção da interface de realidade aumentada projetiva. 
 
-Os componentes descritos formam a estrutura base para a interface proposta. Porém ainda é preciso implementar os mapas, a forma como os blocos serão posicionados, e a dinâmica geral de interação. Essas etapas dependem de observar as crianças usando o protótipo atual, para antecipar possíveis problemas e soluções e evitar desperdício de tempo com designs equivocados.
-
-Para isso, pretende-se seguir uma abordagem centrada no usuário, executando sequências de iterações onde a criança utiliza a ferramenta de forma informal. A cada iteração, os aprendizados obtidos devem guiar as evoluções necessárias ao projeto. O próximo capítulo detalha o planejamento de como essas iterações devem ocorrer, em qual contexto, e as análises previstas.
+Este capítulo descreveu os elementos da interface RoPE AR. Iniciou apresentando os elementos com os quais o usuário interage, que é o aplicativo para Android e os elementos tangíveis. A seguir 
