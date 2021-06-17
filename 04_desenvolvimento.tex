@@ -1,12 +1,19 @@
 \chapter{Desenvolvimento}
 \label{c_desenvolvimento}
 
-Este capítulo apresenta a interface desenvolvida, denominada de RoPE AR. Primeiramente a \autoref{sec:elementos_interface} descreve a interface do ponto de vista do usuário, ou seja, os elementos com os quais a criança ou o adulto interagem. A seguir a \autoref{sec:detalhes_tecnicos} traz detalhes técnicos das tecnologias utilizadas, como a comunicação Bluetooth entre smartphone e robô.
+Este capítulo apresenta a interface desenvolvida, denominada de RoPE AR (\autoref{fig:rope_ar_usage}). Primeiramente a \autoref{sec:elementos_interface} descreve a interface do ponto de vista do usuário, ou seja, os elementos com os quais a criança ou o adulto interagem. A seguir a \autoref{sec:detalhes_tecnicos} traz detalhes técnicos das tecnologias utilizadas, como a comunicação Bluetooth entre smartphone e robô.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\linewidth,fbox]{figs/wide_interface.png}
+    \caption{RoPE AR em uso. Círculo projetado mostra bloco que forma o algoritmo. }
+    \label{fig:rope_ar_usage}
+\end{figure}
 
 \section{Elementos da interface}
 \label{sec:elementos_interface}
 \subsection{Aplicativo}
-A interação inicial ocorre quando um adulto usa o aplicativo para conectar o smartphone com o RoPE. Ele é constituído de apenas duas telas. A primeira tela permite conectar o smartphone ao brinquedo (\autoref{fig:app_connection}). Ela mostra um desenho do RoPE e uma lupa indicando a procura pelo brinquedo, ou seja, a conexão com o brinquedo físico. Gravações de uma voz guiam o usuário para que ligue o RoPE acionando seu botão inferior e informam quando a conexão foi estabelecida. Ao se conectar o brinquedo também emite um \textit{feedback} sonoro e luminoso como \i{feedback}.
+A interação inicial ocorre quando um adulto usa o aplicativo para conectar o smartphone com o RoPE. Ele é constituído de apenas duas telas. A primeira tela permite conectar o smartphone ao brinquedo (\autoref{fig:app_connection}). Ela mostra um desenho do RoPE e uma lupa indicando a procura pelo brinquedo, ou seja, a conexão com o brinquedo físico. Gravações de uma voz guiam o usuário para que ligue o RoPE acionando seu botão inferior e informam quando a conexão foi estabelecida. Ao se conectar o brinquedo também emite um \textit{feedback} sonoro e luminoso.
 
 \begin{figure}[!h]
     \begin{subfigure}{.5\textwidth}
@@ -35,23 +42,22 @@ O brinquedo executa o algoritmo quando a criança pressiona seu botão verde. Ao
 A interface possui quatro tipos de elementos tangíveis: o brinquedo RoPE, os blocos de código, os marcadores de calibragem, e o ativador de depuração  (\autoref{fig:tangible_elements}).
 \begin{enumerate}
 \item \textbf{Brinquedo RoPE}: Ao brinquedo foi adicionada uma marca fiducial para que seja identificada sua posição. A informação da posição do brinquedo permite à interface reagir a seus movimentos, disparando eventos sonoros e animações. Além da marca fiducial, o brinquedo tem os botões superiores. Por meio do botão verde do brinquedo a criança inicia a execução do algoritmo programado com os blocos de papelão. Os demais botões são usados no modo de depuração. Neste modo, o brinquedo para antes de cada movimento e acende a seta indicando qual será a próxima ação. O brinquedo continua a execução quando o botão é clicado, e assim a criança pode observar a execução passo a passo.
-\item \textbf{Blocos de código}:  Há dois tipos de blocos: os direcionais e o bloco de início. Os blocos direcionais tem desenhos que mostram o RoPE fazendo o movimento de andar pra frente, andar para trás, virar a esquerda, e virar à direita. Há também o bloco de início, que corresponde ao botão verde do RoPE e indica o início da execução. Os blocos direcionais devem ser encaixados no bloco de início, formando uma sequência. O formato curvado busca sugerir como deve ser o encaixe entre os blocos. O bloco de início  tem a parte inferior reta para impedir o encaixe de outros blocos incorretamente.
+\item \textbf{Blocos de código}:  Há dois tipos de blocos: os direcionais e o bloco de início. Os blocos direcionais tem desenhos que mostram o RoPE fazendo o movimento de andar pra frente, andar para trás, virar a esquerda, e virar à direita. O bloco de início corresponde ao botão verde do RoPE e indica o início da execução. Além disso o bloco de início marca a posição onde os blocos direcionais devem ser encaixados para formar o algoritmo. O formato curvado busca sugerir como deve ser o encaixe entre os blocos. Diferente dos blocos direcionais, o bloco de início tem formato diferenciado para impedir o encaixe de mais de um bloco.
 \item \textbf{Marcadores de calibragem}: Marcas fiduciais que identificam os quatro cantos da área projetada. Para projetar os elementos na posição correta o algoritmo precisa mapear a posição de projeção, bem como identificar a distorção de perspectiva resultante. Um adulto responsável por preparar a interface coloca os marcadores nos cantos da área projetada, e a câmera do \textit{smartphone} capta a posição da mesma. Após a captação os marcadores são retirados.
 \item \textbf{Ativador de depuração}: O quarto elemento tangível é representado por uma joaninha (em inglês \textit{ladybug}. Essa figura foi selecionada por ser uma figura lúdica e também por ser um inseto, uma referência à origem do termo \textit{bug}. Quando a joaninha está visível o brinquedo RoPE entra em modo de depuração, no qual a execução de cada comando exige que a criança aperte o botão correspondente. Quando não está visível, o brinquedo executa a sequência completa de comandos sem interrupção.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
         \includegraphics[width=.9\linewidth,fbox]{figs/tangible_elements.png}
         \caption{Elementos tangíveis. 1 - RoPE. 2 - Blocos de código. 3 - Marcadores de calibragem. 4 - Ativador de depuração.}
         \label{fig:tangible_elements}
 \end{figure}
-Todos os elementos tangíveis possuem marcas fiduciais de 4cm de diâmetro. Essa medida foi utilizada para facilitar a identificação das mesmas por uma câmera capaz que gera imagens de 1280x720 pixeis durante gravação de vídeo. Essa medida foi obtida de forma empírica, iniciando com 3 cm de diâmetro e aumentando o tamanho até a identificação de todas as marcas presentes no campo de visão da câmera. Um último detalhe é que as marcas são impressas em papel cartão pois este não reflete luz, o que prejudica a captação das marcas.
+Todos os elementos tangíveis possuem marcas fiduciais de 4 cm de diâmetro. Essa medida foi utilizada para facilitar a identificação das mesmas por uma câmera capaz que gera imagens de 1280x720 pixeis durante gravação de vídeo. Essa medida foi obtida de forma empírica, iniciando com 3 cm de diâmetro e aumentando o tamanho até a identificação de todas as marcas presentes no campo de visão da câmera. Um último detalhe é que as marcas são impressas em papel cartão pois este não reflete luz, o que prejudica a captação das marcas.
 
 \section{Aspectos técnicos}
 \label{sec:detalhes_tecnicos}
-\subsection{Arquitetura}
-A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo RoPE, um servidor web e um projetor (\autoref{fig:system_overview}). Estes dispositivos se comunicam por meio de conexão sem fio. Nesta comunicação os dados enviados são as ações executadas pelo brinquedo e as imagens a serem mostradas no tapete.  A seções seguintes apresentam cada um destes componentes.
+A apresentação dos aspectos técnicos será feita com base na arquitetura de software do projeto. Essa arquitetura possui quatro dispositivos: um smartphone, o brinquedo RoPE, um servidor web e um projetor (\autoref{fig:system_overview}).  A \autoref{sec:smartphone} apresenta o smartphone e os módulos do aplicativo implementado. A \autoref{sec:comunicacao} apresenta a comunicação com o brinquedo RoPE. O \autoref{apendice_projetor} apresenta detalhes do mini projetor utilizado. O servidor web não será abordado pois foge do escopo deste trabalho.
 
 \begin{figure}[!h]
     \centering
@@ -60,7 +66,8 @@ A arquitetura do projeto possui quatro dispositivos: um smartphone, o brinquedo 
     \label{fig:system_overview}
 \end{figure}
 
-\subsubsection{Smartphone}
+\subsection{Smartphone}
+\label{sec:smartphone}
 Um smartphone com sistema operacional Android é o componente central, pois coordena a comunicação com o projetor e o servidor web. Dois aplicativos permanecem ativos no smartphone. O primeiro aplicativo é o Mirroring 360, que transmite a tela do smartphone ao projetor via Wi-Fi. Esse aplicativo está disponível na loja de aplicativos da Google, e há diversos aplicativos similares que executam a mesma função. O Mirroring 360 foi selecionado por ser gratuito e não mostrar anúncios.
 
 O segundo aplicativo foi desenvolvido neste trabalho. Ele tem as funções de:
@@ -71,7 +78,7 @@ O segundo aplicativo foi desenvolvido neste trabalho. Ele tem as funções de:
     \item enviar os eventos ocorridos para a CtPuzzle Platform
 \end{itemize}
 
-Para isso, o aplicativo é dividido em cinco módulos: Câmera, Detecção de blocos, Análise dos blocos, Registro de interações, e Comunicação com o RoPE . As próximas seções seções apresentam detalhes de implementação destes módulos.
+Para isso, o aplicativo é dividido em cinco módulos: Câmera, Detecção de blocos, Análise dos blocos, Registro de interações, e Comunicação com o RoPE . As próximas quatro seções apresentam detalhes de implementação dos quatro primeiros módulos. O quinto módulo (comunicação) é abordado na \autoref{sec:comunicacao}.
 
 %\begin{figure}
 %    \centering
@@ -80,7 +87,7 @@ Para isso, o aplicativo é dividido em cinco módulos: Câmera, Detecção de bl
 %    \label{fig:sequence_diagram}
 %\end{figure}
 
-\subsubsubsection{Módulo de Câmera}
+\subsubsection{Módulo de Câmera}
 \label{sec:camera}
 
 %O diagrama de sequência da \autoref{fig:sequence_diagram} mostra classes desses módulos sendo invocadas. O controle principal solicita o início da captação de imagens, que utiliza conversão de formato YUV para RGB (explicado na \autoref{sec:camera}). Depois da obtenção de imagem, ocorre a identificação dos objetos tangíveis presentes na cena. Por fim ocorre a análise do posicionamento dos objetos para gerar feedbacks visuais.
@@ -125,9 +132,9 @@ A \autoref{equation:yuvrgb} precisa ser invocada para cada pixel. Para uma image
 
 Para que este tipo de processamento não cause atrasos perceptíveis para a interação do usuário, o módulo de câmera utiliza a API Renderscript. Essa api é um modo pelo qual o que o sistema Android viabiliza operações computacionais de alto desempenho, geralmente aplicado em processamento de imagens. O ganho de performance decorre da execução de código nativo, que pode ser e executado em modo paralelo na GPU \cite{sams_introducing_2011}. Isso viabiliza que mais e um píxel seja convertido simultâneamente.
 
-\subsubsubsection{Módulo de Detecção de Blocos}
+\subsubsection{Módulo de Detecção de Elementos Tangíveis}
 
-Após a captação da imagem e sua conversão para o formato RGB, o módulo de detecção de blocos processa as imagens a fim de identificar as marcas fiduciais. Os blocos são os objetos tangíveis que contém marcas fiduciais, apresentados na \autoref{fig:tangible_elements}. Este módulo utiliza a biblioteca TopCodes para facilitar a identificação dos objetos da cena. Esta biblioteca possui implementações nas linguagens Java, JavaScript e C++. O uso do algoritmo em Java se mostrou inviável devido à lentidão, restando o uso do algoritmo em C++. 
+Após a captação da imagem e sua conversão para o formato RGB, ocorre a detecção das marcas fiduciais na imagem para que se identifique os elementos tangíveis presentes. A biblioteca TopCodes é responsável por identificar as marcas fiduciais nos objetos da cena. Esta biblioteca possui implementações nas linguagens Java, JavaScript e C++. O uso do algoritmo em Java se mostrou inviável devido à lentidão\footnote{Aproximadamente 3 segundos para detectar os topcodes em um imagem de 1280 x 720.}, restando o uso do algoritmo em C++. 
 
 A tecnologia que viabiliza o uso de C++ em ambiente Android é \textit{Java Native Interface} (JNI). Para utilizar código nativo, uma função do tipo \mintinline{java}{external} é declarada no código Java ou Kotlin e sua implementação ocorre em C++. O \autoref{quadro:jni} demonstra o relacionamento entre ambas as linguagens. O código Kotlin invoca a função \mintinline{java}{external}, cuja implementação é em C++. Os parâmetros que transitam entre os dois ambientes são a altura e a largura da imagem, bem como uma lista de números inteiros que representam os pixeis da imagem no formato RGB.
 
@@ -151,10 +158,11 @@ A tecnologia que viabiliza o uso de C++ em ambiente Android é \textit{Java Nati
     \label{quadro:jni}
 \end{quadro}
 
-Por fim, o código nativo retorna a lista de marcas detectadas. Cada marca tem como atributo a coordenada da marca, seu ângulo, tamanho e código identificador. Essas informações podem, então, ser analisadas para compreender o posicionamento dos elementos tangíveis no cenário.
+A execução do código nativo por meio da da JNI possibilitou a redução do tempo de captura de imagem e identificação de TopCodes para 1019,9 milissegundos\footnote{Tempo médio para captação de uma imagem. O cálculo usou 210 capturas no smartphone Redmi 8. }, ou aproximadamente 1 quadro por segundo. Sem o uso de JNI a identificação custava mais de 3 segundos. 
+Por fim, após a execução, o código nativo retorna a lista de marcas detectadas. Cada marca tem como atributo as coordenadas da marca, seu ângulo, tamanho e código identificador. Essas informações podem, então, ser analisadas para compreender o posicionamento dos elementos tangíveis no cenário.
 
-\subsubsubsection{Módulo de Análise de Blocos}
-Após a identificação dos blocos, o módulo de análise:
+\subsubsection{Módulo de Análise de Elementos Tangíveis}
+Após a identificação dos elementos tangíveis, o módulo de análise:
 
 \begin{itemize}
 \item analisa se um algoritmo foi construído
@@ -162,8 +170,7 @@ Após a identificação dos blocos, o módulo de análise:
 \item detecta se o bloco ativador de depuração está visível
 \end{itemize}
 
-Estas ações são uma parte do código fonte propensa a mudanças. Outros blocos podem ser criados em funcionalidades futuras, exigindo análises específicas. A estrutura de código fonte deve considerar e evitar mudanças constantes em um mesmo arquivo, pois isso provoca o surgimento de erros e código difícil de manter. 
-O padrão de projeto Composite foi a solução utilizada para evitar estes problemas. Esse padrão facilita a construção de hierarquias de objetos, construídas com grupos de objetos (composições) e objetos individuais (folhas). Tanto o tipo folha como composição obedecem uma mesma interface, e os objetos do tipo composição podem ter listas de folhas ou outras composições \cite{gamma_design_1994}.
+Estas ações são uma parte do código fonte propensa a mudanças. Outros tangíveis podem ser criados em funcionalidades futuras, exigindo análises específicas. O padrão de projeto Composite foi a solução utilizada para facilitar a adição de novos objetos tangíveis sem alterar o código já existente. Esse padrão facilita a construção de hierarquias, construídas com grupos de objetos (composições) e objetos individuais (folhas). Tanto o tipo folha como composição obedecem uma mesma interface, e os objetos do tipo composição podem ter listas de folhas ou outras composições \cite{gamma_design_1994}.
 
 \begin{figure}
 \centering
@@ -173,7 +180,7 @@ O padrão de projeto Composite foi a solução utilizada para evitar estes probl
 \sourceauthor
 \end{figure}
 
-No código, o Composite viabiliza compor uma estrutura hierárquica que une analisadores de blocos. A \autoref{fig:composite} demonstra o uso do \textit{pattern}. A classe \mintinline{java}{BlocksAnalyserComposite} é uma composição, e as classes \mintinline{java}{ProgramDetector}, \mintinline{java}{RoPEPositionDetector} e \mintinline{java}{DebugBlockDetector} são folhas. Essas quatro classes implementam a interface \mintinline{java}{BlocksAnalyser}, ou seja, são analisadores de blocos. A primeira classe é um analisador composto pelos três analisadores folha.
+Seguindo este padrão, o código organiza uma estrutura hierárquica de \textit{analisadores de blocos}\footnote{Os blocos são os elementos tangíveis.} (ver \autoref{fig:composite}). A classe \mintinline{java}{BlocksAnalyserComposite} é uma composição, e as classes \mintinline{java}{ProgramDetector}, \mintinline{java}{RoPEPositionDetector} e \mintinline{java}{DebugBlockDetector} são folhas. Essas quatro classes implementam a interface \mintinline{java}{BlocksAnalyser}, ou seja, são analisadores de blocos. A primeira classe é um analisador composto pelos três analisadores folha.
 O código cliente\footnote{Código que solicita a análise dos blocos.} tem apenas um objeto do tipo \mintinline{java}{BlocksAnalyserComposite}, o qual tem uma lista de analisadores. Quando o código cliente solicita a esse objeto que analise os blocos, este repassa a solicitação a cada um dos analisadores da lista para executarem especializadas (\autoref{quadro:composite}). O código cliente não sabe quais análises ocorrem, e o comportamento do programa pode ser alterado ao adicionar mais analisadores na composição. Isso evita alterações em cada um dos analisadores, que ficam responsáveis por ações específicas, e também evita alterações no código cliente, pois a interface com o composite se mantém inalterada.
 
 \begin{quadro}[!h]
@@ -200,22 +207,20 @@ O código cliente\footnote{Código que solicita a análise dos blocos.} tem apen
     \label{quadro:composite}
 \end{quadro}
 
+\subsubsection{Módulo de Registro de Interações - CtPuzzle Platform}
+Este módulo interage com a plataforma web Ct Puzzle Platform\footnote{\url{ctplatform.playerweb.com.br}}. Esta plataforma permite a criação de testes de avaliação do Pensamento Computacional através da definição de \textbf{mecânicas} de puzzles\footnote{Desafio ou jogo de lógica.}. Uma mecânica tem conjunto de atributos que especificam de maneira abstrata as regras do puzzle. No caso desta pesquisa, o puzzle consiste em um mapa, um caminho a ser percorrido, posições de objetos a serem coletado, e um conjunto de comandos esperados como solução. 
 
-\subsubsubsection{Módulo de Registro de Interações - CtPuzzle Platform}
-O módulo Log rastreia as interações do usuário e as armazena na plataforma web CtPuzzle Platform\footnote{\url{ctplatform.playerweb.com.br}}. Esta plataforma permite a criação de testes de Pensamento Computacional através da definição de \textbf{mecânicas} de jogos e desafios de lógica. Uma mecânica é um conjunto de atributos, que especificam de maneira abstrata as regras do jogo ou desafio. No caso desta pesquisa, o jogo ou desafio consiste em um mapa, com um caminho a ser percorrido, posições de objetos a serem coletado e um conjunto de comandos esperados como solução. 
+Após a definição dos atributos do puzzle, a plataforma permite definir instâncias desse puzzle, denominadas \textbf{itens}. Similar à fases de um jogo, cada item tem valores concretos de acordo com as definições da mecânica\footnote{Pode-se comparar mecânica e item com classe e objeto, na programação orientada a objetos. A classe/mecânica define atributos, e o objeto/item tem valores concretos para estes atributos.}.  Como descrito, neste trabalho, a mecânica define que o puzzle deve ter objetos coletáveis posicionados em algum ponto do mapa. Um item especifica que haverá um objeto coletável na posição (2,3) do mapa, e que este mapa terá uma dimensão de 4 por 5, por exemplo. 
 
-Após a definição das mecânica do puzzle, a plataforma permite definir \textbf{itens} que correspondem à instâncias desse puzzle. Similar à fases de um jogo, cada item tem valores concretos de acordo com o que as definições da mecânica\footnote{Pode-se comparar mecânica e item com classe e objeto, na programação orientada a objetos. A classe/mecânica define atributos, e o objeto/item tem valores concretos para estes atributos.}.  Neste trabalho, a mecânica define o puzzle deve ter objetos coletáveis, que o robô deve capturar. Um item especifica que haverá um objeto na posição (2,3) do mapa, e que este mapa terá uma dimensão de 4 por 5. O aplicativo implementa a interface do jogo com base nestas regras. Ao todo são 9 itens, cada um com um caminho e uma maçã a ser capturada. 
+Tendo por base as regras definidas nas mecânicas, e os valores dos atributos para cada item, o aplicativo busca essas informações na plataforma e gera a interface do jogo. Na plataforma estão definidos 9 items/fases, organizadas em ordem crescente de dificuldade. O aplicativo interpreta essa configuração e mostra as fases para o usuário. Por fim, o aplicativo envia à plataforma as respostas para cada um dos itens testados. Cada resposta possui uma lista de tentativas de solução do desafio, que são os algoritmos executados pelo robô. Isso permite entender como as estratégias de resolução mudaram até a obtenção da solução final.
 
-Estes itens são por fim agrupados e sequenciados formando uma sequência de fases de um jogo.
+\subsection{RoPE: Comunicação Bluetooth}
+\label{sec:comunicacao}
+Para entender como ocorre a comunicação com o brinquedo RoPE via Bluetooth é necessário entender a organização do seu \textit{firmware} e o conceito de comunicação serial. O \textit{firmware} é o programa instalado no chip ATMega328p, o qual é acoplado à placa principal e coordena as reações aos eventos percebidos pelo brinquedo. As reações possíveis são o acionamento de  luzes, o acionamento dos motores e a emissão de sons. O \textit{firmware} coordena o acionamento dessas ações em eventos de cliques nos botões e de recepção de mensagens na comunicação serial do Arduino.
 
-Por fim, o aplicativo envia para a plataforma as respostas para cada um dos itens testados, ou seja, para cada fase. Cada resposta possui uma lista de tentativas de solução do desafio, que são os algoritmos executados pelo robô. Isso permite entender como as estratégias de resolução mudaram até a obtenção da solução.
+A comunicação serial possibilita a transferência de dados entre uma placa Arduino e outros computadores ou dispositivos. Todas as placas Arduino possuem ao menos dois pinos para essa comunicação, sendo um para leitura e outro para a escrita. Normalmente esses pinos são usados durante a atualização do \textit{firmware}, quando o programa construído em ambiente de desenvolvimento é instalado no chip.
 
-\subsubsection{RoPE: Comunicação Bluetooth}
-Para entender como ocorre a comunicação com o brinquedo RoPE via Bluetooth é necessário entender a organização do seu \textit{firmware} e o conceito de comunicação serial. O \textit{firmware} é o programa instalado no chip ATMega3268p, o qual é acoplado à placa principal e coordena as reações aos eventos percebidos pelo brinquedo. As reações possíveis são o acionamento de  luzes, o acionamento dos motores e a emissão de sons. O \textit{firmware} coordena o acionamento dessas ações em eventos de cliques nos botões e de recepção de mensagens na comunicação serial do Arduino.
-
-A comunicação serial possibilita a transferência de dados entre uma placa Arduino e outros computadores ou dispositivos. Todas as placas Arduino possuem ao menos dois pinos para essa comunicação, sendo um para leitura e outro para a escrita. Normalmente a comunicação ocorre por cabos para a transferência de código hexadecimal, o qual gerado em ambientes de desenvolvimento e transferido para a placa para atualização do \textit{firmware}.
-
-Além disso, esses mesmos pinos permitem a comunicação sem fio por Bluetooth ou Wi-Fi por meio da adaptação de módulos. Os módulos são dispositivos de hardware com funcionalidades específicas, não encontradas por padrão em placas Arduino. Um destes módulos é HM-10, destinado a habilitar comunicação Bluetooth de baixo consumo de energia (BLE - \textit{Bluetooth Low Energy}). Esse módulo possui os pinos de energia (VCC), aterramento (GND), leitura (RX) e escrita (TX). Os pinos de leitura e escrita são conectados aos pinos de escrita e leitura do brinquedo RoPE, o que habilita a transferência de dados recebidos via Bluetooth pelo módulo, o qual os repassa via serial para o chip do brinquedo (\autoref{fig_connection_hm10}).
+Além disso, esses mesmos pinos permitem a comunicação sem fio por meio da adaptação de um módulo, que pode ser Bluetooth, Wi-Fi, entre outros. Os módulos são dispositivos de hardware que possibilitam a adição de novas funcionalidades à placas Arduino. Um destes módulos é HM-10, destinado a habilitar comunicação Bluetooth de baixo consumo de energia (BLE - \textit{Bluetooth Low Energy}). Esse módulo possui os pinos de energia (VCC), aterramento (GND), leitura (RX) e escrita (TX). Os pinos de leitura e escrita são conectados aos pinos de escrita e leitura do brinquedo RoPE, o que habilita a transferência de dados recebidos via Bluetooth pelo módulo, o qual os repassa via serial para o chip do brinquedo (\autoref{fig_connection_hm10}).
 
 \begin{figure}[!h]
     \centering
@@ -225,11 +230,11 @@ Além disso, esses mesmos pinos permitem a comunicação sem fio por Bluetooth o
     \sourceauthor
 \end{figure}
 
-O \textit{firmware} é responsável por interpretar os dados recebidos na serial. Este é implementado seguindo o paradigma de Orientado a Objetos, a fim de mapear as responsabilidades e componentes físicos existentes no brinquedo. Neste sentido, o código fonte do \textit{firmware} tem classes que correspondem aos componentes de \textit{hardware} como buzzer, CPU, teclado e bateria. A classe \textit{Battery}, por exemplo, monitora o nível da bateria e impede o acionamento do brinquedo quando há pouca energia armazenada.
+O \textit{firmware} é responsável por interpretar os dados recebidos na serial. Este é implementado seguindo o paradigma de Orientado a Objetos, a fim de mapear as responsabilidades e componentes físicos existentes no brinquedo. Neste sentido, o código fonte do \textit{firmware} tem classes que correspondem aos componentes de \textit{hardware} como buzzer, CPU, teclado e bateria (\autoref{fig:classes_firmware}). A classe \textit{Battery}, por exemplo, monitora o nível da bateria e impede o acionamento do brinquedo quando há pouca energia armazenada.
 
-\begin{figure}[!ht]
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=.8\linewidth,fbox]{figs/class_diagram_firmware.png}
+    \includegraphics[width=.7\linewidth,fbox]{figs/class_diagram_firmware.png}
     \caption{Diagrama de classes do firmware.}
     \label{fig:classes_firmware}
     \sourceauthor
@@ -237,7 +242,7 @@ O \textit{firmware} é responsável por interpretar os dados recebidos na serial
 
 Seguindo este paradigma, este trabalho adicionou ao código existente uma classe responsável pela comunicação, ou seja, recepção, interpretação e envio de dados por meio da comunicação serial. Essa classe de comunicação permite o registro de caracteres que, ao serem captados, acionam funcionalidades oferecidas pelo brinquedo. A recepção da letra \textit{f}, por exemplo, dispara a ação \textit{adicionar o comando "frente" na sequência de ações}.
 
-Um protocolo de comunicação define os caracteres a serem enviados, bem como uma sequência de caracteres para definir o início de uma mensagem (\autoref{quadro:protocol}). Além disso, o protocolo define mensagens que informam eventos ocorridos no brinquedo, de modo que aplicações externas possam refletir mudanças de estado, como por exemplo destacar um bloco de código em execução.
+Um protocolo de comunicação define os caracteres a serem enviados, bem como uma sequência de caracteres para definir o início de uma mensagem (\autoref{quadro:protocol}). Além disso, o protocolo define mensagens que informam eventos ocorridos no brinquedo. Isto possibilita que aplicações externas recebem estes eventos e reflitam mudanças de estado do brinquedo. Com isso um aplicativo de programação em blocos pode destacar um bloco em execução, por exemplo.
 {\renewcommand{\arraystretch}{1.3}
 \begin{quadro}
     \caption{Protocolo de comunicação}
@@ -271,8 +276,7 @@ Um protocolo de comunicação define os caracteres a serem enviados, bem como um
 \end{quadro}
 }
 
-
-Ao registrar funções disparadas quando do recebimento de caracteres, o código usa o padrão \textit{Observer} \cite{gamma_design_1994}, o que facilita registrar novos caracteres para alterar o comportamento do robô. A limitação do registro de apenas um caractere é que uma letra apenas identifica a função a ser invocada, mas não informa seus parâmetros. Para isso seria necessário o envio de uma letra para identificar a função a ser invocada, seguida de uma lista de valores a serem inseridos nesta função. Essa funcionalidade não foi implementada pois a passagem de parâmetros não é um requisito da aplicação atual.
+Ao registrar funções disparadas quando do recebimento de caracteres, o código usa o padrão \textit{Observer} \cite{gamma_design_1994}, o que facilita registrar novos caracteres para alterar o comportamento do robô. A limitação do registro de apenas um caractere é que uma letra apenas identifica a função a ser invocada, mas não informa seus parâmetros. Isso permite acionar a função de giro, mas não definir o ângulo. Para isso seria necessário o envio de uma letra para identificar a função a ser invocada, seguida de uma lista de valores a serem inseridos nesta função. A passagem de parâmetros não foi implementada, pois sem eles o brinquedo usa valores padrão que atendem às necessidades deste trabalho.
 
 \begin{quadro}[!h]
 \caption{Ligação entre caracteres e funções executadas no brinquedo.}
@@ -302,4 +306,10 @@ Ao registrar funções disparadas quando do recebimento de caracteres, o código
 
 \section{Considerações}
 
-Este capítulo descreveu os elementos da interface RoPE AR. Iniciou apresentando os elementos com os quais o usuário interage, que é o aplicativo para Android e os elementos tangíveis. A seguir 
+Este capítulo descreveu os elementos da interface RoPE AR. Iniciou apresentando o aplicativo para Android e elementos tangíveis, com os quais o usuário interage. A seguir apresentou aspectos técnicos da implementação. Entre esses aspectos está a organização em módulos, que são responsáveis por capturar a imagem, processá-la, e gerar o cenário de acordo com os itens definidos na CtPuzzle Platform, e também registrar as respostas na plataforma. Outro aspecto é o uso de tecnologias específicas do ambiente Android, como RenderScript e JNI. Essas tecnologias viabilizaram a captura, conversão de formato de imagem e identificação das marcas fiduciais. O último aspecto apresentado foi a comunicação com o RoPE via Bluetooth. Esta foi viabilizada pela adaptação do módulo HM-10 e a definição de um protocolo de comunicação.
+
+Certamente outras tecnologias e dispositivos poderiam ter sido utilizados como alternativa aos aqui propostos. Em vez do smartphone, poderia ser usada uma câmera e um notebook. No lugar da TopCodes poderia ser usada um algoritmo de identificação de objetos independente de marcas fiduciais. Mesmo para essas alternativas, entretanto, os requisitos de captura de imagem, identificação dos objetos tangíveis e comunicação como o RoPE seriam indispensáveis. As tecnologias utilizadas foram consideradas as mais acessíveis, abertas e sem custo de utilização.
+
+%A solução tem, de início, possibilidades inexploradas. Há apenas blocos direcionais com movimentos fixos. Entretanto o RoPE pode fazer movimentos parametrizados, e também emitir luzes e sons. Todos esses eventos poderiam ser programados por blocos específicos. Entretanto, crianças de \idadeinicial a \idadefinal podem sentir-se confusas com tantas possibilidades. Mas 
+
+O próximo capítulo apresenta a avaliação da RoPE AR. A avaliação é qualitativa exploratória, e põe a solução implementada em uso por crianças e ao julgamento de professoras. A avaliação exploratória se justifica pela por esse tipo de ferramenta ser algo novo, e portanto de efeitos desconhecidos.

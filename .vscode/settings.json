@@ -13,6 +13,7 @@
         "Univali",
         "Xiaomi",
         "addi",
+        "captionquadro",
         "cmds",
         "detecta",
         "detectadas",
@@ -28,7 +29,7 @@
         "textsuperscript",
         "topcodes"
     ],
-    "editor.fontFamily": "'Helvetica','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "monospace",
     "workbench.colorTheme": "Kimbie Dark"
 }

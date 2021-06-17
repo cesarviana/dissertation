@@ -142,9 +142,9 @@
 % Pacote para inserir TODO, para correção
 \setlength {\marginparwidth }{2cm}
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
-\belowtopsep=0ex
-\aboverulesep=0ex
-\bellowrulesep=0ex
+% \belowtopsep=0ex
+% \aboverulesep=0ex
+% \bellowrulesep=0ex
 % ---
 % Pacotes de citações
 % ---
@@ -328,13 +328,15 @@ COMPUTAÇÃO APLICADA}
 \begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-    \setlength\afterchapskip{\lineskip}
+	\captionsetup{list=no}
+	\setcounter{figure}{0}
+	\setlength\afterchapskip{\lineskip}
     \include{20_apendiceA}
     \include{21_apendiceB}
     \include{22_apendiceC}
     \include{23_apendiceD}
     \include{24_apendiceE}
-    %\include{25_apendiceF}
+	\include{25_apendiceF}
     %\include{26_apendiceG}
 \end{apendicesenv}
 % ---
