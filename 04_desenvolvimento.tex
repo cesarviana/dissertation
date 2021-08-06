@@ -208,6 +208,7 @@ O código cliente\footnote{Código que solicita a análise dos blocos.} tem apen
 \end{quadro}
 
 \subsubsection{Módulo de Registro de Interações - CtPuzzle Platform}
+\label{sec:ctpuzzle}
 Este módulo interage com a plataforma web CtPuzzle Platform\footnote{\url{ctplatform.playerweb.com.br}}. Esta plataforma permite a criação de testes de avaliação do Pensamento Computacional através da definição de \textbf{mecânicas} de puzzles\footnote{Desafio ou jogo de lógica.}. Uma mecânica tem conjunto de atributos que especificam de maneira abstrata as regras do puzzle. No caso desta pesquisa, o puzzle consiste em um mapa, um caminho a ser percorrido, posições de objetos a serem coletado, e um conjunto de comandos esperados como solução. 
 
 Após a definição dos atributos do puzzle, a plataforma permite definir instâncias desse puzzle, denominadas \textbf{itens}. Similar à fases de um jogo, cada item tem valores concretos de acordo com as definições da mecânica\footnote{Pode-se comparar mecânica e item com classe e objeto, na programação orientada a objetos. A classe/mecânica define atributos, e o objeto/item tem valores concretos para estes atributos.}.  Como descrito, neste trabalho, a mecânica define que o puzzle deve ter objetos coletáveis posicionados em algum ponto do mapa. Um item especifica que haverá um objeto coletável na posição (2,3) do mapa, e que este mapa terá uma dimensão de 4 por 5, por exemplo. 
