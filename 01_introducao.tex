@@ -75,7 +75,7 @@ O RoPE (Robô Programável Educacional) representa uma oportunidade para testar 
 
 %, e tem duas interfaces: uma interface tangível com 5 botões coloridos, e uma interface virtual via aplicativo \cite{viana_interface_2018}. O brinquedo é distribuído em Centros de Desenvolvimento Infantil (CDI), e tema de pesquisas de graduação \cite{pinheiro_alise_2016, metzger_desenvolvimento_2018} e mestrado \cite{martins_desenvolvimento_2016}. O presente trabalho ocorre no contexto dessas pesquisas, com foco no desenvolvimento e avaliação de interfaces alternativas para crianças de 4 a 6 anos\footnote{A observação de crianças com mais de 6 anos interagindo com o RoPE demonstra que as mesmas tem facilidade. Por isso este trabalho foca na faixa etária mais jovem.}.
 
-Este trabalho ocorre como uma continuidade das duas pesquisas citadas e busca contribuir com a área de Informática na Educação ao (1) projetar uma interface tangível externamente compilada para o brinquedo RoPE e (2) explorar o uso de RA projetiva como um meio de facilitar a depuração. Essa contribuição se fundamenta na literatura em favor das interfaces tangíveis para crianças \cite{sapounidis_evaluating_2015, fincher_tangible_2019, plowman_interactivity_2004} e na observação de que o uso de RA projetiva é um campo inexplorado no contexto de BPs.
+Este trabalho ocorre como uma continuidade das duas pesquisas citadas e busca contribuir com a área de Informática na Educação ao (1) projetar uma interface tangível externamente compilada para o brinquedo RoPE e (2) explorar o uso de RA projetiva como um meio de facilitar a depuração. Essa contribuição se fundamenta na literatura sobre interfaces tangíveis para crianças \cite{sapounidis_evaluating_2015, fincher_tangible_2019, plowman_interactivity_2004} e na observação de que o uso de RA projetiva é um campo pouco explorado no contexto de BPs.
 
 %Atualmente os avanços de hardware e técnicas de software tem possibilitado novas alternativas de interação, e isso tem instigado pesquisas que buscam projetar e avaliar essas interfaces \cite{sakamoto_code_2019, burleson_active_2018, sapounidis_evaluating_2015}. Além disso um grande número de novos brinquedos programáveis tem surgido \cite{catlin_edurobots_2018}, levantando o questionamento se ainda seguem os princípios seminais da linguagem LOGO\footnote{Os princípios estão ligados a facilidade de iniciar a programar, mas grande poder naquilo que pode ser criado, denominado "low floor, high ceiling".}.
 
@@ -87,7 +87,7 @@ Em BPs que possuem apenas botões, como o RoPE e a Bee-Bot, o algoritmo que a cr
 
 No caso das interfaces de blocos tangíveis externamente compiladas (como a utilizada pelo KIBO), o problema é a \textit{invisibilidade de execução} do algoritmo. Os blocos carecem de indicadores que mostrem qual bloco está sendo executado em cada momento, correspondente a cada movimento do brinquedo. Essa falta de visibilidade de execução dificulta compreender a sequência lógica de funcionamento do algoritmo, pois não há mapeamento entre comando/bloco e ação do robô. O Cubetto soluciona esse problema por meio de luzes indicadoras, e para isso depende de um painel onde os blocos são encaixados.
 
-\citeonline{norman_design_1988} comenta que a visibilidade influencia o modelo mental que o usuário cria ao interagir com alguma interface. Caso exista falta de visibilidade, e o objeto executar de forma inesperada, o usuário tende a encontrar explicações para justificar tal comportamento. Neste momento, cria um modelo mental errôneo de como o objeto funciona. Um modelo mental errôneo sobre o funcionamento de um BPs pode prejudicar o aprendizado de programação. \citeonline{raabe_brinquedos_2015} apresentam crianças justificando o comportamentos inesperados da Bee-Bot após terem esquecido de limpar a memória do brinquedo: as crianças afirmaram que a abelha tinha vontade própria.
+\citeonline{norman_design_1988} comenta que a visibilidade durante a interação com a interface de um dispositivo influencia o modelo mental que o usuário cria sobre como tal dispositivo funciona. Caso exista falta de visibilidade, e o dispositivo executar de forma inesperada, o usuário tende a encontrar explicações para justificar esse comportamento. Ao justificá-lo, cria um modelo mental errôneo. Um questionamento é que esse modelo mental causado pela falta de visibilidade sobre o funcionamento de um BPs possa prejudicar o aprendizado de programação. \citeonline{raabe_brinquedos_2015} apresentam crianças justificando o comportamentos inesperados da Bee-Bot após terem esquecido de limpar a memória do brinquedo: as crianças afirmaram que a abelha tinha vontade própria.
 
 Por fim, essa falta de visibilidade desencadeia a dificuldade em depurar. Os modelos de depuração presentes na literatura \cite{carver_assessing_1986, mccauley_debugging_2008} possuem etapas de localização e reparação de bugs, o que exige acesso ao código fonte. Portanto, a ausência do código fonte impede depuração segundo estes modelos.
 
@@ -167,7 +167,7 @@ A proposta é desenvolver uma interface de \ac{RA} projetiva combinada com uma l
 
 A intenção é que a criança programe utilizando blocos de papelão com símbolos de setas correspondentes às ações do RoPE. O dispositivo externo com câmera é um \textit{smartphone}, dado que é mais acessível e fácil de manusear do que um laptop ou desktop. O projetor utilizado é portátil e de baixa potência de iluminação (1200 lumens), o que diminui o seu custo.
 
-Outra funcionalidade a ser implementada é a execução passo a passo. Para isso, a criança utilizará uma seta especial que será colocada ao lado da sequência de comandos, apontando para um bloco. Para que o próximo comando seja executado, a seta deve ser movida para ele. Deste modo, a criança deve mover a seta apontando para cada bloco até o fim da sequência, reforçando o mapeamento entre símbolo e ação e facilitando a depuração.
+Outra funcionalidade implementada é a execução passo a passo. A intenção é ativar um estado em que o brinquedo executa um comando e espera a criança disparar a execução da próxima ação. Deste modo, a criança tem mais tempo para olhar cada bloco e compreender o movimento associado a ele. Com isso pode compreender possíveis erros no algoritmo construído por ela ou por outra criança.
 
 Com a construção dessa ferramenta, pretende-se avaliar qualitativamente as interações de crianças de 4 a 6 anos com a mesma. 
 
@@ -243,11 +243,15 @@ A abordagem sobre esse problema foi qualitativa, ao observar aspectos subjetivos
 
 A construção da solução proposta e atendimento dos objetivos de pesquisa possui quatro fases: estudo, modelagem, implementação e avaliação.
 
-A etapa de estudo\footnote{Etapa realizada para atender o objetivo específico \autoref{obj_mapear}. } correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento, por sua vez, buscou descrever quais tipos de interfaces são utilizadas em projetos comerciais de brinquedos programáveis. Por último, os trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
+A etapa de estudo\footnote{Etapa realizada para atender o objetivo específico \autoref{obj_mapear}. } correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento, por sua vez, buscou descrever os tipos de interfaces mais utilizados em projetos de brinquedos programáveis incluindo produtos comerciais. Por último, os trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
 
-A etapa de modelagem é descrita no \autoref{c_desenvolvimento}, onde é apresentado o planejamento dos elementos de software a serem implementados. Para isso foi utilizado técnicas padrão, como diagrama de classes, levantamento de requisitos e desenho de telas.
+A etapa de modelagem ocorreu como um planejamento dos elementos de software a serem implementados. Esta etapa envolveu levantamento de requisitos (\autoref{apendice_requisitos}) e prototipação (\autoref{apendice_prototipo}) para conferir a viabilidade da proposta. 
 
-A etapa de implementação\footnote{Etapa realizada para atender o \autoref{obj_api} e o \autoref{obj_interface} dos objetivos específicos} correspondeu a programar quatro elementos: (i) uma \ac{API} para captação e armazenamento das interações ocorridas com um brinquedo programável; (ii) adaptar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; e (iii) programar um aplicativo de \textit{smartphone} para captar os blocos e comunicar com o projetor.
+A etapa de implementação\footnote{Etapa realizada para atender o \autoref{obj_api} e o \autoref{obj_interface} dos objetivos específicos} correspondeu a programar o aplicativo 
+ (i) alterar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; (ii) 
+
+a conexão com uma plataforma de de armazenamento das interações ocorridas com um brinquedo programável; 
+(ii) adaptar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; e (iii) programar um aplicativo de \textit{smartphone} para captar os blocos e comunicar com o projetor.
 
 A avaliação\footnote{ Para atendimento do objetivo específico \autoref{obj_avaliar}.} corresponde a observar crianças programando o brinquedo, e coletar dados seguindo um protocolo definido no \autoref{c_avaliacao}. A ideia nesta etapa é executar estudos de caso, onde se coletará as interações quantitativa meio da \ac{API} e serão registradas informações qualitativas em diário de bordo. A ideia é organizar um processo em que cada caso subsidie melhorias na interface a serem testadas no próximo caso.
 
@@ -271,17 +275,15 @@ A avaliação\footnote{ Para atendimento do objetivo específico \autoref{obj_av
 \section{Estrutura da Dissertação}
 \label{s_cintro_estrutura}
 
-%Nesta seção, deve-se descrever a estrutura do texto, de forma textual, identificando o conteúdo e as contribuições de cada capítulo da dissertação. Abaixo, segue um exemplo de redação a ser utilizada.
-
 O trabalho está organizado em 6 capítulos correlacionados. O \autoref{c_introducao}, Introdução, contextualizou e apresentou o tema, o problema e uma proposta de como solucioná-lo. Foram estabelecidos os objetivos a serem alcançados com a solução as limitações de escopo a serem observadas.
 
 O \autoref{c_fundamentacao_teorica} apresenta a fundamentação teórica iniciando com a descrição do sujeito mais importante desta pesquisa (a criança) e observa aspectos relacionados ao desenvolvimento infantil. Além disso é apresentada a definição de \ac{PC} em quatro pilares, e conceitos presentes nas interfaces de brinquedos programáveis.
 
 O \autoref{c_estado_arte} apresenta o estado da arte em três aspectos: das pesquisas realizadas com brinquedos programáveis; interfaces de brinquedos mais utilizados no mercado; e trabalhos com semelhanças tecnológicas e conceituais.
 
-O \autoref{c_desenvolvimento} apresenta a modelagem dos elementos de software que integram a contribuição: \textit{firmware}, aplicativo e API. O capítulo apresenta tecnologias utilizadas para construir esses componentes e possibilitar a comunicação entre os mesmos.
+O \autoref{c_desenvolvimento} apresenta uma visão geral dos componentes que integram a contribuição: aplicativo e elementos tangíveis. O capítulo apresenta aspectos técnicos da implementação tecnologias utilizadas para construir esses componentes e possibilitar a comunicação entre os mesmos.
 
-O \autoref{c_avaliacao} descreve o contexto de execução da pesquisa. O capítulo também apresenta protocolo de teste a ser aplicado, a organização dos dados gerados e as estatísticas a serem aplicadas sobre os dados para responder as hipóteses de pesquisa.
+O \autoref{c_avaliacao} descreve o contexto de execução da pesquisa. O capítulo também apresenta protocolo de teste aplicado, os dados coletados durante atividades com crianças e os resultados obtidos com a análise dos dados.
 
 Por fim, o \autoref{c_conclusao} revisa o atendimento aos objetivos da pesquisa, reflete sobre as contribuições geradas até o momento e planeja as próximas etapas do trabalho.
 

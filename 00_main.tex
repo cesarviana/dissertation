@@ -81,6 +81,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{tgbonum}
 \usepackage{minted}
+\usepackage{xifthen}
 
 \usepackage{mathtools}
 % Utilizado para inserir arquivos PDF no documento
@@ -133,6 +134,52 @@
 
 \newcommand{\fala}[1]{
 	“\textit{#1}”
+}
+
+\newenvironment{boxed}
+    {\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+    \hline\\
+    }
+    { 
+    \\\\\hline
+    \end{tabular} 
+    \end{center}
+    }
+
+\newenvironment{table_env}
+{
+	\setlength{\extrarowheight}{3pt}
+   \begin{footnotesize} 
+    \begin{center}
+}
+{
+\end{center}
+\end{footnotesize}
+}
+
+\newenvironment{dialogo}
+	{
+	\begin{spacing}
+		\begin{footnotesize}
+			\begin{adjustwidth}{2cm}{0}
+	}
+	{
+			\end{adjustwidth}
+		\end{footnotesize}
+	\end{spacing}
+	}
+
+\newcommand{\falapessoa}[2]{
+	{#1}: \fala{{#2}}
+}
+
+\newcommand{\gesto}[1]{
+	[{#1}]
+}
+
+\newcommand{\gestopessoa}[2]{
+	{#1}: \gesto{{#2}}
 }
 
 \newcommand{\destaque}[1]{
