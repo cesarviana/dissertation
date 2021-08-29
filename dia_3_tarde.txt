@@ -1,0 +1,365 @@
+[00.00.00] [Pesq] Quem quer brincar comigo aqui?
+
+[00.00.02] [Prof_6] Vai lá (nome)
+
+[00.00.04] [Pesq] Dois, duas crianças corajosas
+
+[00.00.13] [ID1] Que brincadeira que é?
+
+[00.00.16] [Pesq] A brincadeira é que vocês vão conhecer um robô, e vocês vão programar ele. Vocês conhecem algum robô?
+
+[00.00.25] [ID2]Não
+
+[00.00.25] [ID1]Eu lembro daquele lá daquele filme, que ele tem amigo lá, grandão lá lembra? Eu lembro de um robô de um desenho. Eu lembro de um robô da creche.
+
+[00.00.52] [Pesq]Ali tem um né? (aponta para robô de brinquedo em uma prateleira)
+
+[00.00.53] [ID1]Ele só anda
+
+[00.00.56] [Pesq]Esse aqui ele vai andar também, e aqui vocês vão programar usando esses bloquinhos aqui. 
+
+[00.01.01] [ID1]Ok
+
+[00.01.01] [Pesq]O que vocês acham que ele tá fazendo aqui? (entrega bloco frente)
+
+[00.01.08] [ID2]Ele tá botando... o sistema dele pra cima
+
+[00.01.10] [Pesq]Botando o sistema pra cima?
+
+[00.01.13] [ID1]Tá olhando pra cima
+
+[00.01.14] [Pesq]Olhando pra cima...
+
+[00.01.16] [ID1]Esse aqui também tá (aponta bloco início)
+
+[00.01.17] [Pesq]Tá olhando pra cima. E nesse? (entrega bloco direita)
+
+[00.01.20] [ID2]Esse aí ele tá olhando pro lado
+
+[00.01.24] [Pesq]Olhando pro lado? Pra que lado?
+
+[00.01.24] (Ambos apontam para a direita)
+
+[00.01.24] [Pesq]Esse aqui né? Legal
+
+[00.01.29] [Pesq]E esse aqui? (entrega bloco esquerda)
+
+[00.01.33] [ID1]Ele tá olhando pra aquele lado (olham e apontam para a esquerda)
+
+[00.01.33] [ID2]Pra esquerda
+
+[00.01.33] [ID1]Pra direita (confunde)
+
+[00.01.39] [Pesq]Olha, vocês sabem que tem esquerda e direita. Direita é esse aqui, lá é esquerda.
+
+[00.01.40] [ID1]Eu não sei não (duvida)
+
+[00.01.44] [ID2]Eu também não sei não
+
+[00.01.41] [Pesq]Mas já sabem que tem esquerda e direita
+
+[00.01.45] [ID1]Tá bom
+
+[00.01.49] [ID1]Isso aqui acho que se monta. Acho que se monta aqui ó (começa juntar blocos)
+
+[00.01.57] [Pesq]Olha.. acho que já tá acertando hein. 
+
+[00.01.58] [ID2]Propriedade.. (?)
+
+[00.01.59] [Pesq]Dá pra montar né? Dá pra encaixar
+
+[00.02.06] (ID2 tenta encaixar peças de cores diferentes)
+
+[00.02.06] [ID1]Não, esse aqui não pode. Esse aqui não é desse.
+
+[00.02.08] [ID2]É um jogo...
+
+[00.02.11] [ID1]Esse aqui tá olhando pra baixo.
+
+[00.02.20] [ID1]Esse aqui vou conectar com esse, e esse conecta com esse (unindo peças de mesma cor)
+
+[00.02.30] [Pesq]Porque esses assim?
+
+[00.02.32] [ID1]É porque tão olhando pro mesmo lado né
+
+[00.02.36] [Pesq]Ahh... e pela cor né
+
+[00.02.40] [ID1]Não, porque tão olhando pro mesmo lado!
+
+[00.02.40] [Pesq]Ahh... entendi..
+
+[00.02.49] [ID1] Vamos ver qual que tem mais? (apontando para sequência de 4 blocos frente)
+
+[00.02.51] [ID1]Esse aqui
+
+[00.02.50] [ID2] Hehe (apontando para sequência de 4 blocos frente)
+
+[00.02.52] [Pesq]Quantos tem aqui?
+
+[00.02.55] [ID1]Quatro!
+
+[00.02.55] [ID2]Um, dois, três, quatro!
+
+[00.02.57] [ID1]Dois mais dois quatro, cinco mais cinco dez!
+
+[00.03.00] [Pesq]Olhá só!
+
+[00.02.58] [ID2]Um dois, três, quatro, cinco (conta também o verde!)
+
+[00.03.04] [ID1]E três mais três seis
+
+[00.03.08] [ID2]Um dois, três, quatro, cinco (conta novamente para confirmar)
+
+[00.03.10] [Pesq]Quantos anos vocês tem?
+
+[00.03.10] [ID2]Eu tenho cinco!
+
+[00.03.16] [Pesq]Cinco mais cinco...
+
+[00.03.16] [ID1]Dez
+
+[00.03.18] [ID2]Zero!
+
+[00.03.18] [Pesq]Zero?
+
+[00.03.18] [ID1]Eu tenho uma charada pra você
+
+[00.03.22] [Pesq]Charada?
+
+[00.03.23] [ID2]Sete mais sete, tem que dar sete.
+
+[00.03.26] [Pesq]Sete mais sete quatorze
+
+[00.03.38] [ID1] Não, zero, porque daí vai dar sete. 
+
+[00.03.41] [Pesq]Sete mais zero, sete?
+
+[00.03.41] [ID1]Sim, porque daí tem que dar sete.
+
+[00.03.44] [Pesq]Ahh... sete mais zero.
+
+[00.03.54] [ID1]Aqui ele tá olhando pra baixo ó. (aponta bloco trás)
+
+[00.03.59] [Pesq]Se a gente for olhar os botõezinhos aqui. Esse bloco aqui (esquerda) é qual botão lá?
+
+[00.04.04] [ID2]Esse? (mostra botão amarelo)
+
+[00.04.07] [Pesq]E esse aqui?
+
+[00.04.13] (criança compara dois blocos. Outro aperta os botões e robô se move)
+
+[00.04.27] [ID1]Um robozinho.
+
+[00.04.29] [Pesq]Ele se mexe
+
+[00.04.35] (ID2 tenta apertar vários botões)
+
+[00.04.35] [ID1]Não, para, senão vai bugar (!!)
+
+[00.04.36] [Pesq]Vai bugar, o que é bugar?
+
+[00.04.47] [ID2]Bugar é quando faz assim e fica parado
+
+[00.04.52] [Pesq]Tipo trava?
+
+[00.04.59] (crianças apertam botões em conjunto e observam)
+
+[00.04.59] [Pesq]Porque vocês acham que ele tá se mexendo assim?
+
+[00.05.01] [ID1] (som incompreendido) ... eu sei!
+
+[00.05.12] [ID2] Para robô, para...
+
+[00.05.13] [ID1] Esse, direita né (apertando botão esquerda e apontando para a esquerda)
+
+[00.05.13] [Pesq] Esquerda!
+
+[00.05.15] [ID1] Esquerda? Aí ele vai pra esquerda (apertando no botão esquerda). Direita (apertando botão direita) vai pra direita (aponta com a mão). Atrás, ele vai pra trás. (com dedo no botão trás). Eu acho que tem a ver com esses negocinho (peças de papelão). Tem mesmo (pega bloco trás e coloca próximo ao botão trás). Aqui ó, tá olhando pra baixo.
+
+[00.05.30] [ID2] Pra baixo. 
+
+[00.05.33] [ID1] Aí aperto baixo. Bugou (olha embaixo do robô).
+
+[00.05.50] [ID1] Eu acho que esse, é aqui. (encosta bloco frente no botão frente)
+
+[00.05.52] [ID2] Esse, é em cima. 
+
+[00.05.59] [ID1] Esse aqui (pegando bloco verde)
+
+[00.05.59] [Pesq] É o verde.
+
+[00.06.04] [ID1] Esse aqui é pra "tirar vários", por que olha... Verde (aperta no verde), amarelo (pega bloco amarelo, pra baixo (pega bloco trás), pra baixo (aperta botão trás). Espera um pouco! Olha a cor que fica. 
+
+[00.06.22] (neste momento ID2 copia a ação de ID1, e aproxima o bloco verde do botão verde).
+
+[00.06.26] [Pesq] Por que vocês acham que ele tá fazendo esse barulhinho assim, olha. (barulho de programa vazio)
+
+[00.06.28] [ID1] Não sei. 
+
+[00.06.37] (ID2 desliga RoPE)
+
+[00.06.33] [Pesq] Aí tá desligado, ó. 
+
+[00.06.44] [ID2] Se não tá em cima, deve tá embaixo!
+
+[00.06.44] [ID2] Vamos ver o que ele faz. 
+
+[00.07.03] [Pesq] Agora vamos fazer... o que tu quer fazer?
+
+[00.07.11] (ID2 aperta vários botões)
+
+[00.07.11] [Pesq] Eu vou mostrar pra vocês o bloquinho, e vocês vão fazer o movimento que o robô iria fazer, tá bom? Vou mostrar bem rápido. Ó, tem que fazer esse movimento aqui (mostra bloco esquerda. Meninos andam pra esquerda e fazem som de robô).
+
+[00.07.48] Que movimento é esse?
+
+[00.07.45] [ID1] Esquerda.
+
+[00.07.45] [Pesq] Esquerda, isso! Agora vou mostrar um diferente, esse daqui, o que ele faz? (Mostra bloco trás). 
+
+[00.07.57] [ID1] Pra trás. Tun tun tun tun (andam de costas vários passos).
+
+[00.08.02] [Pesq] Só que ele vai pra trás quantas vezes aqui?
+
+[00.08.14] [ID2] Um, dois, três (contando botões desenhados)
+
+[00.08.16] [ID1] Quatro?
+
+[00.08.16] [Pesq] Isso aqui é um bloco. Quantos blocos tem aqui? Tem um bloco né? 
+
+[00.08.25] [ID2] Um, dois, três, quatro. 
+
+[00.08.30] [Pesq] Esse é um bloco. Esses dois são quantos? 
+
+[00.08.31] [ID2] Dois.
+
+[00.08.33] [Pesq] Dois. Então agora vou mostrar pra vocês dois blocos. Quantas vezes tem que ir pra trás? 
+
+[00.08.39] [ID1] Duas!
+
+[00.08.39] [ID2] Dois! (dão dois passos pra trás)
+
+[00.08.41] [Pesq] Agora vou fazer um programa mais difícil. Isso, isso e isso (programa frente, frente, esquerda, direita). Agora vocês são o robô. Apertei no verde. 
+
+[00.09.03] [ID1] Um, dois (frente), 
+
+[00.09.05] [Pesq] Um, dois, agora esse aqui (esquerda. Menino gira à esquerda), e... (aponta ultimo bloco, menino gira à direita). Vocês entenderam. (ID2 brinca de ser robô, sem prestar atenção nos blocos). 
+
+[00.09.17] [ID1] Agora podemos fazer a minha ideia? 
+
+[00.09.18] [Pesq] Vai, pode falar.
+
+[00.09.19] [ID1] Então tá bom. Tem que virar. Tipo aquele jogo... (som incompreendido)
+
+[00.09.28] [Pesq] Ah, tipo um jogo da memória? 
+
+[00.09.30] [ID2] É um jogo da memória esse. 
+
+[00.09.33] [ID1] É por que é um jogo da memória. A gente só embaralhar aqui. Deixa ele embaralhar que ele embaralha direito. 
+
+[00.09.53] [Pesq] Essa tem que tirar (peça verde, única). 
+
+[00.10.00] [ID1] Mas eu também quero. Se você juntar todos iguais... pega o último. Esse aqui não embaralha. 
+
+[00.10.17] [ID2] Eu já embaralhei.
+
+[00.10.17] [ID1] Ele embaralha. 
+
+[00.10.24] [Pesq] Vamos começar. Quem começa? 
+
+[00.10.24] [ID2] Eu começo. 
+
+[00.10.29] [ID1] Vai. 
+
+[00.10.29] [ID2] Azul. (virando peça frente, e depois vermelha). 
+
+[00.10.41] [ID1] (vira dois blocos trás) Achei. Agora eu continuo. (vira azul).
+
+[00.10.49] [Pesq] Frente. (vira vermelha) Opa, lado. Agora é minha vez! Pro lado...esquerda né (vira peça esquerda) Opa, achei. 
+
+[00.11.17] (ID2 vira dois azuils e acha)
+
+[00.11.17] [Pesq] Opa. Agora tua vez (ID1). Virou o verde. 
+
+[00.11.19] [ID1] Mas esse aqui não conta daí. (vira trás, laranja, depois vermelho).
+
+[00.11.29] [Pesq] Pra trás, agora pro lado. (esconde peças novamente)
+
+[00.11.31] [Pesq] Agora sou eu né, opa, estou viajando aqui. 
+
+[00.11.59] [ID2] Agora eu sei agora eu sei. 
+
+[00.11.57] [ID2] Agora é minha vez. (vira peças vermelha e laranja, e acha que acertou).
+
+[00.12.00] [ID1] Errou, é diferente. 
+
+[00.12.05] [Pesq] É diferente né. Mas é parecido, é parecido. 
+
+[00.12.07] [ID1] Agora eu sei. Esse! Esse! 
+
+[00.12.08] [Pesq] Aêê.
+
+[00.12.18] [ID1] Esse. E aí eu ganhei esse! (bloco verde).
+
+[00.12.27] [Pesq] Agora a gente vai fazer a atividade que a gente vai fazer o robô pegar a maçã. 
+
+[00.09.06] [ID2] O robô pegar maça? Mas isso é impossível!
+
+[00.12.30] [Pesq] Impossível? 
+
+[00.12.39] [ID1] Eu acho que isso tem a ver com o verde. 
+
+[00.12.40] [Pesq] Tem a ver com o verde é.
+
+[00.12.49] [ID1] A maçã tá aqui. Tá aqui a maçã. 
+
+[00.12.54] [ID2] Ei, olha ali! A maçã.
+
+[00.13.00] [Pesq] Viu que tem uma mulher falando ali? A maçã vai aparecer daqui a pouco. Tá ali a maçã ó. E aí. A gente tem que programar. 
+
+[00.13.14] [ID1] Deixa eu tentar.
+
+[00.13.14] [Pesq] Vai, pode começar. Presta atenção na regra. O robô tem que começar no círculo verde tá bom. E aqui, o que tem que fazer? Ir pra frente né? Como a gente faz ele ir pra frente? Os botõezinhos não vão mais tá funcionando (menino tenta apertar botão). A partir de agora a programação é feita com os bloquinhos. Deixa ele agora. 
+
+[00.13.54] [ID1] Deixa eu tentar, deixa eu tentar. (coloca peça frente na frente do robô. Não percebe como encaixar). 
+
+[00.14.00] [ID2] Mas tem que ligar ele!
+
+[00.14.00] [Pesq] Tá ligado já. Não desliga. Ó, eu vou dar uma dica. A gente tem que encaixar os blocos aqui no verde, pra daí ele fazer. O que tem que fazer pra ele pegar a maçã. (ID2 encaixa peça frente na verde). 
+
+[00.14.40] Agora esse.. esse.. cadê aquele outro (azul)
+
+[00.14.45] (Encaixam vários azuis)
+
+[00.14.50] [Pesq] Ele tem que ir pra frente quantas vezes? Quantas vezes ele tem que ir pra frente pra pegar a maçã? 
+
+[00.14.57] [ID1] Duas
+
+[00.14.57] [Pesq] Duas? Olha, cada quadradinho ele anda uma vez. 
+
+[00.15.02] [ID1] Olha aqui ó. Aí esse aqui ele vai pra fora.
+
+[00.15.09] [Pesq] Aperta no verde.
+
+[00.15.09] [ID1] Tá, tem que tirar um. 
+
+[00.15.10] [ID2] Tem que tirar um.
+
+[00.15.22] (encaixe lateral)
+
+[00.15.24] [ID1] Tem que botar aqui, tem que botar mais um. 
+
+[00.15.24] [Pesq] Mas o que ele precisa fazer pra pegar a maçã? 
+
+[00.15.37] [ID1] Tem que ir pra frente, pra lá, pra lá, pra lá e pra lá. 
+
+[00.15.51] [Pesq] Ó, ele tá indo pra frente, depois tá virando.. Ó, ele pegou a maçã. Ele pegou lá. 
+
+[00.15.59] [Pesq] Agora ele começa aqui no verde, e tem qure pagar a maçã lá. Tem que encaixar sempre no verde. 
+
+[00.16.08] [ID1] Eu acho que eu tenho uma ideia. (menino coloca dois blocos frente na frente do robô. Tenta apertar botão frente e verde).
+
+[00.16.34] [Pesq] Pra frente duas vezes, é verdade. Só que o programa dele, tem que ir nesse bloco aqui, que é o primeiro bloco. 
+
+[00.17.26] [ID1] Não é assim, é assim ó. 
+
+

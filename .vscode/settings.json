@@ -41,7 +41,8 @@
         "topcodes",
         "uhum"
     ],
-    "editor.fontFamily": "'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Times','monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "monospace",
-    "workbench.colorTheme": "Monokai"
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontSize": 18
 }

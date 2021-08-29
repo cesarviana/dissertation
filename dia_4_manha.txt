@@ -1,0 +1,220 @@
+[00.01.11]
+[Pesq] No planeta do RoPE ele vai comer maçã. O que vocês tão vendo aqui?
+[ID10] Aqui é uma maçã.
+[ID9] Uma maçã.
+[00.02.09]
+[Pesq] O que vocês tão vendo nesse bloquinho aqui? (frente)
+[ID10] Flechinha.
+[Pesq] Uma flechinha pra onde?
+[ID10] Pra cima.
+￼
+[00.02.38]
+[Pesq] E nesse desenho aqui, o que tem? (bloco direita)
+[ID10] Aqui ó.
+￼
+[00.02.48]
+[Pesq] E essa aqui? (esquerda)
+￼
+[00.03.38]
+[Pesq] E esse último aqui?
+[ID10] Pra baixo.
+[ID9] Pra baixo.
+[ID10] Pro chão!
+[Pesq] E onde é pra baixo aqui no robô?
+[ID10] Grama!
+[Pesq] Qual é o botãozinho que faz ele ir pra baixo, pra trás, na verdade.
+(ambos apontam pro mesmo botão)
+￼
+[00.03.54]
+[Pesq] A gente vai programar usando os bloquinhos. Como vocês acham que a gente pode encaixar esses bloquinhos? Querem tentar? Como se fosse um quebra-cabeça. Podem pegar. Será que seria assim, ou assim... (tenta encaixar do modo errado)
+(ID10 encaixa corretamente)
+
+[Pesq] E esse, será que encaixa?
+(ID10 encaixa bloco verde corretamente)
+￼
+[00.05.28]
+[Pesq] Olha só, a [ID10] já fex um programa enorme aqui. O que o robozinho tá fazendo nesse bloco?
+[ID10] Pro lado.
+[Pesq] E aqui?
+[ID10] Pra cima.
+[ID9] Pro telhado.
+[Pesq] E aqui?
+([ID10] aponta lado)
+[Pesq] E aqui?
+[ID9] Pra baixo.
+
+[00.05.48]
+[Pesq] Vamos fazer como se o robô tivesse andando. Ele vai fazer o que aqui? (bloco direita)
+[ID10] Ir pro lado.
+[Pesq] E aqui?
+[ID10] (gesto com a mão)
+[Pesq] Pra lá? Mas o azul tá aqui olha. Vai pra cá, porque o azul tá aqui. E aqui, vai pra que lado?
+[ID9] Tem que ir pelas cores.
+
+[00.07.00]
+[Pesq] Agora a gente tem que fazer ele pegar a maçã. O que ele tem que fazer pra pegar a maçã?
+[ID10] Apertar o botão verde.
+[Pesq] Tá bom, a gente aperta o botão verde. (som de programa vazio no robô). Não tem nenhum bloquinho encaixado que faz ele ir pra frente. Qual é o bloco frente? Qual é a cor?
+[ID9] Essa.
+[Pesq] Então qual bloquinho a gente tem que usar.
+
+[00.08.18]
+[Pesq] Viu que ele comeu a maçã?
+[ID9] Comeu! Agora ele precisa ir pra cima. Vai robô!
+
+[00.08.37]
+[Pesq] Mas ele foi uma vez só, porque só tem um bloco aqui ó. Tem que ir quantas vezes?
+([ID10] encaixa bloco esquerda)
+(repetição de apertos no botão iniciar, sem mudar os blocos)
+(tentativa de mudar a direção manualmente)
+[Pesq] Agora, vamos tentar mudar esses bloquinhos pra fazer ele chegar lá na maçã.
+￼
+[00.13.39]
+[Pesq] Ó, tá indo uma vez, duas vezes...
+[ID9] Mas ele tem que vir pra baixo...
+[Pesq] Pra baixo? Pro teu lado? Ele comeu a maçã ó.
+
+[00.14.27] ([ID10] inicia várias vezes execução, sem mexer nos blocos)
+[Pesq] Qual é o botão que faz ele virar pra lá? (vermelho)
+[ID9] Esse.
+[Pesq] Como faz então? Tem que encaixar lá, né? É assim que encaixa será?        
+￼[Pesq] Será que é embaixo?
+￼
+[00.14.55]  ([ID10] inicia várias vezes execução, sem mexer nos blocos)
+[Pesq] Qual é o botão que faz ele virar pra lá? (vermelho)
+[ID9] Esse.
+[Pesq] Como faz então? Tem que encaixar lá, né? É assim que encaixa será? Será que é embaixo?
+
+[00.16.27]
+[Pesq] Qual é o bloquinho igual aquela seta lá? Esse? Então encaixa aqui ó. Ele vai pra onde agora?
+[ID10] Pra baixo.
+[Pesq] Ó, foi pra baixo ó. Porque é laranjado. Qual é essa cor aí?
+[ID10] Azul.
+[Pesq] Então qual bloco tem que usar?
+(outro menino entra na brincadeira)
+[Prof_7] Posso mostrar pra ele? Ele tá agoniado pra vir aqui.
+[Pesq] Como é teu nome?
+[ID11] ID11.
+[Prof_7] Não pode mexer, só olhar ID11.
+
+[00.18.01]
+[Pesq] Pra pegar a maçã a gente tem que ir pro lado do vermelho. Qual é o vermelho.
+[ID9] Esse.
+[Pesq] Esse é vermelho? Então encaixa lá. Será que tá certo esse encaixe?
+([ID10] corrige posição)
+[Pesq] Ó, a ID10 já entendeu.
+
+[00.20.08]
+[Pesq] E agora, o que tem que fazer? Olha, vai pra frente.
+[ID9] Vai pra frente comer a maçã.
+[ID11] Comeu a maçã!
+
+[00.20.34]
+[Prof_7] ID11 não pode mexer ali. Espera, não. Mais pra cá.
+
+[00.22.53]
+[ID10] Comeu!
+[Pesq] comeu de novo.
+
+[00.23.14] [ID10] Eu quero ver embaixo.
+[Pesq] Quer ver? Tenta ver aqui. Eles olham embaixo pra ver se comeu a maçã.
+[Prof_7] Cuida.
+
+[00.23.41]
+[ID10] O que que é isso?
+[Pesq] O que você acha? Conhece esse bicho?
+[ID10] Uma joaninha
+[Pesq] Uma joaninha.
+([ID10] aproxima joaninha dos blocos)
+
+[00.24.37]
+[Prof_7] Não mexe ID11, não ID11!
+
+[00.26.37]
+[Pesq] O que ele tá fazendo aqui nesse desenho? (frente)
+[ID12] Dormindo
+[Pesq] E aqui ele tá fazendo o que? (mostra rosto do robô)
+[ID13] Tá rindo.
+[Pesq] Ele tá indo pra algum lugar aqui, ou tá parado?
+[ID12] Tá parado...
+[ID13] Tá parado.
+[Pesq] O que é esse desenho aqui? (mostra seta)
+[ID13] Azul.
+[Pesq] E aqui ele tá fazendo alguma coisa? (direita)
+[ID13] Tá dormindo. De novo.
+
+[00.27.39]
+[Pesq] Vou explicar pra vocês. Tem alguma coisa parecida aqui?
+
+[ID13] Ele não tá fazendo nada.
+[Pesq] E esse bloco aqui?
+
+[ID13] Mesmo.
+[Pesq] Mesmo?
+[ID13] Mesmo! É sim.
+[Pesq] E esse aqui? 
+[ID13] Dormindo.
+[Pesq] Mas qual botãozinho é esse?
+
+[00.28.45]
+[Prof_4] Qual botão ID13? Ele tá perguntando que cor é essa. É o laranjado.
+
+[Pesq] Assim? Tá encaixado certo?
+[Prof_4] Tenta virar. 
+[Pesq] Será que assim tá certo? Que tu acha, ID12? Tá legal esse encaixe?
+[ID12] Sim 
+
+[00.31.50] 
+[Pesq] Vou mostrar pra vocês o jeito que fica um pouquinho melhor, que é assim ó.
+
+[00.33.38]
+[Pesq] Não adianta apertar vários. A gente tem que pensar e depois fazer.  A maçã tá ali agora.
+[ID13] Agora a maçã tá aqui.
+[Pesq] E o que ele tem que fazer pra pegar a maçã?
+[ID13] Andar.
+
+[Pesq] Ele tá virado pra lá. O que tem que fazer pra pegar?
+[ID13] Tem que apertar o botão.
+[Pesq] Ele vai andar pra onde daí? 
+[ID13] Pra maçã.
+[Pesq] Qual o bloquinho faz ele girar pra esse lado? 
+￼
+[00.34.38]
+[Pesq] Tem que encaixar nesse bloco aqui. 
+[ID13] Eu gosto de fazer isso.
+
+[Pesq] Viu que ele tá ficando brilhante aqui desse lado? Esse aqui vai pra onde?
+[ID13] Pra maçã, ele tem que ir pra maçã.
+[Pesq] Mas será que ir pra maçã ele tem que fazer tudo isso?
+[ID13] Tem! 
+[Pesq] Será que tem que ir pra frente, pra frente, e depois girar…
+[ID13] E ir pra cá (maçã).
+[Pesq] Mas ele já vai tá longe já. 
+
+[00.35.57]
+[Pesq] Na verdade tem que fazer duas coisas. Virar pro lado, e ir pra frente. Qual é pra virar pro lado da maçã?
+[ID13] Ele tem que virar pra cá.
+
+[Pesq] Tem esses quatro bloquinhos aqui. Esse, esse, esse e esse. Em qual tá girando pro lado da maçã?
+[ID13] Esse
+[Pesq] Então vamos tentar fazer. Aperta no verde. Não pode mexer nele. Tá indo pra trás. Porque o bloquinho é de ir pra trás. Tua vez ID12. Qual desses bloquinhos faz ele girar pro lado da maçã?
+[Pesq] Esse já foi escolhido né. Qual desses três outros aqui?
+(ID12 seleciona giro à direita)
+[Pesq] Esse. Vamos testar. Aperta no verde.
+[ID13] Nesse ID12. Nesse e nesse. ￼ 
+[Pesq] Tá virando, pro lado da maçã. Acertou ID12.
+(robô gira pro lado e fica de frente pra maçã)
+
+[00.39.15] 
+[Pesq] E agora, qual a cor faz ele pegar a maçã? Tem que encaixar o bloquinho.
+[Pesq] Será que precisa tudo isso? 
+(ID12 volta a apertar vários botões. Robô anda, por sorte, para a maçã)
+[ID13] Eu acho que foi pra maçã.
+
+[00.42.03]
+(maçã dois passos à frente)
+[Pesq] Ele tá aqui. O que tem que fazer primeiro?
+[ID13] Ir pra maçã.
+[Pesq] Pra qual quadradinho tem que ir primeiro?
+(ID13 aponta maçã)
+[fim
