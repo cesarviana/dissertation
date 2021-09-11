@@ -68,7 +68,7 @@
 
 [00.01.59] [Pesq]Dá pra montar né? Dá pra encaixar
 
-[00.02.06] (ID2 tenta encaixar peças de cores diferentes)
+[00.02.06] (C2 tenta encaixar peças de cores diferentes)
 
 [00.02.06] [ID1]Não, esse aqui não pode. Esse aqui não é desse.
 
@@ -152,7 +152,7 @@
 
 [00.04.29] [Pesq]Ele se mexe
 
-[00.04.35] (ID2 tenta apertar vários botões)
+[00.04.35] (C2 tenta apertar vários botões)
 
 [00.04.35] [ID1]Não, para, senão vai bugar (!!)
 
@@ -190,13 +190,13 @@
 
 [00.06.04] [ID1] Esse aqui é pra "tirar vários", por que olha... Verde (aperta no verde), amarelo (pega bloco amarelo, pra baixo (pega bloco trás), pra baixo (aperta botão trás). Espera um pouco! Olha a cor que fica. 
 
-[00.06.22] (neste momento ID2 copia a ação de ID1, e aproxima o bloco verde do botão verde).
+[00.06.22] (neste momento C2 copia a ação de ID1, e aproxima o bloco verde do botão verde).
 
 [00.06.26] [Pesq] Por que vocês acham que ele tá fazendo esse barulhinho assim, olha. (barulho de programa vazio)
 
 [00.06.28] [ID1] Não sei. 
 
-[00.06.37] (ID2 desliga RoPE)
+[00.06.37] (C2 desliga RoPE)
 
 [00.06.33] [Pesq] Aí tá desligado, ó. 
 
@@ -206,7 +206,7 @@
 
 [00.07.03] [Pesq] Agora vamos fazer... o que tu quer fazer?
 
-[00.07.11] (ID2 aperta vários botões)
+[00.07.11] (C2 aperta vários botões)
 
 [00.07.11] [Pesq] Eu vou mostrar pra vocês o bloquinho, e vocês vão fazer o movimento que o robô iria fazer, tá bom? Vou mostrar bem rápido. Ó, tem que fazer esse movimento aqui (mostra bloco esquerda. Meninos andam pra esquerda e fazem som de robô).
 
@@ -242,7 +242,7 @@
 
 [00.09.03] [ID1] Um, dois (frente), 
 
-[00.09.05] [Pesq] Um, dois, agora esse aqui (esquerda. Menino gira à esquerda), e... (aponta ultimo bloco, menino gira à direita). Vocês entenderam. (ID2 brinca de ser robô, sem prestar atenção nos blocos). 
+[00.09.05] [Pesq] Um, dois, agora esse aqui (esquerda. Menino gira à esquerda), e... (aponta ultimo bloco, menino gira à direita). Vocês entenderam. (C2 brinca de ser robô, sem prestar atenção nos blocos). 
 
 [00.09.17] [ID1] Agora podemos fazer a minha ideia? 
 
@@ -276,7 +276,7 @@
 
 [00.10.49] [Pesq] Frente. (vira vermelha) Opa, lado. Agora é minha vez! Pro lado...esquerda né (vira peça esquerda) Opa, achei. 
 
-[00.11.17] (ID2 vira dois azuils e acha)
+[00.11.17] (C2 vira dois azuils e acha)
 
 [00.11.17] [Pesq] Opa. Agora tua vez (ID1). Virou o verde. 
 
@@ -324,7 +324,7 @@
 
 [00.14.00] [ID2] Mas tem que ligar ele!
 
-[00.14.00] [Pesq] Tá ligado já. Não desliga. Ó, eu vou dar uma dica. A gente tem que encaixar os blocos aqui no verde, pra daí ele fazer. O que tem que fazer pra ele pegar a maçã. (ID2 encaixa peça frente na verde). 
+[00.14.00] [Pesq] Tá ligado já. Não desliga. Ó, eu vou dar uma dica. A gente tem que encaixar os blocos aqui no verde, pra daí ele fazer. O que tem que fazer pra ele pegar a maçã. (C2 encaixa peça frente na verde). 
 
 [00.14.40] Agora esse.. esse.. cadê aquele outro (azul)
 

@@ -27,10 +27,10 @@
 ￼
 [00.03.54]
 [Pesq] A gente vai programar usando os bloquinhos. Como vocês acham que a gente pode encaixar esses bloquinhos? Querem tentar? Como se fosse um quebra-cabeça. Podem pegar. Será que seria assim, ou assim... (tenta encaixar do modo errado)
-(ID10 encaixa corretamente)
+(C10 encaixa corretamente)
 
 [Pesq] E esse, será que encaixa?
-(ID10 encaixa bloco verde corretamente)
+(C10 encaixa bloco verde corretamente)
 ￼
 [00.05.28]
 [Pesq] Olha só, a [ID10] já fex um programa enorme aqui. O que o robozinho tá fazendo nesse bloco?
@@ -102,7 +102,7 @@
 [ID9] Esse.
 [Pesq] Esse é vermelho? Então encaixa lá. Será que tá certo esse encaixe?
 ([ID10] corrige posição)
-[Pesq] Ó, a ID10 já entendeu.
+[Pesq] Ó, a C10 já entendeu.
 
 [00.20.08]
 [Pesq] E agora, o que tem que fazer? Olha, vai pra frente.
@@ -110,7 +110,7 @@
 [ID11] Comeu a maçã!
 
 [00.20.34]
-[Prof_7] ID11 não pode mexer ali. Espera, não. Mais pra cá.
+[Prof_7] C11 não pode mexer ali. Espera, não. Mais pra cá.
 
 [00.22.53]
 [ID10] Comeu!
@@ -199,7 +199,7 @@
 [ID13] Esse
 [Pesq] Então vamos tentar fazer. Aperta no verde. Não pode mexer nele. Tá indo pra trás. Porque o bloquinho é de ir pra trás. Tua vez ID12. Qual desses bloquinhos faz ele girar pro lado da maçã?
 [Pesq] Esse já foi escolhido né. Qual desses três outros aqui?
-(ID12 seleciona giro à direita)
+(C12 seleciona giro à direita)
 [Pesq] Esse. Vamos testar. Aperta no verde.
 [ID13] Nesse ID12. Nesse e nesse. ￼ 
 [Pesq] Tá virando, pro lado da maçã. Acertou ID12.
@@ -208,7 +208,7 @@
 [00.39.15] 
 [Pesq] E agora, qual a cor faz ele pegar a maçã? Tem que encaixar o bloquinho.
 [Pesq] Será que precisa tudo isso? 
-(ID12 volta a apertar vários botões. Robô anda, por sorte, para a maçã)
+(C12 volta a apertar vários botões. Robô anda, por sorte, para a maçã)
 [ID13] Eu acho que foi pra maçã.
 
 [00.42.03]
@@ -216,5 +216,5 @@
 [Pesq] Ele tá aqui. O que tem que fazer primeiro?
 [ID13] Ir pra maçã.
 [Pesq] Pra qual quadradinho tem que ir primeiro?
-(ID13 aponta maçã)
+(C13 aponta maçã)
 [fim
