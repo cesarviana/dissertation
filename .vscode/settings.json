@@ -44,5 +44,6 @@
     "editor.fontFamily": "'Times','monospace', monospace, 'Droid Sans Fallback'",
     "terminal.integrated.fontFamily": "monospace",
     "workbench.colorTheme": "Visual Studio Dark",
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "languageTool.language": "pt-BR"
 }
