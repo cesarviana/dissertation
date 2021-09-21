@@ -143,7 +143,7 @@ As crianças continuaram suas atividades junto às professoras enquanto o pesqui
  
 O CDI tem rede de internet sem fio, porém a qualidade do sinal é variável em diferentes salas. Especificamente a sala 4-5A apresenta problema de quedas constantes de conexão. Esse problema foi mencionado pelas professoras e ocorreu durante a conexão do projetor na rede local. As demais salas visitadas, porém, tem conexão estável.
 
-\section{Coleta de Dados}
+\section{Instrumentos de coleta}
 \label{sec:protocolo}
 A coleta de dados gerou três artefatos: vídeos das interações de crianças com a RoPE AR, entrevistas com as professoras que acompanharam essas interações, e a lista dos algoritmos criados pelas crianças, registrados na CtPuzzle Platform. 
 
@@ -308,29 +308,30 @@ Nas situações em que todas as fases foram concluídas, ou se percebeu que a cr
 Além de não ser exigida a finalização das tarefas, as trajetórias de cada fase serviram como uma sugestão, e não como uma restrição. Ocorreram modificações em que a criança sugeriu um outro ponto de partida ou um caminho mais longo. O aceite ou não destas modificações foi negociado, a fim de haver tentativas nos caminhos pré-definidos e também nos caminhos sugeridos pela criança. Da mesma forma, foi permitida a resolução do problema em etapas, quando a criança programou o brinquedo para andar até metade do caminho, por exemplo, e depois programou os demais passos.
 
 \subsection{Entrevistas com as professoras}
-As entrevistas com as professoras ocorreu individualmente, após as atividades com as crianças. O local da entrevista foi o ambiente escolar, enquanto as crianças prosseguiam com outras atividades, acompanhadas por outra professora. 
+As entrevistas com as professoras ocorreram individualmente, após as atividades com as crianças. O local da entrevista foi o ambiente escolar, enquanto as crianças prosseguiam com outras atividades, acompanhadas por outra professora. 
 
 A entrevista ocorreu de forma semi-estruturada \cite{boni_aprendendo_entrevistar_2005}, com cinco questões abertas previamente definidas (\autoref{quadro:perguntas}). O objetivo das perguntas foi explorar o contexto de trabalho do professor, sua visão a respeito da relação entre crianças e tecnologias digitais, e por fim explorar sua visão sobre a atividade proposta com a RoPE AR. Com consentimento das professoras, os áudios das entrevistas foram gravados e posteriormente transcritos (\autoref{apendice_transcricoes}).
 
-\begin{quadro}[!h]
-    \captionquadro{Questionário com as professoras}
-    \label{quadro:perguntas}
-    {{\renewcommand{\arraystretch}{1.5}
-    \begin{longtable}{| m{.5\linewidth} | m{.5\linewidth}| }
-        \hline
-        Pergunta & Motivação \\ \hline
-        \pergunta{Você poderia falar sobre suas experiências e seu dia a dia do seu trabalho voltado à Educação Infantil?} & Compreender as experiências passadas e o contexto de trabalho da professora. \\ \hline
-
-        \pergunta{O que você pensa sobre o contato de crianças com tecnologias digitais?} & Identificar sentimentos do professor em relação à tecnologia e também identificar os dispositivos citados. \\ \hline        
-
-        \pergunta{Que importância você daria para a \destaque{visibilidade} no aprendizado das crianças?} & Verificar se a opinião das professoras se alinha com a proposta da interface. \\ \hline
-
-        \pergunta{Você poderia pensar em alguma atividade usando os mesmos princípios propostos na atividade de hoje, seguindo a ideia de projetar imagens no chão e ter essa interação com um robô?} & Compreender a percepção do professor sobre a aplicabilidade da proposta. \\ \hline
-
-        \pergunta{Que tipos de problemas você percebe na proposta? Quais aspectos poderiam melhorar? } & Identificar falhas da interface na visão do professor. \\ \hline
-
-    \end{longtable}
-    }
+\begin{quadro}[!htbp]
+    \begin{table_env}
+        \captionquadro{Questionário com as professoras}
+        \label{quadro:perguntas}
+        \begin{longtable}{| m{.5\linewidth} | m{.5\linewidth}| }
+            \hline
+            Pergunta & Motivação \\ \hline
+            \pergunta{Q0 - Você poderia falar sobre suas experiências e seu dia a dia do seu trabalho voltado à Educação Infantil?} & Compreender as experiências passadas e o contexto de trabalho da professora. \\ \hline
+    
+            \pergunta{Q1 - O que você pensa sobre o contato de crianças com tecnologias digitais?} & Identificar sentimentos do professor em relação à tecnologia e também identificar os dispositivos citados. \\ \hline        
+    
+            \pergunta{Q2 - Que importância você daria para a \destaque{visibilidade} no aprendizado das crianças?} & Verificar se a opinião das professoras se alinha com a proposta da interface. \\ \hline
+    
+            \pergunta{Q3 - Você poderia pensar em alguma atividade usando os mesmos princípios propostos na atividade de hoje, seguindo a ideia de projetar imagens no chão e ter essa interação com um robô?} & Compreender a percepção do professor sobre a aplicabilidade da proposta. \\ \hline
+    
+            \pergunta{Q4 - Que tipos de problemas você percebe na proposta? Quais aspectos poderiam melhorar? } & Identificar falhas da interface na visão do professor. \\ \hline
+    
+        \end{longtable}
+        }
+    \end{table_env}
 \end{quadro}
 
 \subsection{Registro de respostas na CtPuzzle Platform}
@@ -358,9 +359,9 @@ Por fim, cada item tem uma \destaque{resposta esperada}. No caso da RoPE AR, a r
 
 Ressalta-se que, durante a resolução do desafio, é comum a criança realizar mais que uma tentativa. Em cada tentativa ela insere os comandos e pressiona o botão iniciar. A cada início de execução a lista de comandos é armazenada em uma lista de tentativas. Essa lista de comandos usados nas tentativas é utilizada no cálculo do escore.
 
-\section{Análise dos dados}
+\subsection{Métodos de análise dos dados}
 
-O processo de análise dos vídeos ocorreu de modos: indutivo e dedutivo. Na análise indutiva os vídeos foram assistidos repetidas vezes, sem uma definição antecipada de códigos\footnote{O Qualcoder, um software do tipo \acro{CAQDAS}, gratuito e de código aberto, serviu como ferramenta de codificação.}. Foram marcados trechos nos quais as crianças transitaram de estados de repouso para estados ativos, considerando suas gesticulações e falas. No decorrer dos vídeos surgiram novos códigos, conforme o olhar do pesquisador se voltou para aspectos que surgiram em cada filmagem. A partir do terceiro vídeo (\autoref{fig:codificacao}), por exemplo, aparecem trechos marcados em amarelo que são códigos ligados a "mediações de um adulto", pois neste caso as professoras interagiram diretamente durante a brincadeira.
+A análise dos dados se deu pelos métodos indutivo e dedutivo. Na análise indutiva os vídeos foram assistidos repetidas vezes, sem uma definição antecipada de códigos. Nessa etapa o software  Qualcoder, um software do tipo \acro{CAQDAS}, gratuito e de código aberto, serviu como ferramenta de codificação. Foram marcados trechos nos quais as crianças transitaram de estados de repouso para estados ativos, considerando suas gesticulações e falas. No decorrer dos vídeos surgiram novos códigos, conforme o olhar do pesquisador se voltou para aspectos que surgiram em cada filmagem. A partir do terceiro vídeo (\autoref{fig:codificacao}), por exemplo, aparecem trechos marcados em amarelo que são códigos ligados a "mediações de um adulto", pois neste caso as professoras interagiram diretamente durante a brincadeira.
 
 \begin{figure}[!htpb]
     \centering
@@ -372,13 +373,13 @@ O processo de análise dos vídeos ocorreu de modos: indutivo e dedutivo. Na an�
 
 Esse processo de "codificação aberta"\ permitiu identificar códigos e organizá-los em categorias. As categorias identificadas foram \destaque{Interação com os botões}, \destaque{Interação com os blocos}, \destaque{Interação entre crianças}, \destaque{Depuração}, \destaque{Estratégias de solução de problema}, \destaque{Percepção de realidade aumentada} e \destaque{Mediações de um adulto}. Como foco do trabalho, foram analisadas as categorias relacionadas a interação com os blocos, realidade aumentada e depuração. 
 
-\begin{figure}[!htpb]
-    \centering
-    \includegraphics[width=1\linewidth,fbox]{figs/categorias.png}
-    \caption{Categorização dos códigos.}
-    \sourceauthor
-    \label{fig:codificacao}
-\end{figure}
+% \begin{figure}[!htpb]
+%     \centering
+%     \includegraphics[width=1\linewidth,fbox]{figs/categorias.png}
+%     \caption{Categorização dos códigos.}
+%     \sourceauthor
+%     \label{fig:codificacao}
+% \end{figure}
 
 A análise dedutiva tem como base o método de análise das filmagens seguido por \citeonline{santana_alise_2015} e \citeonline{blikstein_analyzing_2014}. Esses autores analisam vídeos em que estudantes resolvem desafios de montagem de artefatos físicos, como um brinquedo programável ou uma estrutura em palitos. Nestes trabalhos as ações dos estudantes são codificadas de acordo com uma máquina de estados, em que os estudantes podem estar no estados como Modificar, Planejar, Executar, Refazer e Repousar. Esta pesquisa se apoia no mesmo método por entender que a atividade proposta às crianças envolve a mesma combinação de manipulações físicas e raciocínio lógico voltado à resolução de um problema.
 
