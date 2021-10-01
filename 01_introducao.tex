@@ -178,7 +178,7 @@ Este trabalho se insere no contexto de ferramentas que buscam permitir o aprendi
 
 Não é objetivo deste trabalho realizar testes com comprovação estatística, no sentido de identificar relações de causa e efeito no aprendizado. O foco é descrever a ocorrência ou ausência das dificuldades mais perceptíveis durante a programação por meio de uma ferramenta educacional. Esse foco se adequa à observações de cunho qualitativo, com um número reduzido de crianças.
 
-Também não foi objetivo programar um algoritmo de visão computacional para reconhecer os blocos tangíveis e o RoPE. O uso de de uma biblioteca de identificação de marcas fiduciais foi a estratégia escolhida para agilizar a implementação. A eliminação de marcas fiduciais poderá ocorrer em trabalhos futuros, considerando os aprendizados obtidos com a primeira versão aqui apresentada.
+Também não foi objetivo programar um algoritmo de visão computacional para reconhecer os blocos tangíveis e o RoPE. O uso de uma biblioteca de identificação de marcas fiduciais foi a estratégia escolhida para agilizar a implementação. A eliminação de marcas fiduciais poderá ocorrer em trabalhos futuros, considerando os aprendizados obtidos com a primeira versão aqui apresentada.
 
 % ----------------------------------------------------------------------- %
 \subsection{Justificativa}
@@ -241,14 +241,13 @@ A abordagem sobre esse problema foi qualitativa, ao observar aspectos subjetivos
 
 A construção da solução proposta e atendimento dos objetivos de pesquisa possui quatro fases: estudo, modelagem, implementação e avaliação.
 
-A etapa de estudo\footnote{Etapa realizada para atender o objetivo específico \autoref{obj_mapear}. } correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento, por sua vez, buscou descrever os tipos de interfaces mais utilizados em projetos de brinquedos programáveis, incluindo produtos comerciais. Por último, trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
+A etapa de estudo correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento, por sua vez, buscou descrever os tipos de interfaces mais utilizados em projetos de brinquedos programáveis, incluindo produtos comerciais. Por último, trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
 
 A etapa de modelagem ocorreu como um planejamento dos elementos de software a serem implementados. Esta etapa envolveu levantamento de requisitos (\autoref{apendice_requisitos}) e prototipação (\autoref{apendice_prototipo}) para conferir a viabilidade da proposta. 
 
-A etapa de implementação\footnote{Etapa realizada para atender o \autoref{obj_api} e o \autoref{obj_interface} dos objetivos específicos} correspondeu a programar o aplicativo 
+A etapa de implementação correspondeu a programar o aplicativo 
  (i) alterar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; (ii) 
-
-a conexão com uma plataforma de de armazenamento das interações ocorridas com um brinquedo programável; 
+configurar a conexão com uma plataforma de armazenamento das interações ocorridas com um brinquedo programável; 
 (ii) adaptar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; e (iii) programar um aplicativo de \textit{smartphone} para captar os blocos e comunicar com o projetor.
 
 A avaliação\footnote{ Para atendimento do objetivo específico \autoref{obj_avaliar}.} corresponde a observar crianças programando o brinquedo, e coletar dados seguindo um protocolo definido no \autoref{c_avaliacao}. A ideia nesta etapa é executar estudos de caso, onde se coletará as interações quantitativa meio da \ac{API} e serão registradas informações qualitativas em diário de bordo. A ideia é organizar um processo em que cada caso subsidie melhorias na interface a serem testadas no próximo caso.
