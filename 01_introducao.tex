@@ -1,13 +1,13 @@
 \chapter{Introdução}
 \label{c_introducao}
 
-A depuração é entendida como um dos conceitos centrais do aprendizado de programação \cite{carver_assessing_1986}. Ela compreende a etapa de encontrar e solucionar problemas (\textit{bugs}\footnote{
+A depuração é entendida como um dos conceitos centrais do aprendizado de programação \cite{carver_assessing_1986}. Ela compreende a etapa de encontrar e solucionar problemas ou \textit{bugs}\footnote{
     Termo em inglês que, quando ligado à informática, significa falha ou defeito em código que provoca mau funcionamento.
-}) em um algoritmo. \citeonline{mccauley_debugging_2008} menciona que há grande quantidade de literatura sobre o tema, que é considerado de difícil aprendizado pelos estudantes e um desafio de ensino para os professores. Essa literatura busca responder questões como: Quais as causas dos \textit{bugs}?, Que tipos de \textit{bugs} ocorrem? e Como melhorar o ensino e aprendizado de depuração?
+} em algoritmos. \citeonline{mccauley_debugging_2008} menciona que a depuração é um tema de difícil aprendizado para os estudantes e um desafio de ensino para os professores. Neste sentido, a literatura sobre o tema busca responder questões como: quais as causas dos \textit{bugs}, quais categorias de \textit{bugs} são mais frequentes?, e como melhorar o ensino e aprendizado de depuração?
 
-Enquanto no contexto comercial os \textit{bugs} de \textit{software} são indesejados e causam enormes prejuízos de toda ordem \cite{valdivia-garcia_understanding_2016}, no contexto educacional eles representam uma oportunidade de aprendizado. Segundo \citeonline{papert_mindstorms:_1980}, não se espera que qualquer coisa funcione na primeira tentativa, e portanto errar e depurar faz parte do processo. 
+Enquanto no contexto comercial os erros em \textit{software} são indesejados e causam prejuízos de toda ordem \cite{valdivia-garcia_understanding_2016}, no campo educacional eles representam oportunidades de aprendizado. Segundo \citeonline{papert_mindstorms:_1980}, não se espera que qualquer coisa funcione na primeira tentativa, portanto errar e depurar faz parte do processo. 
 
-\citeonline{valente_aspectos_2018} expressa essa ideia como uma espiral de \textit{descrição-execução-reflexão-depuração} (\autoref{fig_espiral}). Ao entrar nessa espiral, primeiramente o aluno descreve um programa e o executa, a fim de obter um resultado. Pode, então, refletir sobre se a execução do seu programa resultou naquilo que intencionava. Por fim, em caso negativo, deve depurar o programa. Essa depuração pode eliminar erros de sintaxe, revelar incompreensão de conceitos envolvidos no problema ou esclarecer quais passos devem ser aplicados para resolvê-lo. Esse ciclo possibilita ao aluno passar de um nível de conhecimento inicial para outro mais elaborado.
+\citeonline{valente_aspectos_2018} expressa essa ideia como uma espiral de \textit{descrição-execução-reflexão-depuração} (\autoref{fig_espiral}). Ao entrar nessa espiral, primeiramente o aluno descreve um programa e o executa, para obter um resultado. Pode, então, refletir sobre se a execução do seu programa resultou naquilo que intencionava. Por fim, em caso negativo, deve depurar o programa. Essa depuração pode eliminar erros de sintaxe, revelar incompreensão de conceitos envolvidos no problema ou esclarecer quais passos devem ser aplicados para resolvê-lo. Esse ciclo possibilita ao aluno passar de um nível de conhecimento inicial para outro mais elaborado.
 
 \begin{figure}[!htpb]
   \centering
@@ -17,21 +17,23 @@ Enquanto no contexto comercial os \textit{bugs} de \textit{software} são indese
   \label{fig_espiral}
 \end{figure}
 
-A depuração também foi uma das diretrizes de design do ambiente de programação Logo \cite{solomon_history_2020}. Desenvolvido a partir de 1966, ele foi o primeiro ambiente projetado tendo crianças como público-alvo. Era composto por um computador, uma linguagem textual de programação e um robô com rodas capaz de se mover no chão e desenhar sobre papel. Esse ambiente permitia depurar por meio instruções da própria linguagem, como \textit{pause}, impressão de pilha de comandos e impressão de variáveis. 
+A depuração também foi uma das diretrizes de design do ambiente de programação Logo \cite{solomon_history_2020}. Desenvolvido a partir de 1966, ele foi o primeiro ambiente de programação projetado para crianças. Era composto por um computador, uma linguagem textual de programação e um robô com rodas que se movia no chão e desenhava sobre papel. Esse ambiente permitia depurar por meio instruções da própria linguagem, como \textit{pause}, impressão de pilha de comandos e impressão de variáveis. 
 
-Além desses recursos técnicos, para \citeonline{solomon_history_2020} a "grande ideia"\ do Logo era permitir à criança depurar seu próprio entendimento do processo computacional e do algoritmo que deveria ser implementado. Um exemplo é o entendimento dos comandos \textit{left} e \textit{right}, que as crianças confundiam com mover para o lado. Para auxiliar a criança depurar esse conceito, um professor poderia sugeri-la "brincar de ser programada", para então compreender que na verdade esses comandos representam movimentos de giro.
+Além desses recursos técnicos, para \citeonline{solomon_history_2020} a "grande ideia"\ do Logo era permitir à criança depurar seu próprio entendimento do processo computacional e do algoritmo a ser implementado. Um exemplo é o entendimento dos comandos \textit{left} e \textit{right}, que as crianças confundiam com mover para o lado. Para auxiliar a criança depurar esse conceito, um professor poderia sugeri-la "brincar de ser programada", para então compreender que esses comandos representam movimentos de giro.
 
-A ideia de que a depuração poderia representar uma atividade benéfica para o desenvolvimento cognitivo, somada à existência da linguagem Logo, estimulou pesquisas sobre a depuração por crianças. \citeonline{carver_assessing_1986} avaliaram a depuração de algoritmos por crianças de 7 a 8 anos durante um curso usando Logo. Para isso definiram um modelo de depuração em quatro fases: (i) identificação da diferença entre resultado esperado e resultado obtido; (ii) levantamento de hipóteses para a causa do erro; (iii) localização do \bug\ no código; e (iv) correção do \bug. Com base neste modelo, os pesquisadores concluíram que, após 24 horas de curso, as crianças não desenvolveram estratégias efetivas de depuração, preferindo apagar tudo e reiniciar à procurar \textit{bugs} nos programas. Em estudo posterior, porém, os mesmos autores conseguiram identificar que crianças aprenderam a isolar a procura por bugs e transferiram esta habilidade para atividades não relacionadas à programação \cite{carver_improving_1987}.
+A ideia de que a depuração poderia representar uma atividade benéfica para o desenvolvimento cognitivo, somada à existência da linguagem Logo, estimulou pesquisas sobre a prática de depuração por crianças. \citeonline{carver_assessing_1986} avaliaram a depuração de algoritmos por crianças de 7 a 8 anos durante um curso usando Logo. Para isso definiram um modelo de depuração em quatro fases: (i) identificação da diferença entre resultado esperado e resultado obtido; (ii) levantamento de hipóteses para a causa do erro; (iii) localização do \bug\ no código; e (iv) correção do \bug. Com base neste modelo, os pesquisadores concluíram que, após 24 horas de curso, as crianças não desenvolveram estratégias efetivas de depuração, preferindo apagar todo o código e escrever novamente. Posteriormente os mesmos autores conseguiram identificar que crianças aprenderam procurar erros e transferiram esta habilidade para atividades não relacionadas à programação \cite{carver_improving_1987}.
 
-Além de possibilitar pesquisas sobre como as crianças programam, o ambiente Logo contribuiu para o surgimento, na década de 1990, de um ramo de estudos de \ac{IHC} focado no design de interação para crianças \cite{hourcade_child-computer_2015}. Inicialmente as crianças programavam em Logo utilizando teclados convencionais, projetados para adultos. Mas como ficou evidente para os pesquisadores, crianças antes dos 10-14 anos de idade não estavam preparadas pra esse tipo de interação \cite{mcnerney_turtles_2004}. O uso dos teclados exigia alfabetização, coordenação motora fina, e propiciava a ocorrência de erros sintáticos. Por isso a criança despendia esforço cognitivo tentando entender o funcionamento da interface, em vez de dedicar-se a desenvolver ideias.
+Além de possibilitar pesquisas sobre como as crianças programam, o ambiente Logo contribuiu para o surgimento, na década de 1990, de um ramo de estudos de \ac{IHC} focado no design de interação para crianças \cite{hourcade_child-computer_2015}. Esse ramo de estudos permitiu identificar dificuldades que as crianças tinham ao usar teclado de computadores convencionais \cite{mcnerney_turtles_2004}, projetados para adultos. O uso dos teclados exigia alfabetização, coordenação motora fina, e propiciava a ocorrência de erros sintáticos. Esses aspectos desviavam a atenção que deveria estar focada na construção de algoritmos e entendimento do problema para aspectos secundários, como entender o funcionamento da interface.
 
-O reconhecimento dessa inadequação na interação das crianças com o ambiente de programação, motivou a criação de uma classe de ferramentas chamada de \ac{BPs}. Os \ac{BPs} descendem do ambiente Logo e buscam facilitar o aprendizado de programação pelo público infantil. Assim como o robô do ambiente Logo, eles geralmente se movem sobre o chão, e tem aparências que remetem ao imaginário infantil, como animais, carros ou robôs \cite{raabe_2017_rope}. Em geral, sua principal funcionalidade é possibilitar à criança inserir comandos, que o brinquedo então executa. Esses brinquedos tem interfaces de programação projetadas para facilitar à criança concentrar-se nos conceitos fundamentais, sem se distrair com erros que não contribuem para o aprendizado de algoritmos.
+O reconhecimento dessa inadequação na interação das crianças com o ambiente de programação, motivou a criação de uma classe de ferramentas dos \ac{BPs}. Os \ac{BPs} descendem do ambiente Logo e buscam facilitar o aprendizado de programação pelo público infantil. Assim como o robô do ambiente Logo, eles geralmente se movem sobre o chão, e tem aparências que remetem ao imaginário infantil, como animais, carros ou robôs \cite{raabe_2017_rope}. Em geral, sua principal funcionalidade é possibilitar à criança inserir comandos, que o brinquedo então executa. Esses brinquedos têm interfaces de programação projetadas para facilitar à criança concentrar-se nos conceitos fundamentais, sem se distrair com erros que não contribuem para o aprendizado de algoritmos.
 
-Considerando que os \ac{BPs} descendem do Logo, espera-se que herdem o princípio de permitir depurar os algoritmos. A preocupação em criar interfaces que facilitem a depuração está presente em ambientes de desenvolvimento profissionais e/ou voltados para o ensino de programação introdutória para adultos. Esses ambientes mostram valores de variáveis na memória, permitem executar passo a passo e definir \textit{break points} \cite{noschang_portugol_nodate}. Se adultos precisam destas ferramentas, será que as crianças poderiam se beneficiar das mesmas funcionalidades caso aplicadas em interfaces de \ac{BPs}?
+As interfaces dos \ac{BPs} são simplificadas, para que crianças pequenas saibam como interagir. Adicionar controles de depuração nessas interfaces aumenta a sua complexidade. Ambientes de desenvolvimento profissionais e/ou voltados para o ensino de programação introdutória para adultos apresentam controles de depuração. Esses ambientes mostram valores de variáveis, permitem executar passo a passo e definir pontos de parada \cite{noschang_portugol_2014}. Se adultos precisam destas ferramentas, será que as crianças poderiam se beneficiar das mesmas funcionalidades caso aplicadas em interfaces de \ac{BPs}?
 
-No contexto dessa pergunta, \citeonline{sipitakiat_robo-blocks_2012} desenvolveram o Robo-Blocks, uma interface tangível de programação em blocos que permite executar passo a passo as instruções de um BP. Eles perceberam a necessidade dessa função ao observar que as crianças tendiam a implementar "grosseiramente"\ suas ideias para ver o robô executá-las, até obter o resultado desejado. Além disso, o robô executava rapidamente e as crianças precisavam escolher olhar para o brinquedo ou para os blocos, dificultando associar um movimento errado com sua causa no código. Com a execução passo a passo as crianças puderam associar blocos com movimentos, o que foi auxiliado por um LED ativado em cada bloco durante sua execução. Outra ferramenta que apresenta certa função de depuração é o Cubetto \cite{anzoategui_cubetto_2017} (\autoref{fig_cubetto}).  Esse brinquedo é programado por um painel no qual são encaixados blocos de madeira. Assim como o Robo-Blocks, o painel destaca cada bloco executado acendendo LEDs.
+ \citeonline{sipitakiat_robo-blocks_2012} tentam responder essa pergunta ao criar o Robo-Blocks, uma interface tangível de programação em blocos que permite execuções passo a passo. Os autores perceberam que as crianças implementavam “grosseiramente” suas ideias para ver o robô executá-las, sem refletir e aprender com os erros. Além disso, os movimentos rápidos do robô não permitiam comparar as ações do brinquedo com os blocos de “código”, dificultando associar um movimento errado com um bloco. Neste sentido, a execução passo a passo permitiu associar blocos com movimentos, o que foi auxiliado por um LED ativado em cada bloco durante sua execução. 
+ 
+O Cubetto \cite{anzoategui_cubetto_2017} (\autoref{fig_cubetto}) é um \ac{BP} é programado por um painel onde são encaixados blocos de madeira. O painel destaca cada bloco executado acendendo LEDs. Permite, portanto, que a criança associe o movimento do brinquedo com sua causa na lista de comandos. Diferente do Robo-Blocks, porém, não há a opção de execução passo a passo. O Cubetto e o Robo-Blocks, portanto, tentam atacar o problema da depuração em interfaces que devem ser compreendidos por crianças.
 
-Uma característica comum nestes trabalhos é a presença de componentes eletrônicos específicos. Tanto os blocos do Robo-Blocks quanto o painel do Cubetto tem um \textit{hardware} com baterias, conectores e placas projetadas para acender luzes conforme o brinquedo executa os comandos. Como alternativa independente de \textit{hardware} \citeonline{fincher_tangible_2019} apresentam as "linguagens externamente compiladas". Elas são interfaces com blocos tangíveis contendo marcas especiais. Essas marcas são lidas por um sensor óptico (câmera ou escâner) e interpretadas por um software externo que identifica as marcas e as "compila"\ de forma compreensível para um agente computacional (geralmente um robô) executar. Os blocos contém pouco ou nenhum componente eletrônico, o que segundo \citeonline{fincher_tangible_2019} dá mais liberdade aos projetistas para escolherem os materiais ou objetos a utilizar. Um exemplo de BP que utiliza interface tangível externamente compilada é o KIBO \cite{sullivan_kibo_2015} (\autoref{fig_kibo}).
+Uma característica comum nestes trabalhos é a presença de componentes eletrônicos. Eles têm baterias, conectores e placas eletrônicas. Como alternativa, \citeonline{fincher_tangible_2019} apresentam as “linguagens externamente compiladas”. Elas são interfaces com blocos tangíveis que contém marcas especiais, denominadas marcas fiduciais. Essas marcas são lidas por um sensor óptico e interpretadas por um software que identifica as marcas e as converte em um conjunto de comandos para o brinquedo executar. Deste modo os blocos não carecem de componentes eletrônicos, aumentando a liberdade para os projetistas escolherem os materiais ou objetos a utilizar \citeonline{fincher_tangible_2019}. O KIBO \cite{sullivan_kibo_2015} (\autoref{fig_kibo}) é um executado de \ac{BP} programado por uma linguagem externamente compilada.
 
 \begin{figure}[!htbp]
     \centering
@@ -51,20 +53,11 @@ Uma característica comum nestes trabalhos é a presença de componentes eletrô
     \label{fig_toys_tangible}
 \end{figure}
 
-%Este trabalho divide as interfaces dos \ac{BPs} dois tipos principais: tangíveis e virtuais. Enquanto as interfaces tangíveis permitem programar por meio de blocos físicos, como o KIBO \cite{sullivan_kibo_2015}, ou botões acoplados ao corpo do brinquedo, como a Bee-Bot\textsuperscript{\textregistered}, as interfaces virtuais permitem ver o algoritmo em uma tela bidimensional. Este segundo grupo inclui dispositivos de toque como \textit{smartphones} e \textit{tablets}, e computadores onde a interação ocorre por teclado e mouse. A \autoref{toy_samples} demonstra quatro exemplos.
+Por outro lazo, sem componentes eletrônicos, como LEDs, os blocos tangíveis carecem de meios para representar as instruções do algoritmo que durante a sua execução. A ausência de um indicador dificulta para a criança relacionar o comando está sendo executado e seus efeitos no comportamento do brinquedo. Portanto, também dificulta encontrar causas de erros, bem como mapear símbolos (imagens presente nos blocos) ações (movimentos do brinquedo).
 
-Por outro lado, sem componentes eletrônicos como LEDs, os blocos carecem de mecanismos de depuração, ou seja, ver quais instruções do algoritmo estão sendo executadas em cada instante. A falta de um indicador dificulta para a criança saber qual comando está sendo executado em cada ação do brinquedo, e portanto encontrar causas de erros, bem como mapear símbolos (imagens presente nos blocos) ações (movimentos do brinquedo).
+Uma abordagem possível para diminuir a necessidade de eletrônicos também possibilitar indicadores luminosos na interface de programação é \ac{RA} projetiva \cite{roberto_dynamic_2013}. Elá é uma técnica de projeção de elementos virtuais associados a objetos reais. Ela permite que um projetor crie animações, luzes, ou qualquer objeto graficamente representável e os projete interagindo com objetos reais em uma cena. Permite, portanto, avançar a representação oferecida por LEDS fixos em blocos e painéis, ao variar as cores e formas projetadas. Deste modo, os blocos tangíveis do algoritmo podem ser construídos com materiais diversos e ainda assim proporcionar \textit{feedbacks imediatos} \cite{norman_design_1990} durante a depuração.
 
-Esse tipo de problema é aderente ao uso de realidade aumentada (RA) projetiva \cite{roberto_dynamic_2013}. Essa técnica permite projetar elementos virtuais sobre objetos reais de modo dinâmico. Enquanto componentes eletrônicos seriam fixos em blocos com baterias ou inseridos em um painel, como o Cubetto, a projeção permite variar as cores e formas projetadas. Deste modo, os blocos tangíveis do algoritmo podem ser construídos com materiais diversos e ainda assim proporcionar \textit{scaffolding} durante a depuração.
-
-O RoPE (Robô Programável Educacional) representa uma oportunidade para testar a viabilidade desta abordagem de criação de interfaces tangíveis externamente compiladas e com uso de RA projetiva. Ele é um BP desenvolvido na Univali pelo Laboratório Lite\footnote{\url{https://lite.acad.univali.br}} com foco em crianças a partir dos 3 anos de idade. A sua interface de programação são botões coloridos (\autoref{fig_rope}), desenhados para serem simples de usar por crianças pequenas \cite{raabe_2017_rope}. Essa interface se mostrou um sucesso, e o brinquedo já foi usado em Centros de Desenvolvimento Infantil por mais de 1000 crianças. Além dos botões, pesquisas desenvolveram protótipos de outros modos de interação, como um aplicativo de celular \cite{viana_cesar_interface_2018} e uma interface de programação em blocos eletrônica \cite{metzger_desenvolvimento_2018}.
-
-%\begin{figure}[!htpb]
-  %\centering
-  %\includegraphics[width=.6\linewidth,fbox]{figs/toys.png}
-  %\caption{Exemplos de brinquedos programáveis. a) %Bee-Bot\textsuperscript{\textregistered}; b) Cubetto; c) KIBO; d) Dash}
-  %\label{toy_samples}
-%\end{figure}
+O RoPE (Robô Programável Educacional) representa uma oportunidade para testar a viabilidade desta abordagem de criação de interfaces tangíveis externamente compiladas e com uso de RA projetiva. Ele é um BP desenvolvido na Univali pelo Laboratório Lite\footnote{\url{https://lite.acad.univali.br}} com foco em crianças a partir dos 3 anos. A sua interface de programação são botões coloridos (\autoref{fig_rope}), desenhados para serem simples de usar por crianças pequenas \cite{raabe_2017_rope}. Essa interface se mostrou um sucesso, e o brinquedo já foi usado em Centros de Desenvolvimento Infantil por mais de 1000 crianças. Além dos botões, pesquisas desenvolveram protótipos de outros modos de interação, como um aplicativo de celular \cite{viana_cesar_interface_2018} e uma interface de programação em similar ao Cubetto \cite{metzger_desenvolvimento_2018}.
 
 \begin{figure}[!htbp]
     \centering
@@ -73,46 +66,22 @@ O RoPE (Robô Programável Educacional) representa uma oportunidade para testar 
     \label{fig_rope}
 \end{figure}
 
-%, e tem duas interfaces: uma interface tangível com 5 botões coloridos, e uma interface virtual via aplicativo \cite{viana_interface_2018}. O brinquedo é distribuído em Centros de Desenvolvimento Infantil (CDI), e tema de pesquisas de graduação \cite{pinheiro_alise_2016, metzger_desenvolvimento_2018} e mestrado \cite{martins_desenvolvimento_2016}. O presente trabalho ocorre no contexto dessas pesquisas, com foco no desenvolvimento e avaliação de interfaces alternativas para crianças de 4 a 6 anos\footnote{A observação de crianças com mais de 6 anos interagindo com o RoPE demonstra que as mesmas tem facilidade. Por isso este trabalho foca na faixa etária mais jovem.}.
-
-Este trabalho ocorre como uma continuidade das duas pesquisas citadas e busca contribuir com a área de Informática na Educação ao (1) projetar uma interface tangível externamente compilada para o brinquedo RoPE e (2) explorar o uso de RA projetiva como um meio de facilitar a depuração. Essa contribuição se fundamenta na literatura sobre interfaces tangíveis para crianças \cite{sapounidis_evaluating_2015, fincher_tangible_2019, plowman_interactivity_2004} e na observação de que o uso de RA projetiva é um campo pouco explorado no contexto de BPs.
-
-%Atualmente os avanços de hardware e técnicas de software tem possibilitado novas alternativas de interação, e isso tem instigado pesquisas que buscam projetar e avaliar essas interfaces \cite{sakamoto_code_2019, burleson_active_2018, sapounidis_evaluating_2015}. Além disso um grande número de novos brinquedos programáveis tem surgido \cite{catlin_edurobots_2018}, levantando o questionamento se ainda seguem os princípios seminais da linguagem LOGO\footnote{Os princípios estão ligados a facilidade de iniciar a programar, mas grande poder naquilo que pode ser criado, denominado "low floor, high ceiling".}.
+Este trabalho ocorre como uma continuidade dessas e busca contribuir com a área de Informática na Educação ao (1) projetar uma interface tangível externamente compilada para o brinquedo RoPE e (2) explorar o uso de RA projetiva para facilitar a depuração. Essa contribuição se fundamenta na literatura sobre interfaces tangíveis para crianças \cite{sapounidis_evaluating_2015, fincher_tangible_2019, plowman_interactivity_2004} e na observação de que o uso de RA projetiva é um campo pouco explorado no contexto de BPs.
 
 \section{Problema de Pesquisa} \label{s_cintro_problema_pesquisa}
 
-O problema que este trabalho se propõe a investigar no contexto do brinquedo RoPE se insere no que \citeonline{norman_design_1988} denomina falta de \textit{visibilidade}. A visibilidade é um princípio de design que permite ao usuário compreender como interagir com determinada interface, e como os resultados das interações devem ser mostrados ao usuário.
+O problema que este trabalho se propõe a investigar no contexto do brinquedo RoPE se insere no que \citeonline{norman_design_1990} denomina falta de \textit{visibilidade}. A visibilidade é um princípio de design relacionado a como o usuário percebe estado de um sistema, e como ele mapeia as ações que pode fazer e que alterações de estado elas provocam.
 
-Em BPs que possuem apenas botões, como o RoPE e a Bee-Bot, o algoritmo que a criança programa não é visível. A criança não vê a sequência de comandos que está sendo construída ao apertar os botões do brinquedo. Essa falta de visibilidade dificulta conversar sobre o algoritmo, analisá-lo, encontrar erros e desfazer operações. A invisibilidade aparece no relato de \citeonline{raabe_brinquedos_2015}, relacionada à falta de compreensão do funcionamento do botão de limpar a memória da Bee-Bot. As crianças esqueciam de limpar os comandos programados anteriormente. Se os comandos não estão visíveis, a criança não tem como saber se foram limpos, e esquece de apagá-los. A solução sugerida foi adicionar um visor de comandos no brinquedo. No RoPE, a solução foi sempre apagar todos os comandos ao final de cada execução.
+Em BPs que possuem apenas botões, como a Bee-Bot, o algoritmo que a criança programa não é visível. A criança não vê a sequência de comandos construída ao apertar os botões. Essa invisibilidade dificulta conversar sobre o algoritmo, analisá-lo, encontrar erros e desfazer operações. \citeonline{raabe_brinquedos_2015} menciona esse a incompreensão do funcionamento do botão de limpar a memória da Bee-Bot. As crianças esqueciam de limpar os comandos programados anteriormente, dado que essa ação não é automática. O estado do sistema não é visível, e a criança não sabe se os comandos foram limpos. A solução sugerida foi adicionar um visor de comandos.
 
-No caso das interfaces de blocos tangíveis externamente compiladas (como a utilizada pelo KIBO), o problema é a \textit{invisibilidade de execução} do algoritmo. Os blocos carecem de indicadores que mostrem qual bloco está sendo executado em cada momento, correspondente a cada movimento do brinquedo. Essa falta de visibilidade de execução dificulta compreender a sequência lógica de funcionamento do algoritmo, pois não há mapeamento entre comando/bloco e ação do robô. O Cubetto soluciona esse problema por meio de luzes indicadoras, e para isso depende de um painel onde os blocos são encaixados.
+No caso das interfaces de blocos tangíveis externamente compiladas (como a utilizada pelo KIBO), o problema é a \textit{invisibilidade de execução} do algoritmo. Os blocos carecem de indicadores que mostrem qual bloco está sendo executado em cada momento, correspondente a cada movimento do brinquedo. Essa falta de visibilidade de execução dificulta compreender a sequência lógica de funcionamento do algoritmo, pois não há mapeamento entre comando/bloco e ação do robô. O Cubetto soluciona esse problema através de luzes indicadoras, e para isso depende de um painel onde os blocos são encaixados.
 
-\citeonline{norman_design_1988} comenta que a visibilidade durante a interação com a interface de um dispositivo influencia o modelo mental que o usuário cria sobre como tal dispositivo funciona. Caso exista falta de visibilidade, e o dispositivo executar de forma inesperada, o usuário tende a encontrar explicações para justificar esse comportamento. Ao justificá-lo, cria um modelo mental incorreto. Um questionamento é que esse modelo mental causado pela falta de visibilidade sobre o funcionamento de um BPs possa prejudicar o aprendizado de programação. \citeonline{raabe_brinquedos_2015} apresentam crianças justificando o comportamentos inesperados da Bee-Bot após terem esquecido de limpar a memória do brinquedo: as crianças afirmaram que a abelha tinha vontade própria.
+\citeonline{norman_design_1990} comenta que dispositivos cujas interfaces não demonstram o estado interno durante a interação podem influenciar o entendimento do usuário sobre como tal dispositivo funciona. Esse “entendimento” é denominado modelo mental. Caso o dispositivo executar de forma inesperada, o usuário tende a encontrar alguma explicação para justificar tal comportamento. Ao justificá-lo, cria um modelo mental incorreto. \citeonline{raabe_brinquedos_2015} apresentam crianças justificando comportamentos inesperados da Bee-Bot após terem esquecido de limpar sua memória, afirmando que a “abelha” tinha vontade própria.
 
-Por fim, essa falta de visibilidade desencadeia a dificuldade em depurar. Os modelos de depuração presentes na literatura \cite{carver_assessing_1986, mccauley_debugging_2008} possuem etapas de localização e reparação de bugs, o que exige acesso ao código fonte. Portanto, a ausência do código fonte impede a depuração segundo estes modelos.
+Por fim, essa falta de visibilidade desencadeia a dificuldade em depurar. A literatura \cite{carver_assessing_1986, mccauley_debugging_2008} apresenta modelos organizam a ação de depurar em etapas, entre as quais está a de localizar e reparação erros em algum código-fonte. A ausência do código-fonte, portanto, impede a depuração segundo estes modelos.
 
-A partir destas reflexões elaborou-se a seguinte pergunta de pesquisa:
-\textit{Como crianças de 4 a 6 anos interagem com uma interface de programação focada em permitir visualizar os passos e a execução de um algoritmo?}
-
-%Por outro lado, as interfaces tangíveis (TUIs) externamente compiladas são compostas de blocos sem componentes eletrônicos. Essa ausência de luzes ou alguma forma automática de indicar que o bloco está sendo executado
-
-%\citeonline{newhouse_programmable_2017} observaram em um estudo que, sem auxílio, crianças não demonstraram ações que pudessem ser associadas a compreensão de "algoritmos".
-
-% giro
-%Pesquisas sobre a interação de crianças com brinquedos programáveis mencionam algumas dificuldades. Em pesquisa com a Bee-Bot \cite{raabe_brinquedos_2015} os autores comentam incompreensão do movimento de giro. Girar significa manter-se no mesmo local e deslocar-se sobre o próprio eixo. Porém o movimento é confundido com mudar de posição, ou seja, girar e andar para frente, como o movimento de um carrinho por exemplo.
-
-% lateralidade
-%Outra dificuldade é em relação à lateralidade. Devido ao egocentrismo \cite{piaget_representacao_1981}, a criança não consegue imaginar-se em outro ponto de vista. Os comandos que a criança fala são relativos à posição dela. Se o brinquedo está de lado para a criança, e precisa avançar para o próximo quadrante, então a criança diz para ele ir "para o lado", em vez de avançar.
-
-%As interfaces tangíveis e virtuais possuem algumas subcategorias: botões, elementos de auxílio, aplicativos, e blocos tangíveis. Cada uma dessas subcategorias tem vantagens e desvantagens (\autoref{quadro_vantagem_desvantagem}). 
-
-%Os botões são pontos de interação acoplados ao corpo do brinquedo. A vantagem disso é que os símbolos de setas estão na mesma orientação do brinquedo ao programá-lo. A desvantagem é não possuir um visor que demonstre a sequência de comandos programados.
-
-%Os elementos de auxílio são cartas que visam permitir a ver o algoritmo programado. A vantagem é que são tangíveis e baratos. Entretanto não há sincronia com o brinquedo, ou seja, um algoritmo mostrado por cartas pode não corresponder à programação feita no brinquedo.
-
-%Os aplicativos resolvem o problema da sincronia. Por meio de conexão sem fio, permitem programar e ver os comandos programados. A desvantagem é que a experiência de usar telas bidimensionais não é natural, e, além disso, esses dispositivos são de uso pessoal e isso dificulta a colaboração.
-
-%Os blocos tangíveis resolvem o problema da colaboração. Várias crianças podem organizar blocos de madeira ao mesmo tempo. A dificuldade com este tipo de abordagem é a depuração. É difícil projetar blocos que indiquem quando estão em execução. Alternativas para isso são painéis como o do Cubetto, porém o custo destas soluções nem sempre é viável.
+Partindo destas reflexões, elaborou-se a seguinte pergunta de pesquisa: 
+\textit{como crianças de 4 a 6 anos interagem com uma interface de programação focada em permitir visualizar os passos e a execução de um algoritmo?}
 
 \begin{comment}
     \begin{quadro}[!htbp]
@@ -151,12 +120,11 @@ Blocos tangíveis  & Cubetto, KUMIITA    & - Experiência sensorial
 \end{quadro}
 \end{comment}
 
-%Considerando, então, (i) as dificuldades de compreensão do giro e (ii) as vantagens e desvantagens das interfaces existentes, a questão problema deste trabalho é \textit{como construir uma interface de programação para um brinquedo programável, que tenha as vantagens das interfaces virtuais e tangíveis existentes?}.
-
 \subsection{Solução Proposta}
 \label{ss_cintro_solucao}
 
-A proposta é desenvolver uma interface de \ac{RA} projetiva combinada com uma linguagem externamente compilada. Dado que os blocos de linguagens externamente compiladas tem marcas especiais de fácil identificação, chamadas de marcas fiduciais, uma câmera pode captar as posições dos blocos e um algoritmo pode controlar um projetor de modo a destacá-los. Graficamente, a proposta é apresentada na \autoref{idea}.
+A proposta é desenvolver uma interface de \ac{RA} projetiva combinada com uma linguagem externamente compilada. Dado que os blocos de linguagens externamente compiladas tem marcas fiduciais, uma câmera pode captar as posições dos blocos e um algoritmo pode controlar um projetor para destacá-los \autoref{idea}.
+
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=.85\linewidth,fbox]{figs/idea_2.png}
@@ -165,38 +133,38 @@ A proposta é desenvolver uma interface de \ac{RA} projetiva combinada com uma l
   \label{idea}
 \end{figure}
 
-A intenção é que a criança programe utilizando blocos de papelão com símbolos de setas correspondentes às ações do RoPE. O dispositivo externo com câmera é um \textit{smartphone}, dado que é mais acessível e fácil de manusear do que um laptop ou desktop. O projetor utilizado é portátil e de baixa potência de iluminação (1200 lumens), o que diminui o seu custo.
+A intenção é que a criança programe utilizando blocos de papelão com símbolos de setas correspondentes às ações do RoPE. Um \textit{smartphone} é usado como câmera, pois é mais acessível e fácil de manusear do que um notebook ou desktop. Um projetor portátil, de baixa potência de iluminação (1200 lumens) e de baixo custo ilumina os blocos e projeta um mapa interativo.
 
-Outra funcionalidade implementada é a execução passo a passo. A intenção é ativar um estado em que o brinquedo executa um comando e espera a criança disparar a execução da próxima ação. Deste modo, a criança tem mais tempo para olhar cada bloco e compreender o movimento associado a ele. Com isso pode compreender possíveis erros no algoritmo construído por ela ou por outra criança.
+Outra funcionalidade implementada é o estado de \textit{execução passo a passo}. Ao ativar esse estado o brinquedo executa um comando e espera a criança disparar a execução da próxima ação. Isso possibilita à criança mais tempo para olhar cada bloco e compreender o movimento associado a ele. A intenção é que a criança possa compreender possíveis erros no algoritmo construído por ela ou por outra criança.
 
-Com a construção dessa ferramenta, pretende-se avaliar qualitativamente as interações de crianças de 4 a 6 anos com a mesma. 
+A partir do uso de RA e de um estado de execução passo a passo, a proposta é possibilitar um melhor entendimento, por parte da criança, a respeito do algoritmo que ela está construindo, e sobre seu próprio modo de pensar. Esta abordagem é exploratória, e não foram encontrados dados quantitativos passíveis de comparações numéricas com outros estudos. Este trabalho, portanto, apresenta a construção da proposta e a avaliação qualitativa das interações de crianças de 4 a 6 anos com a mesma.
 
 \subsection{Delimitação de Escopo}
 \label{ss_cintro_escopo}
 
-Este trabalho se insere no contexto de ferramentas que buscam permitir o aprendizado de algoritmos por crianças. Na definição de \citeonline{brackmann_desenvolvimento_2017}, algoritmos é um dos pilares do \acl{PC} \cite{brackmann_desenvolvimento_2017}, que tem outros três pilares: decomposição, abstração e reconhecimento de padrões. Este trabalho cita as definições destes pilares, porém a solução proposta tem foco apenas no pilar algoritmos e mais especificamente na atividade de depurá-los.
+Este trabalho é sobre uma ferramenta para facilitar o aprendizado de algoritmos por crianças. Algoritmos é um dos quatro pilares do \acl{PC} \cite{brackmann_desenvolvimento_2017}, junto à decomposição, abstração e reconhecimento de padrões. Este trabalho cita definições destes pilares, porém a solução proposta tem foco apenas em algoritmos, e, mais especificamente, na atividade de depurá-los.
 
-Não é objetivo deste trabalho realizar testes com comprovação estatística, no sentido de identificar relações de causa e efeito no aprendizado. O foco é descrever a ocorrência ou ausência das dificuldades mais perceptíveis durante a programação por meio de uma ferramenta educacional. Esse foco se adequa à observações de cunho qualitativo, com um número reduzido de crianças.
+Não é objetivo deste trabalho realizar testes com comprovação estatística, no sentido de identificar relações de causa e efeito no aprendizado. O foco é descrever a presença ou ausência das dificuldades mais perceptíveis durante a interação com uma ferramenta educacional. Esse foco se adequa à pesquisa de cunho qualitativo, com um número reduzido de crianças.
 
-Também não foi objetivo programar um algoritmo de visão computacional para reconhecer os blocos tangíveis e o RoPE. O uso de uma biblioteca de identificação de marcas fiduciais foi a estratégia escolhida para agilizar a implementação. A eliminação de marcas fiduciais poderá ocorrer em trabalhos futuros, considerando os aprendizados obtidos com a primeira versão aqui apresentada.
+Também não foi objetivo programar um algoritmo de visão computacional para reconhecer os blocos tangíveis e o RoPE. Uma biblioteca de identificação de marcas fiduciais permitiu agilizar a implementação de um protótipo funcional. A eliminação de marcas fiduciais poderá ocorrer em trabalhos futuros, considerando os aprendizados obtidos com a primeira versão aqui apresentada.
 
 % ----------------------------------------------------------------------- %
 \subsection{Justificativa}
 \label{ss_cintro_justificativa}
 
-O mapeamento industrial descrito no \autoref{c_estado_arte}, demonstra que, de 56 brinquedos, apenas 2 utilizam RA. Ainda assim o seu uso ocorre por meio de tablets e celulares, que são menos adequados para crianças em comparação com as interfaces tangíveis \cite{sapounidis_tangible_2019, zuckerman_tui_2013}.
+O mapeamento industrial descrito no \autoref{c_estado_arte}, demonstra que, de 56 brinquedos, apenas 2 utilizam RA. Ainda assim o seu uso ocorre através de tablets e celulares, menos indicados para crianças em comparação com as interfaces tangíveis \cite{sapounidis_tangible_2019, zuckerman_tui_2013}.
 
-No mesmo mapeamento, o RoPE aparece como o único projeto brasileiro em atividade voltado ao ensino de programação para crianças pequenas por meio de brinquedos programáveis. Desde sua concepção há uma preocupação com aspectos de design para que crianças possam aprender de forma lúdica e evitando erros não construtivos \cite{raabe_brinquedos_2015}. O tipo de interação proposto neste trabalho ainda não foi experimentado, tanto com o RoPE quanto em outros brinquedos. Neste sentido, e considerando o caráter pioneiro do brinquedo RoPE como ferramenta educacional para aprendizado de algoritmos por crianças no Brasil, entende-se que a exploração proposta neste trabalho pode contribuir com novas informações para o projeto.
+No mesmo mapeamento, o RoPE aparece como o único projeto brasileiro em atividade voltado ao ensino de programação para crianças pequenas com brinquedos programáveis. Desde a sua concepção, o projeto estuda aspectos de design para que crianças possam aprender de forma lúdica e evitando erros não construtivos \cite{raabe_brinquedos_2015}. A abordagem aplicando \ac{RA}, como este trabalho propõe, ainda não foi experimentado com o RoPE ou outros brinquedos. Considerando o pioneirismo do RoPE como ferramenta educacional para aprendizado de algoritmos por crianças no Brasil, entende-se que a exploração proposta neste trabalho pode contribuir com novas informações para o projeto.
 
-O fato da solução proposta não utilizar um hardware específico, ou seja, usar apenas produtos disponíveis comercialmente por mais de um fabricante (mini-projetores, \textit{smartphones} e Arduino), facilita a sua reprodução. O RoPE compartilha características com uma classe de brinquedos, como a Bee-Bot, Go Robot Mouse e Thymio, e que poderiam testar a proposta apresentada.
+A reprodução da proposta é facilitada pelo fato da mesma não utilizar componentes eletrônicos específicos. Os componentes usados são produtos disponíveis comercialmente, que precisam ser plugados (mini-projetores, \textit{smartphones} e Arduino). O RoPE compartilha princípio de ser programado por botões com diversos outros brinquedos, como a Bee-Bot, Go Robot Mouse e Thymio. Esses brinquedos também poderiam ser aplicados no contexto da proposta, o que também facilita sua reprodução.
 
-A proposta de usar realidade aumentada projetiva abre caminho para desenvolver tapetes dinâmicos. Atualmente o brinquedo RoPE se move sobre tapetes estáticos, que precisam ser trocados de acordo com a atividade. A projeção, associado à informação da localização do brinquedo, permite disparar eventos quando este atinge determinadas posições. Esses eventos viabilizam a construção de jogos, em que as fases avançam conforme os movimentos do brinquedo. Portanto, ao permitir que um sistema computacional perceba a posição do brinquedo e projete o ambiente, surgem novas possibilidades de interação.
+A proposta de usar \ac{RA} projetiva abre caminho para desenvolver tapetes dinâmicos. Atualmente o brinquedo RoPE se move sobre tapetes estáticos, que precisam ser trocados conforme a atividade. A projeção, associado à informação da localização do brinquedo, permite disparar eventos quando este atinge determinadas posições. Esses eventos viabilizam a construção de jogos, em que as fases avançam conforme os movimentos do brinquedo. Portanto, ao permitir que um sistema computacional perceba a posição do brinquedo e projete o ambiente, surgem novas possibilidades de interação.
 
-Novas possibilidades de interação também surgem ao utilizar a programação em blocos. Por estarem desassociados do hardware do RoPE, os blocos podem expandir as funções já existentes sem a necessidade de modificações físicas no brinquedo. Enquanto os botões definem ações específicas, como giros de 90º, adequadas para as crianças iniciarem os primeiros algoritmos, os blocos podem definir outros movimentos, como giros de 45º por exemplo. Além disso, podem haver blocos para programar eventos de sons e luzes, e também animações como trocar a imagem projetada.
+Novas possibilidades de interação também surgem ao utilizar a programação em blocos. Por estarem desassociados dos botões do RoPE, os blocos podem expandir as funções já existentes sem a necessidade de modificações físicas no brinquedo. Enquanto os botões definem ações específicas, como giros de 90.º, adequadas para as crianças iniciarem os primeiros algoritmos, os blocos podem definir outros movimentos, como giros de 45.º, por exemplo. Além disso, outros blocos podem programar eventos de sons e luzes, e também animações como trocar o mapa projetado.
 
-Entretanto, prosseguir com essas possibilidades exige avaliar a ferramenta no ambiente destino do RoPE, que são centros de desenvolvimento infantil com crianças de 4 a 6 anos. Essa avaliação é necessária por dois motivos principais. Primeiro, obter a opinião de professores sobre a interface; e segundo, verificar riscos, como a criança obstruir as marcas fiduciais, ou os elementos físicos e virtuais representarem uma fonte de distração e não de aprendizado.
+Entretanto, prosseguir com essas possibilidades exige avaliar a ferramenta no em centros de desenvolvimento infantil com crianças de 4 a 6 anos. Essa avaliação é necessária por dois motivos principais. Primeiro, obter a opinião de professores e crianças sobre a interface; e segundo, verificar riscos, como a criança obstruir as marcas fiduciais, ou os elementos físicos e virtuais representarem uma fonte de distração e não de aprendizado.
 
-Por fim, a proposta está ligada à uma área de interesse da comunidade científica \footnote{Possui jornais dedicados ao tema, como International Journal of Child-Computer Interaction e ACM Transactions on Computer-Human Interaction.}, e ao fato de que há uma lacuna de compreensão sobre utilização de realidade aumentada projetiva com brinquedos programáveis.
+Por fim, a proposta está ligada a uma área de interesse da comunidade científica\footnote{Possui jornais dedicados ao tema, como International Journal of Child-Computer Interaction e ACM Transactions on Computer-Human Interaction.}, e ao fato de que há uma lacuna de compreensão sobre utilização de \ac{RA} projetiva com brinquedos programáveis.
 
 \section{Objetivos}
 \label{s_cintro_objetivos}
@@ -204,7 +172,7 @@ Por fim, a proposta está ligada à uma área de interesse da comunidade cientí
 \subsection{Objetivo Geral}
 \label{ss_cintro_objetivo_geral}
 
-Avaliar qualitativamente o uso de uma interface de realidade aumentada projetiva na depuração de algoritmos por crianças de um Centro de Desenvolvimento Infantil.
+Avaliar qualitativamente o uso de uma interface de \ac{RA} projetiva na depuração de algoritmos do brinquedo RoPE por crianças de 4 a 6 anos.
 
 \subsection{Objetivos Específicos}
 \label{ss_cintro_objetivos_espec}
@@ -213,13 +181,13 @@ Os objetivos específicos do trabalho são:
 
 \begin{enumerate}
     
-    \item Descrever sistemas e aplicações que utilizam realidade aumentada projetiva;
+    \item Relacionar sistemas e aplicações que utilizam realidade aumentada projetiva;
 
-    \item\label{obj_mapear} Mapear os principais tipos de interfaces de brinquedos programáveis existentes;
-    
+    \item\label{obj_mapear} Categorizar as interfaces de brinquedos programáveis existentes;
+
     \item\label{obj_interface} Construir a interface de realidade aumentada projetiva para o brinquedo RoPE;
-    
-    \item\label{obj_avaliar} Experimentar a interface em atividades com crianças e coletar eventos de interação.
+
+    \item\label{obj_avaliar} Aplicar a interface em atividades com crianças para coletar e analisar eventos de interação.
     
 \end{enumerate}
 \section{Metodologia}
@@ -230,58 +198,35 @@ Esta seção descreve a metodologia e os procedimentos metodológicos utilizados
 \subsection{Métodos da Pesquisa}
 \label{ss_cintro_metod_pesquisa}
 
-\citeonline{gil_metodos_2008} define método científico como um conjunto de procedimentos técnicos adotados para produzir conhecimento. \citeonline{wazlawick_metodologia_2009} comenta que o método científico é uma sequência de passos demonstrando como atingir os objetivos de pesquisa. Os métodos científicos tem duas características: os procedimentos técnicos e as bases lógicas de raciocínio que guiam a investigação.
-
-Quanto aos procedimentos técnicos, esta pesquisa tem natureza aplicada, pois prevê a utilização prática de uma ferramenta e tecnologias específicas para solucionar um problema de interação com brinquedos programáveis.
-
-A abordagem sobre esse problema foi qualitativa, ao observar aspectos subjetivos como falas, gestos e expressões durante o uso da solução proposta. Por fim, esta pesquisa tem objetivos exploratórios, ao buscar extrair informações de um fenômeno desconhecido, com uma pequena amostra de participantes, a fim de proporcionar uma visão aproximada do fato sem a testagem de hipóteses.
+Métodos científicos são conjuntos de procedimentos técnicos adotados para produzir conhecimento \cite{gil_metodos_2008}, construído através de passos para atingir os objetivos de uma pesquisa \cite{wazlawick_metodologia_2009}. O método desta pesquisa pode ser descrito como de natureza aplicada, pois prevê a aplicação prática de uma ferramenta e tecnologias para solucionar um problema de interação com brinquedos programáveis. A abordagem sobre o problema foi qualitativa, ao observar aspectos subjetivos como falas, gestos e expressões durante o uso da solução proposta. Por fim, esta pesquisa é exploratória, ao buscar extrair informações de um fenômeno desconhecido, a partir de uma pequena amostra de participantes em caráter experimental. A próxima subseção descreve os procedimentos metodológicos adotados.
 
 \subsection{Procedimentos Metodológicos}
 \label{ss_cintro_proced_metodologicos}
 
-A construção da solução proposta e atendimento dos objetivos de pesquisa possui quatro fases: estudo, modelagem, implementação e avaliação.
+A construção da solução proposta e atendimento dos objetivos de pesquisa possui quatro fases: estudo, modelagem, implementação e avaliação, descritas a seguir.
 
-A etapa de estudo correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento, por sua vez, buscou descrever os tipos de interfaces mais utilizados em projetos de brinquedos programáveis, incluindo produtos comerciais. Por último, trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
+\begin{description}
+    \item[Estudo] Essa etapa correspondeu a uma revisão sistemática, um mapeamento industrial e um levantamento de trabalhos similares. A revisão sistemática focou em compreender como são feitas pesquisas científicas avaliando interfaces de programação de brinquedos programáveis. O mapeamento buscou descrever as categorias de interfaces mais utilizados em projetos de brinquedos programáveis, incluindo produtos comerciais. Por último, trabalhos similares descrevem o uso de projeção ou formas de facilitar a programação por crianças.
 
-A etapa de modelagem ocorreu como um planejamento dos elementos de software a serem implementados. Esta etapa envolveu levantamento de requisitos (\autoref{apendice_requisitos}) e prototipação (\autoref{apendice_prototipo}) para conferir a viabilidade da proposta. 
+    \item[Modelagem] A etapa de modelagem ocorreu como um planejamento dos elementos de software a serem implementados. Esta etapa envolveu levantamento de requisitos (\autoref{apendice_requisitos}) e prototipação (\autoref{apendice_prototipo}) para conferir a viabilidade da proposta. 
 
-A etapa de implementação correspondeu a programar o aplicativo 
- (i) alterar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; (ii) 
-configurar a conexão com uma plataforma de armazenamento das interações ocorridas com um brinquedo programável; 
-(ii) adaptar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; e (iii) programar um aplicativo de \textit{smartphone} para captar os blocos e comunicar com o projetor.
+    \item[Implementação] Etapa que correspondeu a programar o aplicativo (i) alterar o \textit{firmware} do brinquedo RoPE para comunicação sem fio; (ii) configurar a conexão com uma plataforma de armazenamento das interações ocorridas com um brinquedo programável; (ii) adaptar o \textit{firmware} do RoPE para comunicação sem fio; e (iii) programar um aplicativo de \textit{smartphone} para captar os blocos e comunicar com o projetor.
+   
+    \item[Avaliação] A avaliação\footnote{Para atendimento do objetivo específico \autoref{obj_avaliar}.} aqui compreendida na observação de crianças em atividades de programação do RoPE, para coletar e por fim analisar dados seguindo um protocolo definido no \autoref{c_avaliacao}. Essa etapa envolveu aplicação do software de  análise qualitativa Qualcoder, para tratamento dos dados coletados. 
 
-A avaliação\footnote{ Para atendimento do objetivo específico \autoref{obj_avaliar}.} corresponde a observar crianças programando o brinquedo, e coletar dados seguindo um protocolo definido no \autoref{c_avaliacao}. A ideia nesta etapa é executar estudos de caso, onde se coletará as interações quantitativa meio da \ac{API} e serão registradas informações qualitativas em diário de bordo. A ideia é organizar um processo em que cada caso subsidie melhorias na interface a serem testadas no próximo caso.
+\end{description} 
 
-%Você deve identificar os procedimentos técnicos que você utilizou, como, por exemplo:
-
-\begin{comment}
-    \item Pesquisa bibliográfica;
-    \item Pesquisa documental;
-    \item Pesquisa experimental;
-    \item Levantamento;
-    \item Estudo de caso;
-    \item Pesquisa ex post facto;
-    \item Pesquisa-ação; 
-    \item Pesquisa participante; ou
-    \item Outros.
-\end{comment}
-
-%Você deve definir as etapas utilizadas na execução do seu trabalho, por meio de um plano de trabalho descrito textualmente, explicando as atividades realizadas, os resultados obtidos, os artefatos desenvolvidos, etc. Você deve explorar os procedimentos técnicos comentados na seção anterior. Você deve fazer uma ligação entre as etapas executadas na sua pesquisa e os objetivos específicos da dissertação. Todos os objetivos específicos devem ser atendidos com a execução dos itens do plano de trabalho.
-
-% ----------------------------------------------------------------------- %
 \section{Estrutura da Dissertação}
 \label{s_cintro_estrutura}
 
-O trabalho está organizado em 6 capítulos correlacionados. O \autoref{c_introducao}, Introdução, contextualizou e apresentou o tema, o problema e uma proposta de como solucioná-lo. Foram estabelecidos os objetivos a serem alcançados com a solução, e as limitações de escopo a serem observadas.
+O trabalho está organizado em 6 capítulos correlacionados. O \autoref{c_introducao}, contextualizou e apresentou o tema, o problema e uma proposta de como solucioná-lo. Foram estabelecidos os objetivos a serem alcançados com a solução, e as limitações de escopo a serem observadas.
 
-O \autoref{c_fundamentacao_teorica} apresenta a fundamentação teórica iniciando com a descrição do sujeito mais importante desta pesquisa (a criança) e observa aspectos relacionados ao desenvolvimento infantil. Além disso é apresentada a definição de \ac{PC} em quatro pilares, conceitos presentes nas interfaces de brinquedos programáveis, e aplicações de realidade aumentada projetiva.
+O \autoref{c_fundamentacao_teorica} apresenta a fundamentação teórica iniciando com a descrição do sujeito desta pesquisa (a criança) e observa fundamentos relacionados ao desenvolvimento infantil. Como tema relacionado a algoritmos, é apresentada a definição de \ac{PC} em quatro pilares. O capítulo também apresenta fundamentos sobre as interfaces de brinquedos programáveis, bem como aplicações de realidade aumentada projetiva.
 
 O \autoref{c_estado_arte} apresenta o estado da arte em três aspectos: das pesquisas realizadas com brinquedos programáveis; interfaces de brinquedos mais utilizados no mercado; e trabalhos com semelhanças tecnológicas e conceituais.
 
-O \autoref{c_desenvolvimento} apresenta uma visão geral dos componentes que integram a contribuição: aplicativo e elementos tangíveis. O capítulo apresenta aspectos técnicos da implementação,tecnologias utilizadas para construir esses componentes e possibilitar a comunicação entre os mesmos.
+\autoref{c_desenvolvimento} é o quarto capítulo, que apresenta uma visão geral dos componentes da contribuição: aplicativo e elementos tangíveis. O capítulo apresenta aspectos técnicos da implementação, tecnologias utilizadas para construir esses componentes e possibilitar a comunicação entre os mesmos.
 
-O \autoref{c_avaliacao} descreve o contexto de execução da pesquisa. O capítulo também apresenta o protocolo de teste e os instrumentos de coleta usados durante atividades com crianças. Em seguida, o \autoref{c_resultados} apresenta os resultados obtidos com a análise dos dados coletados.
+O \autoref{c_avaliacao} descreve o contexto de execução da pesquisa. Ele também apresenta o protocolo de teste e os instrumentos de coleta usados durante atividades com crianças. Em seguida, o \autoref{c_resultados} apresenta os resultados obtidos com a análise dos dados coletados.
 
 Por fim, o \autoref{c_conclusao} revisa o atendimento aos objetivos da pesquisa, reflete sobre as contribuições geradas e propõe trabalhos futuros.
-
-%No Capítulo N, são tecidas as conclusões do trabalho, relacionando os objetivos identificados inicialmente com os resultados alcançados. São ainda propostas possibilidades de continuação da pesquisa desenvolvida a partir das experiências adquiridas com a execução do trabalho.
