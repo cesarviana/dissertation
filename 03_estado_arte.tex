@@ -1,21 +1,21 @@
 \chapter{Trabalhos Relacionados}
 \label{c_estado_arte}
 
-Este capítulo apresenta trabalhos similares ao que se propõe nesta pesquisa. Ele está dividido em três seções. A \autoref{sec_tools} apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A \autoref{sec_rsl} apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. A intenção é compreender quais interfaces são comumente utilizadas, quais são os designs experimentais aplicados e que resultados são obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também chamado de mapeamento industrial sistemático.} sobre as interfaces de BPs, que demonstra quais tipos de interface estão disponíveis no comércio eletrônico. %Enquanto na \autoref{sub_sub_aplicacoes_ra_projetiva_educacao} apresenta aplicação de RA projetiva em ferramentas educacionais, o mapeamento indica que a técnica   no contexto de BPs.
+Este capítulo apresenta trabalhos similares ao que se propõe nesta pesquisa. Ele está dividido em três seções. A \autoref{sec_tools} apresenta ferramentas que buscam auxiliar crianças nos primeiros contatos com algoritmos por meio da depuração. A \autoref{sec_rsl} apresenta uma revisão sistemática da literatura (RSL) sobre pesquisas que observam a interação de crianças de 3 a 6 anos com BPs. O objetivo desta revisão é compreender quais interfaces são comumente utilizadas, os designs experimentais aplicados e resultados obtidos, para fundamentar a escolha do design experimental desta pesquisa. Por fim, a \autoref{secao_mapeamento_industrial} apresenta um mapeamento industrial\footnote{Método de busca baseado em fontes não acadêmicas, mas que segue um método sistemático. Também denominado mapeamento industrial sistemático.} sobre as interfaces de BPs, que demonstra quais categorias de interfaces estão disponíveis no comércio eletrônico.
 
 \section{Interfaces de Brinquedos Programáveis}
 \label{sec_tools}
-Esta seção tem por objetivo demonstrar interfaces para crianças terem os primeiros contatos com algoritmos utilizando BPs. Para isso, identifica as características de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram o público-alvo (crianças a partir dos 4 anos), a visibilidade dos algoritmos por meio de interfaces tangíveis e o uso de BPs. Assim, foram analisados quatro trabalhos:
+Esta seção demonstra interfaces destinadas para crianças terem os primeiros contatos com algoritmos utilizando BPs. Para isso, identifica as características de cada trabalho e compara com a solução proposta. Os critérios utilizados para a escolha dos trabalhos relacionados foram: a) o público-alvo (crianças a partir dos 4 anos), b) a visibilidade dos algoritmos através de interfaces tangíveis e c) o uso de BPs. Assim, foram analisados quatro trabalhos:
 
 \begin{enumerate}
     \item Robo-Blocks: uma interface tangível eletrônica para programação de BPs, com foco em ensino de depuração \cite{sipitakiat_robo-blocks_2012}.
-    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por meio de luzes (\url{https://www.primotoys.com}).
-    \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage aos posicionamento dos objetos físicos em sua superfície \cite{beraza_soft_2010}.
-    \item ALERT: interface de programação interativa, na qual o BP interpreta comandos à medida que os detecta via câmera \cite{burleson_active_2018}.
+    \item Cubetto: um BP com interface tangível de painel, que indica a execução de cada comando por luzes (\url{https://www.primotoys.com}).
+    \item Bee-Bot com mesa interativa: uma mesa interativa com objetos tangíveis, que projeta um mapa interativo que reage ao posicionamento dos objetos físicos em sua superfície \cite{beraza_soft_2010}.
+    \item ALERT: interface de programação interativa, em que o BP interpreta comandos à medida que os detecta via câmera \cite{burleson_active_2018}.
 \end{enumerate}
 
 \subsection{Robo-Blocks}
-O Robo-Blocks, de \citeonline{sipitakiat_robo-blocks_2012}, é um sistema que permite que crianças comandem um BP por meio do encaixe de blocos eletrônicos. Os quatro movimentos básicos do robô são iguais aos do brinquedo RoPE (mover-se para frente, para trás, girar à esquerda e girar à direita), porém as crianças também podem parametrizar a extensão do movimento do robô ajustando um controle giratório presente em cada bloco (\autoref{fig:robo_blocks}). Os blocos são encaixados por conectores magnéticos, formando uma sequência. Essa sequência se liga a um bloco principal, que envia os comandos ao BP por comunicação sem fio. O BP, por sua vez, é inspirado na tartaruga do ambiente Logo. Ele tem uma caneta acoplada que permite desenhar ao serem utilizados blocos de \textit{"pen up"} (erguer caneta) e \textit{"pen down"} (baixar caneta).
+O Robo-Blocks, de \citeonline{sipitakiat_robo-blocks_2012}, é um sistema que permite que crianças comandem um BP por meio do encaixe de blocos eletrônicos. Os quatro movimentos básicos do robô são iguais aos do brinquedo RoPE (mover-se para frente, para trás, girar à esquerda e girar à direita), porém as crianças também podem parametrizar a extensão do movimento do robô ajustando um controle giratório presente em cada bloco (\autoref{fig:robo_blocks}). Os blocos são encaixados por conectores magnéticos, formando uma sequência. Essa sequência se liga a um bloco principal, que envia os comandos ao BP por comunicação sem fio. O BP é inspirado na tartaruga do ambiente Logo. Ele tem uma caneta acoplada que permite desenhar ao serem utilizados blocos de \textit{"pen up"} (erguer caneta) e \textit{"pen down"} (baixar caneta).
 
 \begin{figure}[!h]
     \centering
@@ -102,12 +102,12 @@ Com relação à depuração, a programação interativa se apresenta como um di
 
 As seções anteriores apresentaram quatro trabalhos relacionados com programação de brinquedos programáveis.. Esta seção compara estes trabalhos quanto às seguintes características: idade do público-alvo, tipo de interface, e depuração (\autoref{quadro:comparision}). Por fim, os trabalhos são posicionados em relação à solução proposta.
 
-Em relação ao público-alvo, o Robo-Blocks foca em crianças de 8 a 9 anos, pois a criança precisa entender basicamente o significado dos algarismos numéricos ao parametrizar o ângulo do giro do robô, e nesta idade as crianças normalmente aprenderam ler \cite{committee_on_the_prevention_of_reading_difficulties_in_young_children_preventing_1998}. Em contrapartida, o Cubetto, a Bee-Bot\footnote{Existem versões com texto nos botões \it{clear}, \it{go} e \it{pause}, mas os botões provocam sempre o mesmo comportamento. Mesmo que não saiba ler, a criança consegue mapear a ação do botão com sua funcionalidade.} e o ALERT não dependem diretamente de números, e por isso atendem um público a partir dos 4 anos.
+Em relação ao público-alvo, o Robo-Blocks foca em crianças de 8 a 9 anos, pois a criança precisa entender basicamente o significado dos algarismos numéricos ao parametrizar o ângulo do giro do robô, e nesta idade as crianças normalmente já aprenderam a ler \cite{committee_on_the_prevention_of_reading_difficulties_in_young_children_preventing_1998}. Em contrapartida, o Cubetto, a Bee-Bot\footnote{Existem versões com texto nos botões \it{clear}, \it{go} e \it{pause}, mas os botões provocam sempre o mesmo comportamento. Mesmo que não saiba ler, a criança consegue mapear a ação do botão com sua funcionalidade.} e o ALERT não dependem diretamente de números, e atendem um público a partir dos 4 anos.
 
-Com relação ao tipo de interface, todos os trabalhos utilizam interface tangível, mas seguindo diferentes abordagens. O Robo-Blocks tem blocos eletrônicos, que são encaixados entre si e possuem um display que mostra o tamanho do avanço ou giro. A programação do Cubetto também se dá por blocos tangíveis, porém sem visores e controles ajustáveis. Tudo o que a criança faz é encaixar os blocos em um painel. O ALERT tem blocos ainda mais simples. Foram usadas folhas de papel com as marcas fiduciais impressas, o que tende a ser mais barato e fácil de reproduzir. Por fim, a interface tangível da Bee-Bot não tem blocos, mas sim botões  \cite{yu_review_2019}. Apesar das diferentes abordagens, todos os trabalhos mencionam engajamento das crianças durante as interações, sejam elas com blocos eletrônicos, com as folhas de papel ou com os botões.
+Com relação à interface, todos os trabalhos utilizam interface tangível, mas seguindo diferentes abordagens. O Robo-Blocks tem blocos eletrônicos encaixados entre si e que possuem um display que mostra o tamanho do avanço ou giro. A programação do Cubetto também se dá por blocos tangíveis, porém sem visores e controles ajustáveis. Tudo o que a criança faz é encaixar os blocos em um painel. O ALERT tem blocos ainda mais simples. Foram usadas folhas de papel com as marcas fiduciais impressas, o que tende a ser mais barato e fácil de reproduzir. Por fim, a interface tangível da Bee-Bot não tem blocos, mas sim botões  \cite{yu_review_2019}. Apesar das diferentes abordagens, todos os trabalhos mencionam engajamento das crianças durante as interações, sejam elas com blocos eletrônicos, com as folhas de papel ou com os botões.
 
 Por fim, em relação à depuração, o Robo-Blocks é a interface com maior foco em facilitar a atividade de encontrar erros em algoritmos. Isso se dá por duas características: marcadores físicos (bandeiras) para indicar possíveis erros, e a função de execução passo a passo.
-No ALERT, os elementos de execução passo a passo são menos necessários. O brinquedo se move lentamente, e com isso há mais tempo para a criança olhar os comandos e comparar com os movimentos do robô. Além disso, o algoritmo pode ser alterado durante a execução. Se um comando desvia o brinquedo da rota, os passos subsequentes podem ser alterados para reajustá-la. A associação entre comando e ação também é mais óbvia no ALERT, pois o brinquedo precisa se aproximar do comando a ser executado. Quando um erro ocorre, fica claro qual foi o comando responsável. Quando os blocos eletrônicos ficam distântes do brinquedo esse mapeamento entre comando e ação é menos óbvio. Segundo  \citeonline{sipitakiat_robo-blocks_2012} as funções de depuração foram uma tentativa de resolver esse problema de mapeamento. A depuração no Cubetto é similar ao Robo-Blocks, pois o painel de programação fica distante do robô. Além disso, o Cubetto não tem execução passo a passo. Por fim, a interface de RA utilizada com a Bee-Bot  \cite{beraza_soft_2010} não tem visibilidade de código e nem funções de execução passo a passo, mas é similar ao trabalho aqui apresentado devido às tecnologias empregadas.
+No ALERT, os elementos de execução passo a passo são menos necessários. O brinquedo se move lentamente, e com isso há mais tempo para a criança olhar os comandos e comparar com os movimentos do robô. Além disso, o algoritmo pode ser alterado durante a execução. Se um comando desvia o brinquedo da rota, os passos subsequentes podem ser alterados para reajustá-la. A associação entre comando e ação também é mais óbvia no ALERT, pois o brinquedo precisa se aproximar do comando a ser executado. Quando um erro ocorre, fica claro qual foi o comando responsável. Quando os blocos eletrônicos ficam distantes do brinquedo esse mapeamento entre comando e ação é menos óbvio. Segundo  \citeonline{sipitakiat_robo-blocks_2012} as funções de depuração foram uma tentativa de resolver esse problema de mapeamento. A depuração no Cubetto é similar ao Robo-Blocks, pois o painel de programação fica distante do robô. Além disso, o Cubetto não tem execução passo a passo. Por fim, a interface de RA utilizada com a Bee-Bot  \cite{beraza_soft_2010} não tem visibilidade de código e nem funções de execução passo a passo, mas é similar ao trabalho aqui apresentado devido às tecnologias empregadas.
 
 {{\renewcommand{\arraystretch}{1.5}
     \begin{quadro}[!h]
@@ -117,10 +117,10 @@ No ALERT, os elementos de execução passo a passo são menos necessários. O br
         \textbf{Projeto ou ferramenta}  & \textbf{Idade do público-alvo}  & \textbf{Tipo de interface}       &\textbf{Depuração}                                          \\ \hline
         
         Robo-Blocks                     & 8 a 9 anos                      & Tangível com blocos eletrônicos  & Execução passo a passo, protractor e marcadores de erros   \\ \hline
-        Cubetto                         & 4 a 8 anos                      & Tangível com painel eletrônico   & Destaca blocos em execução                                 \\ \hline
+        Cubetto                         & 4 a 8 anos                      & Tangível com painel eletrônico   & Destaca os blocos em execução                                 \\ \hline
         Bee-Bot com mesa interativa     & 4-5 a 12-14 anos                & Tangível com botões              & -                                  \\ \hline
         ALERT                           & 6 anos                          & Tangível com projeção            & Permite alterar o comportamento do robô durante a execução \\ \hline
-        RoPE AR                   & 4 a 6 anos                      & Tangível com projeção            & Destaca blocos em execução                                 \\ \hline
+        RoPE AR                   & 4 a 6 anos                      & Tangível com projeção            & Destaca os blocos em execução                                 \\ \hline
         \end{tabularx}
         \vspace{-10pt}
         \sourceauthor
@@ -135,12 +135,12 @@ Por fim, um último diferencial é que no RoPE AR a projeção ocorre por cima, 
 
 \section{Revisão Sistemática: Pesquisas de IHC com crianças}
 \label{sec_rsl}
-Para compreender como são feitas as pesquisas sobre brinquedos programáveis com crianças, o método utilizado foi o de revisão sistemática \cite{kitchenham_guidelines_2007}. Esse método é um tipo de estudo que revisa estudos a respeito de uma pergunta de pesquisa, tópico ou fenômeno de interesse. No processo busca-se identificar, avaliar e interpretar as publicações relevantes para o tema em questão, e evitar o viés de quem produziu a pesquisa. Três questões exploratórias guiaram a busca:
+Para compreender como são feitas as pesquisas sobre brinquedos programáveis com crianças, o método utilizado foi o de revisão sistemática \cite{kitchenham_guidelines_2007}. Esse método revisa estudos a respeito de uma pergunta de pesquisa, tópico ou fenômeno de interesse. No processo busca-se identificar, avaliar e interpretar as publicações relevantes para o tema em questão, e evitar o viés de quem produziu a pesquisa. Três questões exploratórias guiaram a busca:
 
 \begin{itemize}
-    \item QE1 - Quais tipos de interfaces são usadas em pesquisas sobre aprendizado de algoritmos na Educação Infantil?
-    \item QE2 - Quais métodos e design de experimentos são utilizados?
-    \item QE3 - O que as crianças aprendem ao interagir com brinquedos programáveis?
+    \item QE1 — Quais categorias de interfaces são usadas em pesquisas sobre aprendizado de algoritmos na Educação Infantil?
+    \item QE2 — Quais métodos e design de experimentos são utilizados?
+    \item QE3 — O que as crianças aprendem ao interagir com brinquedos programáveis?
 \end{itemize}
 
 A seguinte busca foi adaptada para os artigos publicados nos anos de 2015 a 2020 nos repositórios ACM Digital Library, ERIC, IEEE Xplore e Science Direct:
@@ -149,7 +149,7 @@ A seguinte busca foi adaptada para os artigos publicados nos anos de 2015 a 2020
 
 \subsection{Resultados}
 
-Sobre os resultados obtidos com as buscas nos repositórios, foram aplicados os critérios de inclusão e exclusão primeiramente sobre os resumos e depois sobre o texto completo (\autoref{quadro_criterios}). Após a aplicação dos critérios, restaram 7 artigos.
+Sobre os resultados obtidos com as buscas nos repositórios foram aplicados os critérios de inclusão e exclusão, primeiramente sobre os resumos e em seguida sobre o texto completo (\autoref{quadro_criterios}). Com isso restaram 7 artigos.
 
 \begin{quadro}[!htbp]
 \caption{Critérios de inclusão e exclusão.}
@@ -163,7 +163,7 @@ Sobre os resultados obtidos com as buscas nos repositórios, foram aplicados os 
     \begin{minipage}{.45\textwidth}
         1. Estudos primários indicando intervenção relacionada a ensino/aprendizado de algoritmos na Educação Infantil \\
         2. Estudos publicados entre 2015 e 2020 \\
-        3. Estudos com crianças entre 3 e 6 anos \\
+        3. Público com idade entre 3 e 6 anos \\
     \end{minipage}
     
     &
@@ -175,8 +175,8 @@ Sobre os resultados obtidos com as buscas nos repositórios, foram aplicados os 
         3. Foco em formar professores \\
         4. Menos de 5 páginas  \\
         5. Estudos secundários ou terciários \\
-        6. Estudos focados em público-alvo diferente desta pesquisa \\
-        7. Estudos duplicados \\
+        6. Público-alvo diferente desta pesquisa \\
+        7. Publicações duplicadas \\
         8. Estudo que não aborda criação de algoritmos por crianças \\
         9. Estudo cujo texto completo não foi possível acessar \\
     \end{minipage}
@@ -186,7 +186,7 @@ Sobre os resultados obtidos com as buscas nos repositórios, foram aplicados os 
  \end{tabular}
 \end{quadro}
 
-O critério de inclusão 3 (idade entre 3 a 6 anos) filtrou 82 trabalhos, pois grande parte dos estudos tem público-alvo maior de 6 anos. O segundo critério que filtrou mais artigos (CI1) aplicou-se a 30 artigos que não apresentaram nenhum tipo de intervenção com crianças, a fim de mensurar resultados como a qualidade de alguma ferramenta ou aprendizado de algoritmos. Outros 15 trabalhos focaram em públicos específicos que se diferenciam do público desta pesquisa, e portanto foram desconsiderados. O \autoref{quadroartigosrsl} apresenta os artigos que passaram no filtro.
+O critério de inclusão 3 (idade entre 3 a 6 anos) filtrou 82 trabalhos com um público-alvo de crianças maiores de 6 anos. O segundo critério que filtrou mais artigos (CI1) filtrou 30 artigos que não apresentaram nenhuma intervenção com crianças para mensurar resultados de alguma ferramenta ou aprendizado de algoritmos. Outros 15 trabalhos focaram em públicos específicos que se diferenciam do público desta pesquisa. O \autoref{quadroartigosrsl} apresenta os artigos que passaram no filtro.
 
 \begin{table}[!htbp]
     \begin{center}
@@ -256,16 +256,16 @@ O critério de inclusão 3 (idade entre 3 a 6 anos) filtrou 82 trabalhos, pois g
     \citeonline{pila_learning_2019}
     \textit{Learning to code via tablet applications: An evaluation of Daisy the Dinosaur and Kodable as learning tools for young children} &
     
-    Pesquisa qualitativa com pré e pós teste. 28 crianças de 4 a 6 anos usaram, durante uma semana, 2 aplicativos para ensino de programação (Kodable e Daisy the Dinossaur). A pesquisa captou o quanto as crianças gostaram de cada aplicativo e a influência do gênero no desempenho. Também foi avaliado o reconhecimento de comandos antes e após a intervenção, com notas de 0 a 5 conforme \citeonline{bers_computational_2014}. &
+    Pesquisa qualitativa com pré e pós teste. Vinte e oito crianças de 4 a 6 anos usaram, durante uma semana, 2 aplicativos para ensino de programação (Kodable e Daisy the Dinossaur). A pesquisa captou o quanto as crianças gostaram de cada aplicativo e a influência do gênero no desempenho. Também foi avaliado o reconhecimento de comandos antes e após a intervenção, com notas de 0 a 5 conforme \citeonline{bers_computational_2014}. &
     
     Testes t identificaram um aumento significativo no reconhecimento dos comandos do aplicativo Daisy. Após uma semana foi possível identificar a compreensão de habilidades gerais de codificação. O “apelo” do aplicativo teve correlação com o aprendizado resultante, e o gênero não afetou o desempenho. \\ \hline
     
     \citeonline{burleson_active_2018}
     \textit{Active Learning Environments with Robotic Tangibles: Children's Physical and Virtual Spatial Programming Experiences} &
     
-    Pesquisa qualitativa comparando o uso de duas ferramentas de programação espacial, sendo uma virtual e outra tangível (Robopad e ALERT). 9 crianças de 6 anos, divididas em 4 grupos, interagiram durante 5 dias (num calendário de 2 semanas) com ambas as ferramentas. &
+    Pesquisa qualitativa comparando o uso de duas ferramentas de programação espacial, sendo uma virtual e outra tangível (Robopad e ALERT). Nove crianças de 6 anos, divididas em 4 grupos, interagiram durante 5 dias (num calendário de 2 semanas) com ambas as ferramentas. &
     
-    Usando o ALERT as crianças foram capazes de programar, colaborativamente, sequências para alterar o comportamento do robô. A ferramenta Robopad induziu mais a alterar/depurar o “programa” em tempo de execução.  \\ \hline
+    Usando o ALERT as crianças programaram, colaborativamente, sequências para alterar o comportamento do robô. A ferramenta Robopad induziu mais a alterar/depurar o “programa” em tempo de execução.  \\ \hline
     
     \citeonline{heljakka_gamified_2019}
     \textit{Gamified Coding: Toy Robots and Playful Learning in Early Education} &
@@ -281,15 +281,15 @@ O critério de inclusão 3 (idade entre 3 a 6 anos) filtrou 82 trabalhos, pois g
 
 \end{landscape}
 
-\subsection{QE1 - Quais tipos de interfaces são usadas em pesquisas sobre aprendizado de algoritmos na Educação Infantil? }
+\subsection{QE1 — Quais categorias de interfaces são usadas em pesquisas sobre aprendizado de algoritmos na Educação Infantil?}
 
-O tipo de interface mais citado nos resultados foram os brinquedos controlados por botões. A Bee-Bot apareceu em duas pesquisas, e outros brinquedos programados por botões foram a TurtleBot e o Botley. Aplicativos citados foram o ScratchJr, a interface do Dash, o Kodable, e \textit{Daisy the Dinossaur}. Outro tipo de interface citado é a espacial: \citeonline{burleson_active_2018} apresenta o ALERT e o Robopad, em que os agentes se movem no espaço e captam os comandos do ambiente.
+A categoria de interface mais citada foram os brinquedos controlados por botões. A Bee-Bot apareceu em duas pesquisas, e outros brinquedos programados por botões foram a TurtleBot e o Botley. Aplicativos citados foram o ScratchJr, a interface do Dash, o Kodable, e \textit{Daisy the Dinossaur}. Outra interface citada é a espacial: \citeonline{burleson_active_2018} apresenta o ALERT e o Robopad, em que os agentes se movem no espaço e captam os comandos do ambiente.
 
-Além das interfaces, outra variável a ser considerada são os tipos de atividades realizadas. Uma mesma interface, utilizada de modos diferentes, pode gerar diferentes aprendizados. A sequência de atividades do TangibleK Robotics Currículum, desenvolvida por \citeonline{bers_computational_2014} foi aplicada por \citeonline{repiso_robotics_2019} e por \citeonline{pila_learning_2019}. Dividida em 7 encontros, o primeiro dia de atividades iniciou com a exploração da interface da Bee-Bot, seguida (nos dias 2 e 3) da programação do brinquedo para se deslocar sobre tapetes. Nos dias 4 e 5 foram introduzidas cartas correspondentes às instruções, para serem sequenciadas e depois comparadas com os movimentos do brinquedo. Nos dias 6 e 7 foram mostradas sequências de comandos com erros, e as crianças exercitaram a depuração ao encontrar esses erros.
+Além das interfaces, outra variável a ser considerada são as atividades realizadas. Uma mesma interface, utilizada de modos diferentes, pode gerar diferentes aprendizados. A sequência de atividades do TangibleK Robotics Curriculum, desenvolvida por \citeonline{bers_computational_2014} foi aplicada por \citeonline{repiso_robotics_2019} e por \citeonline{pila_learning_2019}. Dividida em 7 encontros, o primeiro dia de atividades iniciou com a exploração da interface da Bee-Bot, seguida (nos dias 2 e 3) da programação do brinquedo para se deslocar sobre tapetes. Nos dias 4 e 5 foram introduzidas cartas correspondentes às instruções, para serem sequenciadas e depois comparadas com os movimentos do brinquedo. Nos dias 6 e 7 foram mostradas sequências de comandos com erros, e as crianças exercitaram a depuração ao encontrar esses erros.
 
-\citeonline{di_lieto_educational_2017} apresenta atividades de dificuldade incremental, em que as crianças precisavem programar a Bee-Bot para se deslocar sobre um tapete de formas cada vez mais complexas. \citeonline{heljakka_gamified_2019} não definiram nenhuma atividade específica para as crianças, apenas permitiram a exploração dos brinquedos Botley e Dash por 6 meses.
+\citeonline{di_lieto_educational_2017} apresenta atividades de dificuldade incremental, em que as crianças precisavam programar a Bee-Bot para se deslocar sobre um tapete de formas cada vez mais complexas. \citeonline{heljakka_gamified_2019} não definiram nenhuma atividade específica para as crianças, apenas permitiram a exploração dos brinquedos Botley e Dash por 6 meses.
 
-\subsection{QE2 - Quais métodos e design de experimentos são utilizados?}
+\subsection{QE2 — Quais métodos e design de experimentos são utilizados?}
 
 O método mais utilizado foi a pesquisa quasi-experimental, com pré e pós teste. Das 7 pesquisas, 4 foram quantitativas, 2 qualitativas e uma mista. Além disso, \citeonline{nam_connecting_2019} e \citeonline{repiso_robotics_2019} utilizaram grupos de controle e experimental.
 
@@ -297,13 +297,13 @@ O tempo das intervenções variou consideravelmente. As pesquisas objetivando me
 
 As amostras utilizadas foram de conveniência, com experimentos realizados nos ambientes escolares. O tamanho das amostras variou entre 9 e 31 crianças, que trabalharam em grupos em 6 das 7 pesquisas. As fontes de dados utilizadas foram vídeos, mapa de eventos, rubricas, transcrições, e entrevistas.
 
-\subsection{QE3 - O que as crianças aprendem ao interagir com brinquedos programáveis?}
+\subsection{QE3 — O que as crianças aprendem ao interagir com brinquedos programáveis?}
 
-Os trabalhos citam principalmente o aprendizado de sequenciamento e de algoritmos em geral. \citeonline{pila_learning_2019}, após a interação de um conjunto de crianças durante 5 dias com os aplicativos Daisy e Kodable, perguntaram às crianças “O que é programar?”. A nota máxima foi dada a respostas que apresentavam a ideia de causa e efeito aplicável à tecnologia em geral, por exemplo “programar é colocar código em algo para que faça alguma ação”. Os resultados indicaram que as crianças não evoluíram na capacidade de expressar verbalmente seu entendimento de codificação.
+Os trabalhos citam principalmente o aprendizado de sequenciamento e de algoritmos em geral. \citeonline{pila_learning_2019}, após a interação de um conjunto de crianças durante 5 dias com os aplicativos Daisy e Kodable, perguntaram às crianças “O que é programar?”. A nota máxima foi dada a respostas que apresentavam a ideia de causa e efeito aplicável à tecnologia em geral, por exemplo “programar é colocar código em algo para fazer alguma ação”. Os resultados indicaram que as crianças não evoluíram na capacidade de expressar verbalmente seu entendimento de codificação.
 
-Um outro aspecto da compreensão algorítmica avaliado por \citeonline{repiso_robotics_2019} e \citeonline{pila_learning_2019} é a compreensão dos símbolos da interface. \citeonline{repiso_robotics_2019} investigaram a compreensão sobre a correspondência entre ação e instrução, que significa mapear qual ação o robô executa em correspondência a um símbolo. A partir das rubricas os pesquisadores identificaram uma evolução significativa no grupo experimental. \citeonline{pila_learning_2019} mostrou quatro símbolos da interface do aplicativo Daisy para as crianças e solicitou que explicassem verbalmente o significado do símbolo. No pré-teste a média de acerto foi de 0.5 e no pós-teste esse valor subiu para 2.3.
+Outro aspecto avaliado por \citeonline{repiso_robotics_2019} e \citeonline{pila_learning_2019} é a compreensão dos símbolos da interface. \citeonline{repiso_robotics_2019} investigaram a compreensão sobre a correspondência entre ação e instrução, que significa mapear qual ação o robô executa em correspondência a um símbolo. A partir das rubricas os pesquisadores identificaram uma evolução significativa no grupo experimental. \citeonline{pila_learning_2019} mostrou quatro símbolos da interface do aplicativo Daisy para as crianças e solicitou que explicassem verbalmente o significado do símbolo. No pré-teste a média de acerto foi de 0,5 e no pós-teste esse valor subiu para 2,3.
 
-\citeonline{nam_connecting_2019} avançaram nessa compreensão e utilizaram um instrumento para captar a compreensão de sequências. O instrumento utilizado solicita que crianças organizem 4 imagens que mostram eventos sequenciais, dada a imagem inicial. Os resultados apontaram evolução significativa na pontuação de sequenciamento para o grupo experimental.
+\citeonline{nam_connecting_2019} avançaram nessa questão e captaram a compreensão de sequências. O instrumento utilizado solicita que, dada uma imagem, outras 4 imagens com eventos sequenciais sejam organizados. Aplicando essa técnica com crianças de 4 anos, os resultados apontaram evolução significativa na nota de sequenciamento para o grupo experimental.
 
 \section{Mapeamento Industrial: Interfaces de Brinquedos Programáveis}
 \label{secao_mapeamento_industrial}
@@ -315,14 +315,14 @@ O mapeamento industrial buscou encontrar o maior número possível de brinquedos
     \item Definição dos critérios para filtrar os resultados
 \end{enumerate}
 
-As próximas subseções detalham essas etapas da forma mais transparente possível.
+As próximas subseções detalham essas etapas.
 
 \subsection{Questões de Pesquisa}
 
 Três questões exploratórias guiaram o processo de busca:
 
 \begin{enumerate}
-    \item Quais são os tipos de interfaces mais frequentemente utilizados em brinquedos programáveis?
+    \item Quais são as categorias de interfaces mais frequentemente utilizadas em brinquedos programáveis?
     \item Como a realidade aumentada é aplicada em brinquedos programáveis?
     \item Quais são os conceitos de algoritmos abordados?
 \end{enumerate}
@@ -341,17 +341,15 @@ Seguindo a estratégia também apresentada no mapeamento feito por \citeonline{k
     \item Vídeos do Youtube
 \end{itemize}
 
-Além destas fontes, uma lista de páginas online selecionadas pelo orientador desta pesquisa durante estudos sobre o tema contribuiu como fonte de busca.
-
-A string de busca foi aplicada nos sites que oferecem campos de pesquisa. Outra fonte de busca foram as categorizações de produtos existentes nos websites. O site kickstarter.com, por exemplo, tem uma área específica sobre projetos de robótica, enquanto a plataforma amazon.com possui uma categoria de produtos denominada \textit{coding toys}. Essas categorizações foram consultadas e os resultados adicionados aos resultados da busca textual. Por fim, a abrangência do mapeamento foi validada por meio da consulta de artigos de revisão a fim de encontrar brinquedos faltantes. Nessa etapa 5 brinquedos foram adicionados.
+A string de busca foi aplicada nos sites que oferecem campos de pesquisa. Outra fonte de busca foram listas de produtos categorizados pelos sites consultados. O site kickstarter.com, por exemplo, tem uma área específica sobre projetos de robótica, enquanto a plataforma amazon.com possui uma categoria de produtos denominada \textit{coding toys}. Essas pré-categorizações foram adicionados aos resultados da busca textual. Por fim, a abrangência do mapeamento foi validada por meio da consulta de artigos de revisão de modo a encontrar brinquedos faltantes. Cinco brinquedos foram adicionados nesta etapa.
 
 \subsection{Filtro}
-Os critérios de inclusão foram três. Primeiramente, a presença de alguma forma de inserir comandos a serem executados pelo brinquedo. O segundo critério é a presença de algum componente tangível, ou seja, aplicativos sem interação com brinquedo físico foram descartados. O último critério é a presença de algum componente eletrônico, de forma que haja um processamento dos comandos programados para controlar sua execução. Esse critério eliminou os jogos de tabuleiro e livros de programação \cite{hamilton_emerging_2020}.
+Três critérios guiaram a inclusão dos brinquedos nos resultados. Primeiramente, a presença de alguma forma de inserir comandos a serem executados pelo brinquedo. O segundo critério é a presença de algum componente tangível, ou seja, aplicativos sem interação com brinquedo físico foram descartados. O último critério é possuir algum componente eletrônico, de forma que haja um processamento dos comandos programados para controlar sua execução. Esse critério eliminou os jogos de tabuleiro e livros de programação \cite{hamilton_emerging_2020}.
 
 Após encontrar brinquedos adequados aos critérios de inclusão, a próxima etapa foi obter dados sobre as interfaces de programação. Para cada brinquedo foi executada uma pesquisa por vídeos demonstrando o uso do brinquedo. Outras fontes de dados foram as descrições presentes nas páginas de comércio eletrônico e páginas dos fabricantes.
 
 \subsection{Resultados}
-Um total de 86 brinquedos resultaram do processo de busca. Destes, 56 serviram como objeto de análise para responder às três perguntas de pesquisa. Os outros 30 brinquedos não foram analisados por terem sido adicionados à lista posteriormente ou por serem versões similares de algum dos brinquedos analisados. Os resultados estão disponíveis no endereço \url{https://bit.ly/35cUbZ1}. O \autoref{quadro:toys_reviewed} sumariza os brinquedos utilizados na análise.
+Um total de 86 brinquedos resultaram do processo de busca. Destes, 56 serviram como objeto de análise para responder às três perguntas de pesquisa. Os outros 30 brinquedos não foram analisados, dado que foram adicionados posteriormente aos resultados ou por serem versões similares de algum dos brinquedos analisados. Os resultados estão disponíveis no endereço \url{https://bit.ly/35cUbZ1}. O \autoref{quadro:toys_reviewed} sumariza os brinquedos utilizados na análise.
 \begin{landscape}
 \linespread{1}
 \begin{quadro}
@@ -422,7 +420,7 @@ Um total de 86 brinquedos resultaram do processo de busca. Destes, 56 serviram c
 \end{small}
 \end{landscape}
 
-Mais de 80\% dos brinquedos foram lançados a partir de 2014, ano seguinte ao aumento de interesse pelo tema do \acl{PC}. A \autoref{toys_year} demonstra o número de brinquedos lançados por ano, e, comparado com a \autoref{pc_interest}, há uma semelhança no crescimento e no período de aumento. Isso sugere que os brinquedos estão sendo lançados comercialmente em resposta à uma demanda no campo educacional.
+Quarenta e seis brinquedos (85\%) foram lançados a partir de 2014, ano seguinte ao aumento no interesse pelo tema do \acl{PC}. A \autoref{toys_year} demonstra o número de brinquedos lançados por ano, e, comparado com a \autoref{pc_interest}, há crescimento no número de brinquedos lançados a partir de 2013. Portanto, pode haver uma relação entre o interesse pelo \acl{PC} e \ac{BPs} no mesmo período.
 
 \begin{figure}[!htbp]
     \centering
@@ -440,9 +438,9 @@ Mais de 80\% dos brinquedos foram lançados a partir de 2014, ano seguinte ao au
     \sourceauthor
 \end{figure}
 
-\subsection{QE1 - Quais são os tipos de interfaces mais frequentemente utilizados em brinquedos programáveis?}
+\subsection{QE1 - Quais são as categorias de interfaces mais frequentemente utilizados em brinquedos programáveis?}
 
-A resposta à pergunta \textit{QE1 - Quais são os tipos de interfaces mais frequentemente utilizados em brinquedos programáveis?} depende da perspectiva de análise dessas interfaces. Uma pesquisa pode observar os materiais utilizados, enquanto outra observar as cores e formas. O método utilizado para definir essa perspectiva foi o de Kawakita Jiro \citeonline{scupin_kj_1997}. Esse método busca organizar imagens em grupos em três fases: captura, agrupamento e categorização. Ao final é formado um diagrama de afinidades (\autoref{kj}).
+A resposta à pergunta \textit{QE1 - Quais são as categorias de interfaces mais frequentemente utilizados em brinquedos programáveis?} depende da perspectiva de análise dessas interfaces. Uma pesquisa pode observar os materiais utilizados, enquanto outra observar as cores e formas. O método utilizado para definir essa perspectiva foi o de Kawakita Jiro \citeonline{scupin_kj_1997}. Esse método busca organizar imagens em grupos em três fases: captura, agrupamento e categorização. Ao final é formado um diagrama de afinidades (\autoref{kj}).
 
 \begin{figure}[!htbp]
     \centering
@@ -451,7 +449,7 @@ A resposta à pergunta \textit{QE1 - Quais são os tipos de interfaces mais freq
     \label{kj}
     \sourceauthor
 \end{figure}
-Na fase de captura, foram produzidos recortes de imagens focando nas interfaces dos brinquedos de programar. Essas imagens foram obtidas ao parar vídeos de demonstração dos brinquedos. Após a captura, imagens foram distribuídas em um software online e agrupadas por dois pesquisadores. Possíveis divergências, por exemplo, se blocos com texto e ícones pertencem a uma mesma categoria, foram discutidas e sanadas (\autoref{kj_run}).
+Na fase de captura, foram produzidos recortes de imagens focando nas interfaces dos brinquedos de programar. Essas imagens foram obtidas ao parar vídeos de demonstração dos brinquedos. Após a captura, as imagens foram distribuídas em um software online e agrupadas por dois pesquisadores. Possíveis divergências, por exemplo, se blocos com texto e ícones pertencem a uma mesma categoria, foram discutidas e sanadas (\autoref{kj_run}).
 
 \begin{figure}
     \centering
@@ -465,7 +463,7 @@ O processo resultou em 2 categorias, cada uma com 5 subcategorias. A primeira ca
 As subcategorias elencadas das interfaces virtuais foram:
 \begin{description}
     \item[Código textual: ] Interfaces que usam código digitado em teclados, como as linguagens de propósito geral.
-    \item[Blocos virtuais: ] Peças de quebra-cabeça que são conectadas e representam estruturas de programação.
+    \item[Blocos virtuais: ] Peças de quebra-cabeça que conectadas representam estruturas de programação.
     \item[Máquinas de estado: ] Formas geométricas conectadas por linhas, em que cada forma agrupa ações do brinquedo. As linhas representam eventos que provocam a transição entre os estados.
     \item[Linhas: ] Uma linha é desenhada na tela do dispositivo e o brinquedo se move conforme o seu formato.
     \item[Fluxogramas: ] Formas geométricas conectadas por linhas. Cada forma representa uma ação ou uma decisão.
@@ -518,7 +516,7 @@ Uma vantagem possível dessa abordagem é a proximidade com que o brinquedo fís
 
 \subsection{QE3 - Quais são os conceitos de algoritmos abordados nas interfaces de brinquedos programáveis?}
 
-A abrangência de conceitos de algoritmos abordados por brinquedos programáveis foi analisada nos seguintes conceitos: variáveis, estruturas de repetição, condicionais, listas, recursividade, paralelismo, sequenciamento, funções, parâmetros e eventos. Aspectos como tipos de dados, constantes, orientação a objetos não foram abordados pois são abstraídos na maioria das interfaces.
+A abrangência de conceitos de algoritmos abordados por brinquedos programáveis foi analisada nos seguintes conceitos: variáveis, estruturas de repetição, condicionais, listas, recursividade, paralelismo, sequenciamento, funções, parâmetros e eventos. Aspectos como tipos de dados, constantes, e paradigmas de programação não foram abordados dado que são conceitos abstraídos nessas interfaces.
 
 \begin{figure}[!htbp]
     \centering
@@ -528,12 +526,12 @@ A abrangência de conceitos de algoritmos abordados por brinquedos programáveis
     \sourceauthor
 \end{figure}
 
-A \autoref{fig:toys_concepts} apresenta o resultado da análise. Como o esperado, o sequenciamento é o conceito mais abordado: criar sequências de comandos a serem executados é intrínseco dos brinquedos programáveis. O segundo conceito mais abordado são repetições, por 76\% dos brinquedos. As estruturas de repetição são normalmente suportadas em interfaces virtuais de programação em blocos.
+A \autoref{fig:toys_concepts} apresenta o resultado da análise. Como o esperado, o sequenciamento é o conceito mais abordado: criar sequências de comandos a serem executados é intrínseco dos brinquedos programáveis. O segundo conceito mais abordado (76\% dos brinquedos) são repetições. As estruturas de repetição são normalmente suportadas em interfaces virtuais de programação em blocos.
 
-Outros dois conceitos interligados são condicionais e eventos. 66\% dos brinquedos disparam algum tipo de evento captado por sensores de luminosidade, proximidade, sons, etc. Esses eventos são usados em condicionais para ações do tipo "se obstáculo à frente", "se luminosidade maior que", entre outros.
+Outros dois conceitos interligados são condicionais e eventos. 66\% dos brinquedos disparam algum evento captado por sensores de luminosidade, proximidade, sons, etc. Esses eventos são usados em condicionais para ações do tipo "se obstáculo à frente, vire à esquerda", "se luminosidade maior que 30, toque som", entre outros.
 
-Conceitos mais avançados, como paralelismo, recursividade e vetores são suportados pelos brinquedos que tem interfaces de código textual, com suporte a linguagens de propósito geral. Recursividade e vetores são conceitos suportados por 23\% dos brinquedos.
+Conceitos mais avançados, como paralelismo, recursividade e vetores são suportados pelos brinquedos com interfaces de código textual, com suporte a linguagens de propósito geral. Recursividade e vetores são conceitos suportados por 23\% dos brinquedos.
 
 \section{Considerações}
 
-Por fim, esse capítulo ressalta três aspectos. (i) O mapeamento industrial não apontou uso de realidade aumentada projetiva com brinquedos programáveis. Entretanto (ii) os trabalhos relacionados demonstram que usar projeção em interfaces de programação é viável e abre novas possibilidades de interação, como a programação espacial descrita por \citeonline{burleson_active_2018}. Além disso, o mapeamento indicou (iii) uso de interfaces tangíveis por 55\% dos brinquedos. A proposta apresentada no \autoref{c_desenvolvimento} considera esses três aspectos e busca representar um tipo inovador de interação, ou, ao menos, contribuir com pesquisas que indiquem a adequação da realidade aumentada projetiva aplicada à interfaces de brinquedos programáveis.
+Por fim, esse capítulo ressalta três aspectos. (i) O mapeamento industrial não apontou uso de realidade aumentada projetiva com brinquedos programáveis, ao menos em nível comercial. Entretanto (ii) os trabalhos relacionados demonstram que usar projeção em interfaces de programação é viável e abre novas possibilidades de interação, como a programação espacial\cite{burleson_active_2018}. Além disso, o mapeamento indicou (iii) uso de interfaces tangíveis por 55\% dos brinquedos. A proposta apresentada no \autoref{c_desenvolvimento} considera esses três aspectos e busca representar um tipo inovador de interação, ou, ao menos, contribuir com pesquisas que indiquem a adequação da realidade aumentada projetiva aplicada às interfaces de brinquedos programáveis.
