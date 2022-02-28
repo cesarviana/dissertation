@@ -246,32 +246,37 @@
 \RequirePackage[brazil]{babel}
 %
 % Nomes constantes do abnTeX2 em portugues (definicoes padroes)
-\newcommand{\folhaderostoname}{Folha de rosto}
-\newcommand{\epigraphname}{Ep\'igrafe}
-\newcommand{\dedicatorianame}{Dedicat\'oria}
-\newcommand{\errataname}{Errata}
-\newcommand{\agradecimentosname}{Agradecimentos}
-\newcommand{\anexoname}{ANEXO}
-\newcommand{\anexosname}{Anexos}
-\newcommand{\apendicename}{AP\^ENDICE}
-\newcommand{\apendicesname}{Ap\^endices}
-\newcommand{\orientadorname}{Orientador(a):}
-\newcommand{\coorientadorname}{Coorientador(a):}
-\newcommand{\folhadeaprovacaoname}{Folha de aprova\c{c}\~ao}
-\newcommand{\resumoname}{Resumo} 
-\newcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
-\newcommand{\listadesimbolosname}{Lista de s\'imbolos}
-\newcommand{\fontename}{Fonte}
-\newcommand{\notaname}{Nota}
-\newcommand{\quadroname}{Quadro}
-\newcommand{\listofquadrosname}{Lista de quadros}
 %
 \addto\captionsbrazil{% portugues-brasil
   %% ajusta nomes padroes do babel
-  \renewcommand{\bibname}{Refer\^encias}
-  \renewcommand{\indexname}{\'Indice}
-  \renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
-  \renewcommand{\listtablename}{Lista de tabelas}
+
+  \newcommand{\folhaderostoname}{Folha de rosto}
+  \newcommand{\epigraphname}{Ep\'igrafe}
+  \newcommand{\dedicatorianame}{Dedicat\'oria}
+  \newcommand{\errataname}{Errata}
+  \newcommand{\agradecimentosname}{Agradecimentos}
+  \newcommand{\anexoname}{ANEXO}
+  \newcommand{\anexosname}{Anexos}
+  \newcommand{\apendicename}{AP\^ENDICE}
+  \newcommand{\apendicesname}{Apêndices}
+  \newcommand{\orientadorname}{Orientador:}
+  \newcommand{\coorientadorname}{Coorientador(a):}
+  \newcommand{\folhadeaprovacaoname}{Folha de aprova\c{c}\~ao}
+  \newcommand{\resumoname}{Resumo} 
+  \newcommand{\listadesiglasname}{Lista de abreviaturas e siglas}
+  \newcommand{\listadesimbolosname}{Lista de s\'imbolos}
+  \newcommand{\fontename}{Fonte}
+  \newcommand{\notaname}{Nota}
+  \newcommand{\quadroname}{Quadro}
+  \newcommand{\listofquadrosname}{Lista de quadros}
+  \newcommand{\listfigurename}{Lista de figuras}
+  \newcommand{\listtablename}{Lista de tabelas}
+  \renewcommand{\tablename}{Tabela}
+  \renewcommand{\figurename}{Figura}
+  \renewcommand{\tableautorefname}{Tabela}
+  \renewcommand{\figureautorefname}{Figura}
+  \renewcommand{\bibname}{Referências}
+  \renewcommand{\indexname}{Índice}
   %% ajusta nomes usados com a macro \autoref
   \renewcommand{\pageautorefname}{p\'agina}
   % Glaidson Nota: Nome utilizado pelo autoreferenciamento
@@ -280,40 +285,26 @@
   \renewcommand{\subsubsectionautorefname}{Subse{\c c}\~ao}
   \renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
 }
-\addto\captionsenglish{% ingles
-  %% adjusts names from abnTeX2
-  \renewcommand{\folhaderostoname}{Title page}
-  \renewcommand{\epigraphname}{Epigraph}
-  \renewcommand{\dedicatorianame}{Dedication}
-  \renewcommand{\errataname}{Errata sheet}
-  \renewcommand{\agradecimentosname}{Acknowledgements}
-  \renewcommand{\anexoname}{ANNEX}
-  \renewcommand{\anexosname}{Annex}
-  \renewcommand{\apendicename}{APPENDIX}
-  \renewcommand{\apendicesname}{Appendix}
-  \renewcommand{\orientadorname}{Supervisor:}
-  \renewcommand{\coorientadorname}{Co-supervisor:}
-  \renewcommand{\folhadeaprovacaoname}{Approval}
-  \renewcommand{\resumoname}{Abstract} 
-  \renewcommand{\listadesiglasname}{List of abbreviations and acronyms}
-  \renewcommand{\listadesimbolosname}{List of symbols}
-  \renewcommand{\fontename}{Source}
-  \renewcommand{\notaname}{Note}
-   %% adjusts names used by \autoref
-  \renewcommand{\pageautorefname}{page}
-  \renewcommand{\sectionautorefname}{section}
-  \renewcommand{\subsectionautorefname}{subsection}
-  \renewcommand{\subsubsectionautorefname}{subsubsection}
-  \renewcommand{\paragraphautorefname}{subsubsubsection}
-}
 % ---
-
+\AtBeginDocument{
+  \renewcommand{\bibname}{Referências}
+  \renewcommand{\listtablename}{Lista de tabelas}
+  \renewcommand{\listfigurename}{Lista de figuras}
+  \renewcommand{\tablename}{Tabela}
+  \renewcommand{\figurename}{Figura}
+  \renewcommand{\figureautorefname}{Figura}
+  \renewcommand{\tableautorefname}{Tabela}
+  \renewcommand{\figureautorefname}{Figura}
+  \renewcommand{\cftfigurename}{Figura\space} 
+  \renewcommand*{\cftfigureaftersnum}{.}
+  \renewcommand{\cfttablename}{Tabela\space}
+  \renewcommand*{\cfttableaftersnum}{.}	
+  \renewcommand{\contentsname}{Sumário}
+}
 % Customiza Quadros
 \newfloat[chapter]{quadro}{loq}{\quadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
-
-
 
 % ---
 % Customiza listas

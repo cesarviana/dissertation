@@ -88,7 +88,7 @@
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
 
 % Redefine seção de agradecimentos
-\renewcommand{\agradecimentosname}{\fontencoding{OT1}\bfseries\fontshape{n}\Large\selectfont{AGRADECIMENTOS}}
+%\renewcommand{\agradecimentosname}{\fontencoding{OT1}\bfseries\fontshape{n}\Large\selectfont{AGRADECIMENTOS}}
 
 % Redefine títulos de Seções
 %\renewcommand{\resumoname}{RESUMO}
@@ -110,14 +110,6 @@
   %\renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
   %\renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
 }
-
-% lista de ilustracoes
-\renewcommand{\cftfigurename}{\figurename\space} 
-\renewcommand*{\cftfigureaftersnum}{.}
-
-% lista de tabelas  
-\renewcommand{\cfttablename}{\tablename\space}
-\renewcommand*{\cfttableaftersnum}{.}	
 
 % lista de quadros
 %\renewcommand{\cftquadroname}{\quadroname\space}
@@ -423,8 +415,6 @@
 
 % Legendas utilizadas em Figuras, tabelas e quadros
 \renewcommand{\legend}{Fonte: }
-\addto\captionsbrazil{\renewcommand{\figurename}{Figura}}
-\addto\captionsbrazil{\renewcommand{\tablename}{Tabela}}
 \addto\captionsbrazil{\renewcommand{\quadroname}{Quadro}}
 \newcommand{\foa}{\legend{Elaborada pelo autor.}}
 \newcommand{\fad}[1]{\legend{Adaptada de \citeonline{#1}.}}
