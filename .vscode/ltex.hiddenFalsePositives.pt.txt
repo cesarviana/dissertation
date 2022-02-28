@@ -1,0 +1,2 @@
+{"rule":"BARBARISMS","sentence":"^\\QNo contexto dessa pergunta, sipitakiat_robo-blocks_2012 desenvolveram o Robo-Blocks, uma interface tangível de programação em blocos que permite executar passo a passo as instruções de um BP.\\E$"}
+{"rule":"BARBARISMS","sentence":"^\\QSe adultos precisam destas ferramentas, será que as crianças poderiam se beneficiar das mesmas funcionalidades caso aplicadas em interfaces de \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q?\\E$"}
